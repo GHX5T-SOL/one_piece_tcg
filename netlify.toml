@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build:wrapper"
+  publish = "deploy"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Cache-Control = "private, no-store"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

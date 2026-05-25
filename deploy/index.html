@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Ghost x Zoro Grand Line TCG</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <main id="app">
+      <section class="gate" id="gate">
+        <div class="gate-map" aria-hidden="true"></div>
+        <div class="gate-panel">
+          <p class="eyebrow">Private crew access</p>
+          <h1>Ghost x Zoro Grand Line TCG</h1>
+          <p class="lede">A password-gated strategy ship for portfolio analytics, open bids, source-backed research, and the Unity WebGL game build.</p>
+          <form id="gate-form" class="gate-form">
+            <label for="passcode">Passcode</label>
+            <div class="pass-row">
+              <input id="passcode" name="passcode" type="password" autocomplete="current-password" />
+              <button type="submit">Enter</button>
+            </div>
+            <p id="gate-status" class="status">No public access. No PII. Private-use One Piece assets only.</p>
+          </form>
+        </div>
+      </section>
+
+      <section id="portal" class="portal hidden">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Grand Line command deck</p>
+            <h1>Ghost x Zoro Grand Line TCG</h1>
+          </div>
+          <nav aria-label="Portal panels">
+            <button data-panel="game" class="active">Game</button>
+            <button data-panel="inventory">Inventory</button>
+            <button data-panel="bids">Bids</button>
+            <button data-panel="research">Research</button>
+            <button data-panel="entry">Add Card</button>
+            <button data-panel="archive">Archive</button>
+          </nav>
+        </header>
+
+        <section id="panel-game" class="panel active-panel">
+          <div class="unity-shell">
+            <div id="unity-container">
+              <canvas id="unity-canvas" width="1280" height="720"></canvas>
+              <div id="unity-status" class="unity-status">Checking Unity WebGL build...</div>
+            </div>
+            <aside class="captain-card">
+              <p class="eyebrow">Controls</p>
+              <h2>Choose Luffy or Zoro in Unity</h2>
+              <p>WASD or arrows move. Mouse controls the camera. Press E to interact and Esc for the menu.</p>
+              <dl id="quick-stats"></dl>
+            </aside>
+          </div>
+        </section>
+
+        <section id="panel-inventory" class="panel">
+          <div class="section-heading">
+            <h2>Card Vault</h2>
+            <p>Owned, inbound, bought-not-shipped, and off-thesis cards. Cert numbers stay null until verified.</p>
+          </div>
+          <div id="inventory-grid" class="grid"></div>
+        </section>
+
+        <section id="panel-bids" class="panel">
+          <div class="section-heading">
+            <h2>Bounty Board</h2>
+            <p>All 13 Courtyard offers from the supplied screenshots, with keep/cancel actions and caps.</p>
+          </div>
+          <div id="bid-board" class="table"></div>
+        </section>
+
+        <section id="panel-research" class="panel">
+          <div class="section-heading">
+            <h2>Robin Archive</h2>
+            <p>Source ledger and watchlist notes, including OP14/EB04 and the August 2026 English 3rd Anniversary Set.</p>
+          </div>
+          <div id="research-list" class="source-list"></div>
+        </section>
+
+        <section id="panel-entry" class="panel">
+          <div class="section-heading">
+            <h2>Manual Card Entry</h2>
+            <p>Scanner support can be added later; this form stores local cards in browser storage and exports JSON.</p>
+          </div>
+          <form id="card-form" class="entry-form">
+            <input name="title" placeholder="Full card title" required />
+            <input name="character" placeholder="Character" required />
+            <input name="set" placeholder="Set" required />
+            <input name="cardNumber" placeholder="Card number" required />
+            <select name="gradeCompany" required>
+              <option value="PSA">PSA</option>
+              <option value="CGC">CGC</option>
+              <option value="BGS">BGS</option>
+              <option value="Raw">Raw</option>
+              <option value="Other">Other</option>
+            </select>
+            <input name="grade" placeholder="Grade" required />
+            <input name="platform" placeholder="Platform/source" required />
+            <input name="sourceNote" placeholder="Source note, no PII" required />
+            <button type="submit">Add Local Card</button>
+          </form>
+          <div class="entry-actions">
+            <button id="export-json">Export Local Cards</button>
+            <label class="import-label">Import JSON <input id="import-json" type="file" accept="application/json" /></label>
+          </div>
+          <pre id="local-cards" class="json-preview"></pre>
+        </section>
+
+        <section id="panel-archive" class="panel">
+          <div class="section-heading">
+            <h2>Brook Theater</h2>
+            <p>Prior research report, generated stills, narration, and music archive.</p>
+          </div>
+          <div id="archive-list" class="grid"></div>
+        </section>
+      </section>
+    </main>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

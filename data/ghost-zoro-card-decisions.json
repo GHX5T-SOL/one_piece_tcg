@@ -1,0 +1,400 @@
+{
+  "generatedAt": "2026-05-25T10:45:00+02:00",
+  "visibleCollectrValueUsd": 636.2,
+  "openCourtyardBidExposureUsd": 197.5,
+  "illustrativeAtRiskStackUsd": 833.7,
+  "ownedCards": [
+    {
+      "id": "ST03-001",
+      "name": "Crocodile",
+      "title": "2022 ST03 The Seven Warlords of the Sea #001 Crocodile Super Pre-Release",
+      "platform": "Phygitals inbound",
+      "slab": "PSA 9 MINT",
+      "gradeCompany": "PSA",
+      "value": 15,
+      "action": "HOLD / WATCH",
+      "conviction": 74,
+      "liquidity": 58,
+      "role": "Warlords anchor",
+      "thesis": "Early Seven Warlords leader with Super Pre-Release framing. This matters more as a theme/era piece than as a raw power play. It becomes more relevant around OP-14 Warlords attention.",
+      "risk": "PSA 9 caps upside versus PSA 10; Crocodile demand is strong but below Luffy/Zoro/Nami/Roger.",
+      "trigger": "Sell only into a Warlords/Crocodile hype premium or if you can upgrade to PSA 10 without overpaying.",
+      "source": "S3/S5/S15"
+    },
+    {
+      "id": "ST10-006",
+      "name": "Monkey.D.Luffy",
+      "title": "2025 Japanese Promo 3rd Anniversary Treasure SR Luffy #ST10-006",
+      "platform": "Phygitals inbound",
+      "slab": "CGC 10 GEM",
+      "gradeCompany": "CGC",
+      "value": 0,
+      "action": "CORE HOLD",
+      "conviction": 90,
+      "liquidity": 78,
+      "role": "Luffy promo core",
+      "thesis": "Luffy plus anniversary/promo context is the strongest fit in the current collection. Main-character demand gives this a better floor than many cheap modern slabs.",
+      "risk": "Japanese modern promos can be reprinted or repriced quickly; CGC 10 does not always command PSA 10 liquidity.",
+      "trigger": "Hold unless a PSA 10 comp premium appears large enough to justify selling or cross-grading risk.",
+      "source": "S2/S3/S15"
+    },
+    {
+      "id": "ST18-004",
+      "name": "Zoro-Juurou",
+      "title": "2024 Japanese SD Purple Luffy SR Zoro-Juurou #ST18-004",
+      "platform": "Phygitals inbound",
+      "slab": "CGC 10 PRISTINE",
+      "gradeCompany": "CGC",
+      "value": 137.49,
+      "action": "CORE HOLD",
+      "conviction": 86,
+      "liquidity": 70,
+      "role": "Zoro thesis piece",
+      "thesis": "Personal brand fit for Zoro, strong character, Pristine label, and purple Straw Hat deck relevance. This is a collection identity card.",
+      "risk": "Starter deck cards are more supply-sensitive than event promos or top chase rarities.",
+      "trigger": "Hold through shipment; consider selling only if Courtyard/local buyers pay a strong pristine-label premium.",
+      "source": "S3/S15"
+    },
+    {
+      "id": "OP01-021",
+      "name": "Franky",
+      "title": "2023 Premium Collection Film Red Alt Art Franky #OP01-021",
+      "platform": "Phygitals inbound",
+      "slab": "CGC 10 GEM",
+      "gradeCompany": "CGC",
+      "value": 63.71,
+      "action": "WATCH / SELL INTO PREMIUM",
+      "conviction": 62,
+      "liquidity": 48,
+      "role": "Straw Hat support",
+      "thesis": "Nice Film Red tie-in and high grade. Good visual card, but Franky is not a top liquidity character.",
+      "risk": "Lower character liquidity; easy to hold too long if no specific buyer appears.",
+      "trigger": "List or trade if it can fund Luffy/Zoro/Nami/Roger/Ace/Sabo upgrades.",
+      "source": "S3/S15"
+    },
+    {
+      "id": "ST01-007",
+      "name": "Nami",
+      "title": "2023 Tournament Pack Vol. 3 Nami #ST01-007",
+      "platform": "Phygitals inbound / Collectr",
+      "slab": "CGC 9 MINT",
+      "gradeCompany": "CGC",
+      "value": 400,
+      "action": "HOLD, VERIFY COMPS",
+      "conviction": 84,
+      "liquidity": 82,
+      "role": "Visible value anchor",
+      "thesis": "Nami is one of the most liquid non-Luffy One Piece characters and this is the visible-value anchor of the book. The portfolio is currently concentrated around this position.",
+      "risk": "CGC 9 is not a premium grade; if Collectr value is stale or thin, do not treat the $400 as instantly realizable.",
+      "trigger": "Verify sold comps after arrival. Sell only if a buyer pays close to high comps, or upgrade into PSA 10/CGC 10 version.",
+      "source": "S3/S15"
+    },
+    {
+      "id": "P-041",
+      "name": "Monkey.D.Luffy",
+      "title": "2024 ST18 Purple Luffy #041 Monkey D. Luffy",
+      "platform": "Courtyard bought / not shipped",
+      "slab": "PSA 9 MINT",
+      "gradeCompany": "PSA",
+      "value": 20,
+      "action": "KEEP AS SHIPMENT FILLER",
+      "conviction": 68,
+      "liquidity": 74,
+      "role": "Low-cost Luffy",
+      "thesis": "Low-dollar main-character slab. Not a trophy, but Luffy liquidity is useful when building a bigger Courtyard shipment.",
+      "risk": "PSA 9 modern starter/promo cards can be common; do not average up heavily.",
+      "trigger": "Keep if shipping anyway; sell first if it blocks capital for PSA 10 Sabo/Roger/Ace.",
+      "source": "S3/S6/S15"
+    },
+    {
+      "id": "OP08-023",
+      "name": "Carrot",
+      "title": "2024 OP08 Two Legends #023 Carrot",
+      "platform": "Courtyard bought / not shipped",
+      "slab": "PSA 10 GEM MINT",
+      "gradeCompany": "PSA",
+      "value": 0,
+      "action": "SELL / TRADE IF NEEDED",
+      "conviction": 52,
+      "liquidity": 45,
+      "role": "Non-core PSA 10",
+      "thesis": "PSA 10 is good, and Carrot has fans, but she is not core to the Ghost x Zoro Luffy/Warlords/Roger/Ace/Sabo thesis.",
+      "risk": "May sit longer than main-character slabs. Good grade does not equal strong demand.",
+      "trigger": "Use as first quick sale/trade if you need room or funds before shipping.",
+      "source": "S3/S15"
+    },
+    {
+      "id": "LED6-EN001",
+      "name": "The Dark Magicians",
+      "title": "Yu-Gi-Oh! The Dark Magicians",
+      "platform": "Collectr visible",
+      "slab": "CGC 10 GEM",
+      "gradeCompany": "CGC",
+      "value": 0,
+      "action": "SELL / TRADE",
+      "conviction": 35,
+      "liquidity": 55,
+      "role": "Off-thesis asset",
+      "thesis": "Not a bad card, but it dilutes a One Piece-focused thesis. Use it as trade fuel.",
+      "risk": "Keeping mixed-IP inventory makes the strategy harder to track.",
+      "trigger": "Convert to One Piece sealed, Luffy/Zoro/Nami/Roger/Ace/Sabo slabs, or cash reserve.",
+      "source": "Portfolio capture"
+    }
+  ],
+  "offerDecisions": [
+    {
+      "id": "OP13-120",
+      "name": "Sabo",
+      "slab": "PSA 10 GEM MINT",
+      "offer": 19,
+      "action": "KEEP - TOP BID",
+      "priority": 1,
+      "score": 93,
+      "rationale": "Best risk/reward in the visible offer book. OP-13 anniversary context, popular character, PSA 10, tiny bid size.",
+      "cap": "Keep up to roughly the low $30s unless live comps say otherwise.",
+      "img": "OP13-120"
+    },
+    {
+      "id": "ST29-001",
+      "name": "Monkey.D.Luffy B&W Alt",
+      "slab": "PSA 9 MINT",
+      "offer": 25,
+      "action": "KEEP",
+      "priority": 2,
+      "score": 88,
+      "rationale": "Egghead Luffy and ST-29 are current-cycle demand. PSA 9 is acceptable at the current bid if you keep discipline.",
+      "cap": "Do not chase far above $30-$35 without verified comps.",
+      "img": "ST29-001"
+    },
+    {
+      "id": "OP09-118",
+      "name": "Gol.D.Roger",
+      "slab": "PSA 9 MINT",
+      "offer": 23,
+      "action": "KEEP",
+      "priority": 3,
+      "score": 86,
+      "rationale": "Roger is a franchise apex character, and the card text/identity is iconic. PSA 9 is fine at low cost.",
+      "cap": "Keep PSA 9; cancel lower-grade duplicate.",
+      "img": "OP09-118"
+    },
+    {
+      "id": "OP07-119",
+      "name": "Portgas D. Ace",
+      "slab": "PSA 9 MINT",
+      "offer": 18,
+      "action": "KEEP",
+      "priority": 4,
+      "score": 83,
+      "rationale": "Ace has emotional collector demand, pairs with Luffy/Sabo thesis, and the bid is small.",
+      "cap": "Hold if won; sell only into fast premium.",
+      "img": "OP07-119"
+    },
+    {
+      "id": "ST01-001",
+      "name": "Monkey D. Luffy",
+      "slab": "PSA 9 MINT",
+      "offer": 19,
+      "action": "KEEP IF BATCHING",
+      "priority": 5,
+      "score": 75,
+      "rationale": "Early starter Luffy is on-thesis, but not rare enough to become a big position.",
+      "cap": "Keep if shipment quality stays high; do not duplicate.",
+      "img": "ST01-001"
+    },
+    {
+      "id": "OP13-042",
+      "name": "Edward Newgate",
+      "slab": "CGC 10 PRISTINE",
+      "offer": 18.5,
+      "action": "KEEP IF UNDER CAP",
+      "priority": 6,
+      "score": 73,
+      "rationale": "Whitebeard is iconic and pristine label helps. CGC liquidity is lower than PSA.",
+      "cap": "Keep at current bid; do not overextend.",
+      "img": "OP13-042"
+    },
+    {
+      "id": "OP05-119",
+      "name": "Monkey D. Luffy PRB01",
+      "slab": "PSA 9 MINT",
+      "offer": 17,
+      "action": "KEEP LOW CAP",
+      "priority": 7,
+      "score": 70,
+      "rationale": "Luffy is liquid, but PRB reprint context reduces scarcity. Fine only because the bid is low.",
+      "cap": "Flip candidate if won and comps are thin.",
+      "img": "OP05-119"
+    },
+    {
+      "id": "OP09-093",
+      "name": "Marshall D. Teach",
+      "slab": "CGC 10 GEM",
+      "offer": 8,
+      "action": "OPTIONAL KEEP",
+      "priority": 8,
+      "score": 64,
+      "rationale": "Blackbeard is a real villain thesis, and $8 is low. But it is still a CGC 10 non-trophy.",
+      "cap": "Keep only if you want a villain slot.",
+      "img": "OP09-093"
+    },
+    {
+      "id": "OP06-069",
+      "name": "Vinsmoke Reiju",
+      "slab": "CGC 10 GEM",
+      "offer": 8,
+      "action": "OPTIONAL CANCEL",
+      "priority": 9,
+      "score": 58,
+      "rationale": "Popular character and low bid, but not aligned with the current crew thesis.",
+      "cap": "Cancel if you want a cleaner shipment.",
+      "img": "OP06-069"
+    },
+    {
+      "id": "OP02-018",
+      "name": "Marco",
+      "slab": "CGC 10 PRISTINE",
+      "offer": 12,
+      "action": "OPTIONAL CANCEL",
+      "priority": 10,
+      "score": 57,
+      "rationale": "Pristine label helps, but Marco is not a first-wave capital target for this portfolio.",
+      "cap": "Keep only as a cheap flip.",
+      "img": "OP02-018"
+    },
+    {
+      "id": "OP13-120-9",
+      "name": "Sabo",
+      "slab": "PSA 9 MINT",
+      "offer": 18,
+      "action": "CANCEL IF PSA 10 REMAINS LIVE",
+      "priority": 11,
+      "score": 54,
+      "rationale": "Duplicate exposure. The PSA 10 bid is only $1 higher, so the PSA 9 is inefficient unless both are deliberate ladder bids.",
+      "cap": "Cancel before capital locks if you can.",
+      "img": "OP13-120"
+    },
+    {
+      "id": "OP09-118-CGC",
+      "name": "Gol.D.Roger",
+      "slab": "CGC 8.5",
+      "offer": 6,
+      "action": "CANCEL",
+      "priority": 12,
+      "score": 32,
+      "rationale": "Low grade and duplicate subject. Cheap does not mean investable.",
+      "cap": "Avoid low-grade modern slabs unless they are iconic scarce promos.",
+      "img": "OP09-118"
+    },
+    {
+      "id": "SW-003",
+      "name": "Shiki",
+      "slab": "CGC 8",
+      "offer": 6,
+      "action": "CANCEL",
+      "priority": 13,
+      "score": 28,
+      "rationale": "Old pre-Bandai curiosity, low grade, weak fit with the modern One Piece TCG thesis.",
+      "cap": "Cancel and keep the slot for Luffy/Roger/Ace/Sabo/Nami/Zoro.",
+      "img": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "name": "PSA infrastructure demand",
+      "url": "https://www.psacard.com/articles/articleview/15715/200-million-investment-grading-experience",
+      "note": "PSA says it graded 2M cards in 2020 and more than 19M in 2025; Jan-Apr 2026 output was up 39% year over year."
+    },
+    {
+      "id": "S2",
+      "name": "PSA x Bandai promo signal",
+      "url": "https://www.psacard.com/articles/articleview/15211/ahoy-psa-x-bandai-partner-on-third-exclusive-one-piece-promo",
+      "note": "PSA says the first PSA/Bandai Straw Hat promo became the most-graded English One Piece card of all time."
+    },
+    {
+      "id": "S3",
+      "name": "PSA One Piece basics",
+      "url": "https://www.psacard.com/info/tcg/one-piece-collecting-basics-guide",
+      "note": "Useful for set-code, rarity, promo, franchise, and modern Bandai TCG context."
+    },
+    {
+      "id": "S4",
+      "name": "Bandai card business growth",
+      "url": "https://www.bandainamco.co.jp/en/ir/library/feature02_01_2025.html",
+      "note": "Bandai discusses global card-game growth, regional strategy, supply capacity, localization, TCG+ data, and fan demand."
+    },
+    {
+      "id": "S5",
+      "name": "OP-14 The Azure Sea's Seven",
+      "url": "https://en.onepiece-cardgame.com/products/boosters/op14-eb04.php",
+      "note": "Official page: Seven Warlords theme, January 16, 2026 English release, MSRP $4.99, 163+2 card types."
+    },
+    {
+      "id": "S6",
+      "name": "ST-29 Egghead",
+      "url": "https://en.onepiece-cardgame.com/products/decks/st29.php",
+      "note": "Official page: Egghead starter, January 16, 2026 release, $16.99 MSRP, Luffy leader, Rush: Character and Unblockable."
+    },
+    {
+      "id": "S7",
+      "name": "TCG Portal release tracker",
+      "url": "https://tcg-portal.jp/onepiece/releases",
+      "note": "Non-official release tracker: ST31-ST36 July 11, 2026; OP-17 listed for August 22, 2026 in Japan. Treat as schedule intelligence until Bandai English page appears."
+    },
+    {
+      "id": "S8",
+      "name": "TCGplayer sellers",
+      "url": "https://seller.tcgplayer.com/",
+      "note": "Seller channel with global reach, listing/pricing/fulfillment tools, and marketplace trust layer."
+    },
+    {
+      "id": "S9",
+      "name": "Cardmarket One Piece",
+      "url": "https://www.cardmarket.com/en/OnePiece",
+      "note": "European market surface for One Piece comps, trends, best sellers, singles, sealed, and cross-market arbitrage checks."
+    },
+    {
+      "id": "S10",
+      "name": "eBay Vault fees",
+      "url": "https://pages.ebay.com/vault/fees/",
+      "note": "Vault/fee source to check before moving higher-value graded slabs into eBay fulfillment."
+    },
+    {
+      "id": "S11",
+      "name": "Collect-a-Con Cape Town",
+      "url": "https://www.collectacon.co.za/",
+      "note": "Local event surface for in-person buying, selling, trade, auction, and vendor networking."
+    },
+    {
+      "id": "S12",
+      "name": "Card Cache Cape Town",
+      "url": "https://cardcache.co.za/pages/about",
+      "note": "Cape Town store signal for TCG singles, sealed, and local liquidity checks."
+    },
+    {
+      "id": "S13",
+      "name": "TCGXchange South Africa",
+      "url": "https://tcgxchange.co.za/",
+      "note": "South African online TCG store surface for stock, preorder, and local pricing comparison."
+    },
+    {
+      "id": "S14",
+      "name": "Wizards Books and Games",
+      "url": "https://www.wizardsworld.co.za/",
+      "note": "Local hobby-store surface to verify events, stock, and buy/sell opportunities."
+    },
+    {
+      "id": "S15",
+      "name": "Official One Piece Card List",
+      "url": "https://en.onepiece-cardgame.com/cardlist/",
+      "note": "Official card art and gameplay text used for private analytical slab renders."
+    }
+  ],
+  "caveats": [
+    "Educational scenario analysis only, not financial advice.",
+    "No raw account-sensitive details are included.",
+    "Slab visuals are analytical renders using official card art unless a platform image is explicitly labeled.",
+    "OP-17 August 2026 is treated as schedule intelligence from non-official/retailer sources until official Bandai English publication is verified."
+  ]
+}

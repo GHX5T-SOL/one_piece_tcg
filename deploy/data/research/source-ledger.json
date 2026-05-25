@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T00:00:00+02:00",
+  "privateUseOnly": true,
+  "sources": [
+    {
+      "id": "SRC-PSA-INFRA-2026",
+      "title": "PSA Announces $200 Million Infrastructure Investment to Support Global Demand",
+      "publisher": "PSA",
+      "url": "https://www.psacard.com/articles/articleview/15715/200-million-investment-grading-experience",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Broad grading-demand infrastructure signal; not a One Piece price guarantee.",
+      "notes": "PSA article dated May 14, 2026 describes grading demand and infrastructure investment."
+    },
+    {
+      "id": "SRC-PSA-BANDAI-PROMO",
+      "title": "Ahoy! PSA x Bandai Partner on Third Exclusive ONE PIECE Promo",
+      "publisher": "PSA",
+      "url": "https://www.psacard.com/articles/articleview/15211/ahoy-psa-x-bandai-partner-on-third-exclusive-one-piece-promo",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Promo collaboration demand signal and PSA/Bandai relationship context.",
+      "notes": "Use carefully as a promo-signal source, not as evidence that every promo appreciates."
+    },
+    {
+      "id": "SRC-PSA-BASICS",
+      "title": "One Piece Collecting Basics Guide",
+      "publisher": "PSA",
+      "url": "https://www.psacard.com/info/tcg/one-piece-collecting-basics-guide",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Set-code, expansion, rarity, and Bandai 2022 launch context.",
+      "notes": "Good source for explaining OP/ST/PRB/product-code basics."
+    },
+    {
+      "id": "SRC-BANDAI-INTEGRATED-2025",
+      "title": "Bandai Namco Integrated Report 2025",
+      "publisher": "Bandai Namco Holdings",
+      "url": "https://www.bandainamco.co.jp/en/ir/library/integratedreports2025.html",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Corporate context for Bandai card-business and IP strategy.",
+      "notes": "Use as background business context, not item-level pricing."
+    },
+    {
+      "id": "SRC-OP13",
+      "title": "BOOSTER PACK -CARRYING ON HIS WILL- [OP-13]",
+      "publisher": "Official One Piece Card Game",
+      "url": "https://en.onepiece-cardgame.com/products/boosters/op13/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "OP13 context for Sabo, Newgate, and Carrying on His Will cards.",
+      "notes": "Official product context."
+    },
+    {
+      "id": "SRC-EB03",
+      "title": "EXTRA BOOSTER -ONE PIECE HEROINES EDITION- [EB-03]",
+      "publisher": "Official One Piece Card Game",
+      "url": "https://en.onepiece-cardgame.com/products/boosters/eb03.php",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Heroine/Nami/Yamato/female-lead demand context.",
+      "notes": "Official product context."
+    },
+    {
+      "id": "SRC-OP14-EB04",
+      "title": "BOOSTER PACK -THE AZURE SEA'S SEVEN- [OP14-EB04]",
+      "publisher": "Official One Piece Card Game",
+      "url": "https://en.onepiece-cardgame.com/products/boosters/op14-eb04.php",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Seven Warlords, Mihawk, Crocodile, Boa, and January 16, 2026 release context.",
+      "notes": "Official page lists Warlords theme, Jan. 16, 2026 release, MSRP, card count, and Mihawk super alternate art."
+    },
+    {
+      "id": "SRC-OP14-EVENT",
+      "title": "OP14-EB04 Release Event",
+      "publisher": "Official One Piece Card Game",
+      "url": "https://en.onepiece-cardgame.com/events/2026/store-tournament-op14/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Pre-release/release-event stamped card and local-store timing context.",
+      "notes": "Official event page lists Jan. 9-15, 2026 event period and release-event pack details."
+    },
+    {
+      "id": "SRC-ANNIVERSARY-SET-2026",
+      "title": "ONE PIECE CARD GAME English Version 3rd Anniversary Set",
+      "publisher": "Official One Piece Card Game",
+      "url": "https://en.onepiece-cardgame.com/products/other/3rd_anniversary_set.php",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "August 2026 drop watchlist and Luffy/Ace/Sabo Three Brothers product context.",
+      "notes": "Official page lists Delivery Month August 2026, MSRP USD $120.00, and contents."
+    },
+    {
+      "id": "SRC-COLLECTACON-CPT",
+      "title": "Collect-a-Con Cape Town",
+      "publisher": "Collect-a-Con South Africa",
+      "url": "https://www.collectacon.co.za/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "medium",
+      "useCase": "Local Cape Town selling/networking/event route.",
+      "notes": "Use only for local event/channel context; verify specific dates before acting."
+    },
+    {
+      "id": "SRC-CARD-CACHE",
+      "title": "About The Card Cache",
+      "publisher": "The Card Cache",
+      "url": "https://cardcache.co.za/pages/about",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Cape Town local store, One Piece singles/sealed/graded-card route.",
+      "notes": "Page describes Cape Town-based online store and One Piece TCG support."
+    },
+    {
+      "id": "SRC-TCGXCHANGE",
+      "title": "TCGXchange South Africa",
+      "publisher": "TCGXchange",
+      "url": "https://tcgxchange.co.za/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Cape Town online TCG store and local sealed/accessory route.",
+      "notes": "Page describes Cape Town base and South Africa shipping."
+    },
+    {
+      "id": "SRC-WIZARDS",
+      "title": "Wizards Books and Games",
+      "publisher": "Wizards Books and Games",
+      "url": "https://www.wizardsworld.co.za/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "medium",
+      "useCase": "Local store route; verify One Piece stock/event details before acting.",
+      "notes": "Local channel placeholder in strategy until live stock/event pages are verified."
+    },
+    {
+      "id": "SRC-TCGPLAYER-SELLERS",
+      "title": "Sell Your Collectibles to Millions",
+      "publisher": "TCGplayer",
+      "url": "https://seller.tcgplayer.com/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "US-oriented selling-channel context.",
+      "notes": "Useful for channel comparison; practical access depends on region/account constraints."
+    },
+    {
+      "id": "SRC-CARDMARKET-ONEPIECE",
+      "title": "Cardmarket One Piece",
+      "publisher": "Cardmarket",
+      "url": "https://www.cardmarket.com/en/OnePiece",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "EU liquidity/price-check route where practical.",
+      "notes": "Useful for European market observation; selling access may depend on region/account status."
+    },
+    {
+      "id": "SRC-EBAY-VAULT-FEES",
+      "title": "The eBay Vault pricing and fees",
+      "publisher": "eBay",
+      "url": "https://pages.ebay.com/vault/fees/",
+      "retrievedAt": "2026-05-25",
+      "confidence": "high",
+      "useCase": "Vault/selling fee context.",
+      "notes": "Verify account/location eligibility before using."
+    },
+    {
+      "id": "CAP-COLLECTR-2026-05-24",
+      "title": "Collectr visible portfolio capture",
+      "publisher": "User logged-in Collectr portfolio",
+      "url": null,
+      "retrievedAt": "2026-05-24",
+      "confidence": "medium",
+      "useCase": "Visible holdings and $636.20 value snapshot.",
+      "notes": "Read-only capture; no sensitive account data stored."
+    },
+    {
+      "id": "CAP-PHYGITALS-2026-05-24",
+      "title": "Phygitals inbound shipment capture",
+      "publisher": "User logged-in Phygitals account",
+      "url": null,
+      "retrievedAt": "2026-05-24",
+      "confidence": "medium",
+      "useCase": "Five inbound One Piece slabs and one off-thesis slab.",
+      "notes": "Shipping/order logistics redacted."
+    },
+    {
+      "id": "CAP-COURTYARD-OFFERS-2026-05-25",
+      "title": "Courtyard active offers screenshots",
+      "publisher": "User supplied screenshots",
+      "url": null,
+      "retrievedAt": "2026-05-25",
+      "confidence": "medium",
+      "useCase": "13 active highest-bidder offers totaling $197.50.",
+      "notes": "Offer screenshots only; no account-sensitive data stored."
+    },
+    {
+      "id": "CAP-COURTYARD-BOUGHT-2026-05-25",
+      "title": "Courtyard bought not shipped cards",
+      "publisher": "User supplied purchase list",
+      "url": null,
+      "retrievedAt": "2026-05-25",
+      "confidence": "medium",
+      "useCase": "Two Courtyard bought/not-shipped cards.",
+      "notes": "No shipment/account details stored."
+    }
+  ]
+}

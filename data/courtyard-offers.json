@@ -1,0 +1,29 @@
+{
+  "source": "Courtyard offers-made page for ghxst23",
+  "captureMethod": "Read-only browser capture from logged-in tab",
+  "capturedAt": "2026-05-25T10:23:08+02:00",
+  "currency": "USD",
+  "redaction": "No account, wallet, payment, shipping, or contact details captured.",
+  "summary": {
+    "activeOffersVisible": 13,
+    "totalOfferExposureUsd": 197.5,
+    "psaOffers": 7,
+    "cgcOffers": 6,
+    "onePieceOffers": 13
+  },
+  "offers": [
+    {"title": "2025 One Piece OP13-Carrying on His Will #120 Sabo", "gradeCompany": "PSA", "grade": "9 MINT", "offerUsd": 18, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "cancel-if-psa10-live"},
+    {"title": "2026 One Piece Starter Deck ST29-Egghead #001 Monkey D. Luffy - Black & White Alternate Art", "gradeCompany": "PSA", "grade": "9 MINT", "offerUsd": 25, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "keep"},
+    {"title": "2024 One Piece Japanese PRB01-Premium Booster -One Piece Card the Best #119 Monkey D. Luffy", "gradeCompany": "PSA", "grade": "9 MINT", "offerUsd": 17, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "keep-low-cap"},
+    {"title": "2024 One Piece OP09-Emperors in the New World #118 Gol D. Roger", "gradeCompany": "PSA", "grade": "9 MINT", "offerUsd": 23, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "keep"},
+    {"title": "2024 One Piece Japanese OP07-500 Years in the Future #119 Portgas D. Ace", "gradeCompany": "PSA", "grade": "9 MINT", "offerUsd": 18, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "keep"},
+    {"title": "2023 Wings of the Captain OP06 Japanese #OP06-069 Vinsmoke Reiju", "gradeCompany": "CGC", "grade": "10 GEM MINT", "offerUsd": 8, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "optional-cancel"},
+    {"title": "2024 Premium Booster: The Best PRB-01 Japanese #OP02-018 Marco - Alternate Art Parallel", "gradeCompany": "CGC", "grade": "10 PRISTINE", "offerUsd": 12, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "optional-cancel"},
+    {"title": "2009 OnePy BB Match Promos Japanese #SW-003-W Shiki", "gradeCompany": "CGC", "grade": "8 NM-MT", "offerUsd": 6, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "cancel"},
+    {"title": "2025 Premium Booster: The Best Vol.2 PRB-02 English #OP09-093 Marshall D. Teach", "gradeCompany": "CGC", "grade": "10 GEM MINT", "offerUsd": 8, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "optional-keep"},
+    {"title": "2024 Emperors in the New World OP09 Japanese #OP09-118 Gol D. Roger", "gradeCompany": "CGC", "grade": "8.5 NM-MT+", "offerUsd": 6, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "cancel"},
+    {"title": "2022 One Piece Japanese Starter Deck ST01-Straw Hat Crew #001 Monkey D. Luffy", "gradeCompany": "PSA", "grade": "9 MINT", "offerUsd": 19, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "keep-if-shipping-batch"},
+    {"title": "2025 Carrying on His Will OP13 English #OP13-042 Edward Newgate", "gradeCompany": "CGC", "grade": "10 PRISTINE", "offerUsd": 18.5, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "keep-if-under-cap"},
+    {"title": "2025 One Piece OP13-Carrying on His Will #120 Sabo", "gradeCompany": "PSA", "grade": "10 GEM MINT", "offerUsd": 19, "status": "active highest-bidder", "expiresText": "6 days", "strategyTag": "best-offer-target"}
+  ]
+}

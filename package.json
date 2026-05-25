@@ -1,0 +1,33 @@
+{
+  "name": "ghost-zoro-grand-line-tcg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Private password-gated Unity WebGL game and research workspace for Ghost x Zoro One Piece TCG strategy.",
+  "scripts": {
+    "install:verify": "node -v && npm -v && ffmpeg -version | head -n 1 && npx hyperframes@latest --version",
+    "render:still": "remotion still src/index.ts GhostZoroVideo out/stills/hook.png --frame=120",
+    "render:stills": "remotion still src/index.ts GhostZoroVideo out/stills/market.png --frame=2400 && remotion still src/index.ts GhostZoroVideo out/stills/portfolio.png --frame=4200 && remotion still src/index.ts GhostZoroVideo out/stills/action.png --frame=8500",
+    "render": "remotion render src/index.ts GhostZoroVideo dist/ghost-zoro-one-piece-tcg-investment.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=4",
+    "hyperframes:lint": "npx hyperframes@latest lint hyperframes/ghost-zoro",
+    "hyperframes:inspect": "npx hyperframes@latest inspect hyperframes/ghost-zoro --json",
+    "validate:data": "node scripts/validate-data.mjs",
+    "pii:scan": "node scripts/pii-scan.mjs",
+    "build:wrapper": "node scripts/build-wrapper.mjs",
+    "qa:workspace": "npm run validate:data && npm run pii:scan && npm run build:wrapper"
+  },
+  "dependencies": {
+    "@react-three/fiber": "8.17.10",
+    "@remotion/cli": "4.0.465",
+    "@remotion/media-utils": "4.0.465",
+    "lucide-react": "0.468.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.465",
+    "three": "0.181.2"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "typescript": "5.7.2"
+  }
+}

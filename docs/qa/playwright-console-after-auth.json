@@ -1,0 +1,9 @@
+Total messages: 56 (Errors: 2, Warnings: 6)
+Returning 2 messages for level "error"
+
+[ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0
+[ERROR] ArgumentNullException: Value cannot be null.
+Parameter name: shader
+  at UnityEngine.Bindings.ThrowHelper.ThrowArgumentNullException (System.Object obj, System.String parameterName) [0x00000] in <00000000000000000000000000000000>:0 
+
+ @ http://127.0.0.1:4173/game/Build/game.framework.js:8

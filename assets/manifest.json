@@ -1,0 +1,93 @@
+{
+  "project": "Ghost x Zoro One Piece TCG Investment Video",
+  "generatedAt": "2026-05-24T18:27:04+02:00",
+  "privateUseOnly": true,
+  "notes": [
+    "Assets are sourced from the user-provided Google Drive folder for a private, non-commercial persona project.",
+    "Do not upload, publish, sell, or use these assets in public/commercial distribution without explicit rights clearance.",
+    "No account-sensitive order, address, phone, email, wallet, or logistics details are included."
+  ],
+  "assets": [
+    {
+      "id": "1fWE1XHpffy1AYTs915Pclcav_0hdmXtj",
+      "title": "areamap_bg_0000_t.png",
+      "sourceUrl": "https://drive.google.com/file/d/1fWE1XHpffy1AYTs915Pclcav_0hdmXtj/view",
+      "localPath": "assets/raw/drive/areamap_bg_0000_t.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "area", "map", "background", "hook"],
+      "useCase": "Grand Line map background and market-route visual."
+    },
+    {
+      "id": "1ZTL5wjV2SCceulcLk7XksAPlyVwnvaVg",
+      "title": "worldmap_008_sea_tile.png",
+      "sourceUrl": "https://drive.google.com/file/d/1ZTL5wjV2SCceulcLk7XksAPlyVwnvaVg/view",
+      "localPath": "assets/raw/drive/worldmap_008_sea_tile.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "area", "sea", "loop"],
+      "useCase": "Looping ocean texture for parallax background."
+    },
+    {
+      "id": "1hgaEgS2cmhiE2O8Wsyi3R6qNAk46AC9z",
+      "title": "worldmap_008_wave.png",
+      "sourceUrl": "https://drive.google.com/file/d/1hgaEgS2cmhiE2O8Wsyi3R6qNAk46AC9z/view",
+      "localPath": "assets/raw/drive/worldmap_008_wave.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "area", "wave", "motion"],
+      "useCase": "Animated foreground wave strip."
+    },
+    {
+      "id": "1wBb4NTzhdWxZB38Ue5h5Lo4UHwM_3YlY",
+      "title": "ship_0057_c.png",
+      "sourceUrl": "https://drive.google.com/file/d/1wBb4NTzhdWxZB38Ue5h5Lo4UHwM_3YlY/view",
+      "localPath": "assets/raw/drive/ship_0057_c.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "ships", "hero", "hook"],
+      "useCase": "Hero ship flythrough and closing scene."
+    },
+    {
+      "id": "1iLxgKZL62-CO07VWSFrAAaIyEv6FmNTw",
+      "title": "ship_0060_c.png",
+      "sourceUrl": "https://drive.google.com/file/d/1iLxgKZL62-CO07VWSFrAAaIyEv6FmNTw/view",
+      "localPath": "assets/raw/drive/ship_0060_c.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "ships", "secondary"],
+      "useCase": "Secondary fleet element in market-route scenes."
+    },
+    {
+      "id": "1SQzQ_gcQNaFCe5JysgnI7xbp1poUFY8T",
+      "title": "motion_13818_luffy_0001.png",
+      "sourceUrl": "https://drive.google.com/file/d/1SQzQ_gcQNaFCe5JysgnI7xbp1poUFY8T/view",
+      "localPath": "assets/raw/drive/motion_13818_luffy_0001.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "sprites", "luffy", "character"],
+      "useCase": "Iconic-character strategy scene and portfolio texture."
+    },
+    {
+      "id": "1VhqLBqgh5pbbNE1fILHip9lcxgxgg3Lr",
+      "title": "motion_13851_zoro_0001.png",
+      "sourceUrl": "https://drive.google.com/file/d/1VhqLBqgh5pbbNE1fILHip9lcxgxgg3Lr/view",
+      "localPath": "assets/raw/drive/motion_13851_zoro_0001.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "sprites", "zoro", "cofounder"],
+      "useCase": "Zoro identity moment and co-founder visual cue."
+    },
+    {
+      "id": "1OPNl9r-gWYAVw_4jHo9DkCf6U9opiEVQ",
+      "title": "motion_13815_nami_0001.png",
+      "sourceUrl": "https://drive.google.com/file/d/1OPNl9r-gWYAVw_4jHo9DkCf6U9opiEVQ/view",
+      "localPath": "assets/raw/drive/motion_13815_nami_0001.png",
+      "mimeType": "image/png",
+      "tags": ["drive", "sprites", "nami", "portfolio"],
+      "useCase": "Portfolio section supporting the high-value Nami holding."
+    },
+    {
+      "id": "1XbW3kiCVP8wlZey_kM12vV35OH5iGrmW",
+      "title": "fob_20140130.ttf",
+      "sourceUrl": "https://drive.google.com/file/d/1XbW3kiCVP8wlZey_kM12vV35OH5iGrmW/view",
+      "localPath": "assets/raw/drive/fob_20140130.ttf",
+      "mimeType": "font/ttf",
+      "tags": ["drive", "ui", "font"],
+      "useCase": "Optional private-use title accent if render pipeline accepts it."
+    }
+  ]
+}

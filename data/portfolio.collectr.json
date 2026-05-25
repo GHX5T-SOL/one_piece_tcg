@@ -1,0 +1,104 @@
+{
+  "source": "Collectr logged-in portfolio products tab",
+  "captureMethod": "Read-only browser/app snapshot supplied in the active Codex context",
+  "capturedAt": "2026-05-24T18:27:04+02:00",
+  "currency": "USD",
+  "redaction": "No account, address, contact, wallet, or order-logistics details captured.",
+  "summary": {
+    "visibleHoldingCount": 8,
+    "visibleQuantity": 8,
+    "visibleMarketValueUsd": 636.2,
+    "onePieceHoldingCount": 7,
+    "otherHoldingCount": 1
+  },
+  "holdings": [
+    {
+      "title": "Nami (CS 2023 Celebration Pack)",
+      "category": "One Piece",
+      "set": "One Piece Promotion Cards",
+      "rarity": "C",
+      "cardNumber": "ST01-007",
+      "marketValueUsd": 400,
+      "quantity": 1,
+      "strategyTag": "hold",
+      "notes": "Highest visible portfolio value; keep unless market comps show a strong premium bid."
+    },
+    {
+      "title": "Zoro-Juurou (ST18-004)",
+      "category": "One Piece",
+      "set": "Starter Deck 18: PURPLE Monkey.D.Luffy",
+      "rarity": "SR",
+      "cardNumber": "ST18-004",
+      "marketValueUsd": 137.49,
+      "quantity": 1,
+      "strategyTag": "hold",
+      "notes": "Name-aligned with co-founder Zoro; high personal and thematic fit."
+    },
+    {
+      "title": "Franky (Premium Card Collection -ONE PIECE FILM RED Edition-)",
+      "category": "One Piece",
+      "set": "One Piece Promotion Cards",
+      "rarity": "UC",
+      "cardNumber": "OP01-021",
+      "marketValueUsd": 63.71,
+      "quantity": 1,
+      "strategyTag": "watch",
+      "notes": "Film Red tie-in gives recognizable IP context; sell only into a character/theme premium."
+    },
+    {
+      "title": "Monkey.D.Luffy (P-041)",
+      "category": "One Piece",
+      "set": "Starter Deck 18: PURPLE Monkey.D.Luffy",
+      "rarity": "PR",
+      "cardNumber": "P-041",
+      "marketValueUsd": 20,
+      "quantity": 1,
+      "strategyTag": "hold",
+      "notes": "Main-character promo; lower dollar base but high demand surface."
+    },
+    {
+      "title": "Crocodile (001)",
+      "category": "One Piece",
+      "set": "Super Pre-Release Starter Deck 3: The Seven Warlords of the Sea",
+      "rarity": "L",
+      "cardNumber": "ST03-001",
+      "marketValueUsd": 15,
+      "quantity": 1,
+      "strategyTag": "watch",
+      "notes": "Pre-release stamp/theme matters more than raw character demand."
+    },
+    {
+      "title": "The Dark Magicians",
+      "category": "Yu-Gi-Oh!",
+      "set": "Legendary Duelists: Magical Hero",
+      "rarity": "Ultra Rare",
+      "cardNumber": "LED6-EN001",
+      "marketValueUsd": 0,
+      "quantity": 1,
+      "strategyTag": "sell-or-trade",
+      "notes": "Non-One Piece concentration break; consider selling or trading into One Piece target list."
+    },
+    {
+      "title": "Monkey.D.Luffy - ST10-006 (3rd Anniversary Treasure Campaign Pack)",
+      "category": "One Piece",
+      "set": "One Piece Promotion Cards",
+      "rarity": "C",
+      "cardNumber": "ST10-006",
+      "marketValueUsd": 0,
+      "quantity": 1,
+      "strategyTag": "hold",
+      "notes": "Anniversary/promotional framing makes it a better long-horizon candidate than ordinary bulk."
+    },
+    {
+      "title": "Carrot (JP)",
+      "category": "One Piece",
+      "set": "PRB02 - One Piece Card the Best Vol. 2",
+      "rarity": "SR",
+      "cardNumber": "OP08-023",
+      "marketValueUsd": 0,
+      "quantity": 1,
+      "strategyTag": "watch",
+      "notes": "Japanese SR; needs liquidity and sold-comp validation before new capital follows."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T00:00:00+02:00",
+  "currency": "USD",
+  "summary": {
+    "visibleCollectrValueUsd": 636.2,
+    "openBidExposureUsd": 197.5,
+    "illustrativeAtRiskStackUsd": 833.7,
+    "ownedOnePieceCards": 7,
+    "ownedOffThesisCards": 1,
+    "inboundPhygitalsOnePieceCards": 5,
+    "courtyardBoughtNotShippedCards": 2,
+    "openCourtyardOffers": 13
+  },
+  "concentration": [
+    {
+      "bucket": "Nami visible value anchor",
+      "amountUsd": 400,
+      "shareOfVisibleCollectr": 0.6287,
+      "note": "Largest visible value; verify sold comps before treating as cash."
+    },
+    {
+      "bucket": "Zoro-Juurou",
+      "amountUsd": 137.49,
+      "shareOfVisibleCollectr": 0.2161,
+      "note": "Strong thesis fit and co-founder identity piece."
+    },
+    {
+      "bucket": "Franky",
+      "amountUsd": 63.71,
+      "shareOfVisibleCollectr": 0.1001,
+      "note": "Likely trade/sell candidate into stronger characters."
+    },
+    {
+      "bucket": "Other visible cards",
+      "amountUsd": 35,
+      "shareOfVisibleCollectr": 0.0551,
+      "note": "Lower-value filler or off-thesis positions."
+    }
+  ],
+  "projectionBands": [
+    {
+      "scenario": "Conservative",
+      "sixMonthValueUsd": 540,
+      "twelveMonthValueUsd": 575,
+      "assumption": "Thin comps, shipping friction, and modern PSA/CGC slabs clear below app values."
+    },
+    {
+      "scenario": "Base",
+      "sixMonthValueUsd": 700,
+      "twelveMonthValueUsd": 830,
+      "assumption": "Core Luffy/Zoro/Nami/Roger/Sabo cards hold value and a few bids are won under cap."
+    },
+    {
+      "scenario": "Upside",
+      "sixMonthValueUsd": 950,
+      "twelveMonthValueUsd": 1250,
+      "assumption": "OP14/EB04 Warlords attention, August 2026 anniversary demand, and strong local/liquid exits support premiums."
+    }
+  ],
+  "rules": [
+    "Sell or trade off-thesis cards before adding weak low-grade slabs.",
+    "Prefer PSA 10 or CGC 10 Pristine on modern non-trophy cards unless price is clearly low.",
+    "Do not chase duplicate PSA 9 Luffy cards without fresh sold comps.",
+    "Keep bids in one Courtyard shipment only when the incremental card is still on thesis.",
+    "Treat projections as scenario planning, not guaranteed profit."
+  ],
+  "nextReviewTriggers": [
+    "Phygitals shipment arrives and cert images are visible.",
+    "Courtyard offers expire or are accepted.",
+    "OP14/EB04 local stock and comps stabilize.",
+    "Premium Bandai / local channels open English 3rd Anniversary Set allocation.",
+    "Collectr values move more than 20 percent from current snapshot."
+  ]
+}

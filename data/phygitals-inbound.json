@@ -1,0 +1,59 @@
+{
+  "source": "Phygitals order page",
+  "captureMethod": "Read-only browser capture from logged-in tab",
+  "capturedAt": "2026-05-24T18:27:04+02:00",
+  "currency": "USD",
+  "redaction": "Shipping address, recipient name, email, phone, tracking, and order logistics omitted.",
+  "orderDateVisible": "2026-05-21 21:50",
+  "statusVisible": "paid, in transit",
+  "summary": {
+    "packagesVisible": 2,
+    "itemsVisible": 6,
+    "onePieceItems": 5,
+    "otherItems": 1
+  },
+  "items": [
+    {
+      "title": "2022 OP Starter Deck ST03 The Seven Warlords of the Sea 001 Crocodile Super Pre-Release",
+      "gradeCompany": "PSA",
+      "grade": "9",
+      "category": "One Piece",
+      "strategyTag": "watch"
+    },
+    {
+      "title": "2025 Japanese Promo 3rd Anniversary Treasure SR Monkey D. Luffy #ST10-006",
+      "gradeCompany": "CGC",
+      "grade": "10 GEM",
+      "category": "One Piece",
+      "strategyTag": "hold"
+    },
+    {
+      "title": "2024 Japanese SD Purple Monkey D. Luffy SR Zoro-Juurou #ST18-004",
+      "gradeCompany": "CGC",
+      "grade": "10 PRISTINE",
+      "category": "One Piece",
+      "strategyTag": "hold"
+    },
+    {
+      "title": "2023 Promo Premium Collection Film Red Alt Art Franky #OP01-021",
+      "gradeCompany": "CGC",
+      "grade": "10 GEM",
+      "category": "One Piece",
+      "strategyTag": "watch"
+    },
+    {
+      "title": "2023 Yu-Gi-Oh! Japanese Quarter Century Duelist Box The Dark Magicians #QCDB-JP033",
+      "gradeCompany": "CGC",
+      "grade": "10 GEM",
+      "category": "Yu-Gi-Oh!",
+      "strategyTag": "sell-or-trade"
+    },
+    {
+      "title": "2023 One Piece Promo Tournament Pack Volume 3 Nami #ST01-007",
+      "gradeCompany": "CGC",
+      "grade": "9 MINT",
+      "category": "One Piece",
+      "strategyTag": "hold"
+    }
+  ]
+}

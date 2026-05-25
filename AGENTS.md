@@ -1,0 +1,11 @@
+# Global Tooling Rules
+
+1. For any UI, UX, or visual design task, use `superdesign` first before writing implementation code unless the user explicitly says to skip design.
+2. For existing apps, keep `.superdesign/design-system.md` current and build or refresh `.superdesign/init/` context files before major design work.
+3. For research-heavy or fast-changing topics, prefer tool-backed verification with web search, browser automation, or MCPs instead of memory alone.
+4. For complex thinking, prefer structured workflows: `search-first`, `deep-research`, `iterative-retrieval`, `blueprint`, `council`, and `verification-loop`.
+5. For browser QA, prefer Playwright MCP or browser skills before making claims about UI behavior.
+6. For 3D or interactive visualization, prefer Blender MCP when Blender is available, then use Three.js or React Three Fiber for web-facing scenes.
+7. Never guess when a tool can verify the answer. Use tool calls, then summarize the verified result.
+8. Keep designs implementation-aware: accessible, responsive, and grounded in the real component or token system.
+9. After done with a task always clear all caches, rebuild, check everything for errors, fix everything, clean all code, and then upload, deploy, push, sync everything and restart, then test everything and do a full status check.

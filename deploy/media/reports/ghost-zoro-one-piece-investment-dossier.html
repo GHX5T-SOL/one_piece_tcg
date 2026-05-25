@@ -1,0 +1,886 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ghost x Zoro One Piece TCG Investment Dossier</title>
+  <style>
+    @font-face { font-family: Pirate; src: url("../assets/raw/drive/fob_20140130.ttf"); }
+    @page { size: A4 landscape; margin: 0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #071014; color: #f3efe2; font-family: Inter, Avenir Next, Helvetica Neue, Arial, sans-serif; }
+    .page { width: 297mm; height: 210mm; padding: 11mm 12mm; page-break-after: always; position: relative; overflow: hidden; background:
+      radial-gradient(circle at 90% 10%, rgba(242,193,78,.22), transparent 28%),
+      radial-gradient(circle at 10% 90%, rgba(18,199,184,.20), transparent 30%),
+      linear-gradient(135deg, rgba(7,16,20,.95), rgba(15,49,64,.92) 55%, rgba(71,20,30,.88)); }
+    .page::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: 24px 24px; pointer-events: none; }
+    .watermark-map { position: absolute; right: -20mm; top: -24mm; width: 175mm; opacity: .16; filter: saturate(1.2); transform: rotate(-6deg); }
+    .page-kicker { position: relative; z-index: 2; color: #12c7b8; font-size: 10px; font-weight: 900; letter-spacing: 1.8px; text-transform: uppercase; }
+    h1 { position: relative; z-index: 2; margin: 2mm 0 6mm; font-size: 26px; line-height: 1.02; letter-spacing: 0; max-width: 255mm; }
+    h2 { margin: 0 0 4mm; font-size: 19px; line-height: 1.12; }
+    h3 { margin: 0 0 2mm; font-size: 12px; }
+    p { margin: 0 0 3mm; font-size: 10.5px; line-height: 1.42; color: rgba(243,239,226,.9); }
+    small, .fine { font-size: 8.5px; line-height: 1.35; color: rgba(243,239,226,.66); }
+    footer { position: absolute; left: 12mm; right: 12mm; bottom: 6mm; font-size: 7.5px; color: rgba(243,239,226,.52); border-top: 1px solid rgba(243,239,226,.14); padding-top: 2mm; }
+    .page-body { position: relative; z-index: 2; }
+    .cover-grid, .two-col { display: grid; grid-template-columns: 1.05fr .95fr; gap: 9mm; align-items: stretch; }
+    .cover-copy h2 { font-size: 28px; line-height: 1.03; max-width: 130mm; }
+    .cover-copy p { font-size: 12px; max-width: 130mm; }
+    .hero-slabs { display: flex; gap: 5mm; align-items: center; justify-content: center; min-height: 115mm; }
+    .cover-note, .decision-banner { margin-top: 5mm; padding: 4mm 5mm; background: rgba(7,16,20,.62); border: 1px solid rgba(18,199,184,.28); border-radius: 5px; font-size: 10px; }
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 5mm; }
+    .metric-row.wide { grid-template-columns: repeat(4, 1fr); margin-bottom: 5mm; }
+    .metric, .thesis-card, .chart-panel, .offer-card, .rules-grid article, .channel-grid article, .plan-grid article, .ladder-row, .card-analysis { background: rgba(7,16,20,.62); border: 1px solid rgba(188,200,209,.18); border-radius: 6px; box-shadow: 0 14px 36px rgba(0,0,0,.18); }
+    .metric { padding: 4mm; min-height: 25mm; }
+    .metric span { display:block; color: rgba(243,239,226,.62); font-size: 8.5px; text-transform: uppercase; letter-spacing: .8px; }
+    .metric b { display:block; font-size: 22px; margin-top: 2mm; color: #fffaf0; font-variant-numeric: tabular-nums; }
+    .metric em { display:block; font-style: normal; color: rgba(243,239,226,.7); font-size: 8.5px; margin-top: 1mm; }
+    .exec-grid, .analytics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5mm; }
+    .analytics-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .thesis-card, .chart-panel, .rules-grid article, .channel-grid article { padding: 5mm; }
+    .thesis-card h3 { color: #f2c14e; font-size: 16px; }
+    .slab { position: relative; width: 42mm; height: 70mm; padding: 3mm; border-radius: 4mm; background: linear-gradient(145deg, #dce4e8, #7f8c96 52%, #e7eef1); color: #071014; box-shadow: 0 20px 40px rgba(0,0,0,.35); transform: perspective(900px) rotateY(-9deg) rotateX(3deg); break-inside: avoid; }
+    .slab-small { width: 28mm; height: 48mm; padding: 2mm; border-radius: 3mm; transform: perspective(800px) rotateY(-7deg) rotateX(2deg); }
+    .slab-head { height: 11mm; display: flex; align-items: center; justify-content: space-between; background: #f7f4ed; border: 1px solid rgba(7,16,20,.18); padding: 0 2mm; font-size: 7px; font-weight: 900; }
+    .slab-head span { font-size: 10px; }
+    .slab-head.cgc { border-color: #12c7b8; }
+    .slab-head.psa { border-color: #e54b4b; }
+    .slab-art { height: 43mm; margin: 2mm 0; display: grid; place-items: center; background: linear-gradient(135deg, rgba(18,199,184,.25), rgba(242,193,78,.25)); border: 1px solid rgba(7,16,20,.16); overflow: hidden; }
+    .slab-small .slab-art { height: 28mm; }
+    .slab-art img { max-width: 98%; max-height: 100%; object-fit: contain; }
+    .slab-meta b { display:block; font-size: 7.4px; line-height: 1.05; }
+    .slab-meta span { font-size: 6.8px; color: rgba(7,16,20,.68); }
+    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+    .card-analysis { display: grid; grid-template-columns: 31mm 1fr 43mm; gap: 4mm; padding: 3mm; min-height: 53mm; break-inside: avoid; }
+    .muted { color: rgba(243,239,226,.64); font-size: 8.8px; }
+    .inline-tags { display: flex; flex-wrap: wrap; gap: 1.5mm; margin: 1mm 0 2mm; }
+    .inline-tags span, .pill, .source-chip { display: inline-flex; align-items: center; border-radius: 999px; padding: 1mm 2mm; font-size: 7.5px; font-weight: 800; background: rgba(18,199,184,.14); color: #dffdfa; border: 1px solid rgba(18,199,184,.26); }
+    .pill.green { background: rgba(18,199,184,.18); color: #bffff8; }
+    .pill.yellow { background: rgba(242,193,78,.18); color: #ffe69d; border-color: rgba(242,193,78,.3); }
+    .pill.red { background: rgba(229,75,75,.18); color: #ffb0a9; border-color: rgba(229,75,75,.3); }
+    .score-row { display: grid; grid-template-columns: 22mm 1fr 8mm; gap: 2mm; align-items: center; margin: 1.4mm 0; font-size: 8px; }
+    .score-row:has(span:empty) { grid-template-columns: 1fr 8mm; }
+    .score-row span:empty { display:none; }
+    .score-track { height: 2.2mm; background: rgba(243,239,226,.14); border-radius: 999px; overflow: hidden; }
+    .score-track i { display:block; height: 100%; background: linear-gradient(90deg, #12c7b8, #8de0b0); border-radius: inherit; }
+    .score-track i.gold { background: linear-gradient(90deg, #12c7b8, #f2c14e); }
+    .score-track i.red { background: linear-gradient(90deg, #f2c14e, #e54b4b); }
+    .decision-table, .source-table { width: 100%; border-collapse: collapse; background: rgba(7,16,20,.54); border-radius: 5px; overflow: hidden; }
+    th, td { border-bottom: 1px solid rgba(243,239,226,.12); padding: 2.2mm; text-align: left; vertical-align: middle; font-size: 8.2px; line-height: 1.28; }
+    th { color: #12c7b8; text-transform: uppercase; letter-spacing: .8px; font-size: 7px; }
+    .rank { display:inline-grid; place-items:center; width: 6mm; height: 6mm; border-radius: 50%; background:#f2c14e; color:#071014; font-weight:900; }
+    .offer-hero-grid, .channel-grid, .rules-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+    .channel-grid, .rules-grid { grid-template-columns: repeat(3, 1fr); }
+    .offer-card { padding: 3mm; display: grid; justify-items: start; min-height: 66mm; }
+    .offer-card h3 { margin-top: 2mm; color: #f2c14e; }
+    .tag-cloud { display:flex; flex-wrap:wrap; gap:2mm; margin:4mm 0; }
+    .tag-cloud span { padding:2mm 3mm; background:rgba(242,193,78,.16); border:1px solid rgba(242,193,78,.28); border-radius:999px; font-weight:900; color:#fff4c2; }
+    .ladder { display:grid; gap:3mm; }
+    .ladder-row { display:grid; grid-template-columns: 26mm 1fr; align-items:center; padding:4mm; }
+    .ladder-row b { color:#f2c14e; font-size:16px; }
+    .timeline { display:grid; grid-template-columns: repeat(5, 1fr); gap:3mm; }
+    .timeline > div { background: rgba(7,16,20,.62); border: 1px solid rgba(188,200,209,.18); border-top: 3px solid #12c7b8; padding: 4mm; border-radius: 5px; min-height: 88mm; }
+    .timeline b { color:#f2c14e; font-size: 11px; }
+    .projection-grid, .plan-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 6mm; }
+    .plan-grid { grid-template-columns: repeat(3, 1fr); }
+    .plan-grid article { padding: 5mm; min-height: 62mm; }
+    .plan-grid article > b { color:#12c7b8; font-size: 42px; line-height: 1; }
+    .allocation { margin-top: 5mm; display:grid; grid-template-columns: repeat(3, 1fr); gap:4mm; }
+    .allocation div { padding:4mm; border-radius:5px; background:rgba(7,16,20,.62); border:1px solid rgba(242,193,78,.22); }
+    .allocation b { display:block; color:#f2c14e; font-size:28px; }
+    .source-table td { font-size: 8px; }
+    ol { margin: 0; padding-left: 5mm; }
+    li { margin-bottom: 2mm; font-size: 10px; line-height: 1.35; }
+  </style>
+</head>
+<body><section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Private brief / May 25, 2026</div>
+    <h1>Ghost x Zoro: One Piece TCG Investment Dossier</h1>
+    <div class="page-body"><div class="cover-grid">
+    <div class="cover-copy">
+      <h2>Build the crew. Protect the treasure. Sell into hype. Hold the legends.</h2>
+      <p>This dossier turns your Phygitals inbound cards, Courtyard bought cards, and current highest-bidder offers into an operating plan for one clean shipment, disciplined bid management, and a next-target watchlist.</p>
+      <div class="metric-row">
+        <div class="metric"><span>Visible Collectr book</span><b>$636.20</b><em>8 visible holdings</em></div>
+        <div class="metric"><span>Open Courtyard exposure</span><b>$197.50</b><em>13 highest-bidder offers</em></div>
+        <div class="metric"><span>Concentration</span><b>62.9%</b><em>Nami share of visible value</em></div>
+      </div>
+    </div>
+    <div class="hero-slabs">
+      
+    <div class="slab slab-normal">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST01-007.png" alt="Nami"></div>
+      <div class="slab-meta">
+        <b>Nami</b>
+        <span>ST01-007</span>
+      </div>
+    </div>
+  
+      
+    <div class="slab slab-normal">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>10 PRISTINE</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST18-004.png" alt="Zoro-Juurou"></div>
+      <div class="slab-meta">
+        <b>Zoro-Juurou</b>
+        <span>ST18-004</span>
+      </div>
+    </div>
+  
+      
+    <div class="slab slab-normal">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>10 GEM MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP13-120.png" alt="Sabo"></div>
+      <div class="slab-meta">
+        <b>Sabo</b>
+        <span>OP13-120</span>
+      </div>
+    </div>
+  
+    </div>
+  </div>
+  <div class="cover-note">Private/non-commercial fan and investment-education artifact. Card visuals are analytical renders using official card-list art and private-use Drive assets, not cert images unless explicitly labeled.</div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">What to do now</div>
+    <h1>Executive Decision</h1>
+    <div class="page-body"><div class="exec-grid">
+    <div class="thesis-card"><h3>Keep the shipment focused</h3><p>Build one Courtyard shipment only if it contains mostly high-conviction slabs: PSA 10 Sabo, ST29 Luffy, Roger PSA 9, Ace PSA 9, ST01/P-041 Luffy, and maybe Newgate CGC 10 Pristine. Do not let cheap low-grade slabs bloat the package.</p></div>
+    <div class="thesis-card"><h3>Cancel weak duplicates</h3><p>Cancel the CGC 8.5 Roger and CGC 8 Shiki. Cancel the PSA 9 Sabo if the PSA 10 bid remains live, because the PSA 10 is only $1 higher. Reiju and Marco are optional cheap flips, not core holdings.</p></div>
+    <div class="thesis-card"><h3>Hold the real core</h3><p>The strongest current core is Luffy anniversary/promo, Zoro-Juurou Pristine, Nami promo, and the Warlords/Crocodile anchor. Franky and Carrot are useful but are the first candidates to sell or trade into stronger names.</p></div>
+    <div class="thesis-card"><h3>Buy fewer, better names</h3><p>Next capital should target Luffy, Zoro, Nami, Roger, Ace, Sabo, Shanks, Mihawk, Boa, Crocodile, and sealed drops at MSRP/near-MSRP. Avoid weak low-grade modern slabs even when they look cheap.</p></div>
+  </div>
+  <div class="decision-banner">
+    <b>Operating rule:</b> If a slab is not iconic, scarce, grade-premium, or an obvious flip after fees, it does not belong in the next shipment.
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Why One Piece is interesting, but volatile</div>
+    <h1>Market Map</h1>
+    <div class="page-body"><div class="two-col">
+    <div>
+      <h2>Demand signals</h2>
+      <p>PSA says broad grading demand is still booming: 2 million cards graded in 2020, more than 19 million in 2025, and January-April 2026 output up 39% year over year. That is not One Piece-specific proof, but it confirms the grading infrastructure tailwind. <span class="source-chip">S1</span></p>
+      <p>PSA and Bandai continue to create exclusive One Piece promo moments. PSA says the first PSA/Bandai Straw Hat promo became the most-graded English-language One Piece card of all time, which is a strong signal that collectors treat official promos as slab-worthy. <span class="source-chip">S2</span></p>
+      <p>Bandai's card-game business is explicitly pursuing global card-game growth, regional strategy, production capacity, localization speed, and data-driven product decisions through its TCG+ ecosystem. <span class="source-chip">S4</span></p>
+    </div>
+    <div class="chart-panel">
+      <h3>Investment interpretation</h3>
+      <div class="score-row"><span>IP strength</span><div class="score-track"><i class="teal" style="width:95%"></i></div><b>95</b></div>
+      <div class="score-row"><span>Collector growth</span><div class="score-track"><i class="teal" style="width:86%"></i></div><b>86</b></div>
+      <div class="score-row"><span>Liquidity maturity vs Pokemon</span><div class="score-track"><i class="gold" style="width:48%"></i></div><b>48</b></div>
+      <div class="score-row"><span>Reprint / supply risk</span><div class="score-track"><i class="red" style="width:72%"></i></div><b>72</b></div>
+      <div class="score-row"><span>Volatility</span><div class="score-track"><i class="red" style="width:88%"></i></div><b>88</b></div>
+      <p class="fine">Important correction: this dossier does not claim One Piece grading volume is higher than Pokemon. I could verify rapid One Piece demand signals, but not a source-backed head-to-head volume win.</p>
+    </div>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Current book and exposure</div>
+    <h1>Portfolio Analytics</h1>
+    <div class="page-body"><div class="metric-row wide">
+    <div class="metric"><span>Visible Collectr value</span><b>$636.20</b><em>Before all live comp verification</em></div>
+    <div class="metric"><span>Open bid exposure</span><b>$197.50</b><em>From 2026-05-25 screenshots</em></div>
+    <div class="metric"><span>Illustrative at-risk stack</span><b>$833.70</b><em>Visible value + open bid exposure</em></div>
+    <div class="metric"><span>Inbound Phygitals</span><b>6</b><em>6 items across 2 shipments</em></div>
+  </div>
+  <div class="analytics-grid">
+    <div class="chart-panel">
+      <h3>Visible value concentration</h3>
+      <div class="score-row"><span>Nami</span><div class="score-track"><i class="teal" style="width:63%"></i></div><b>63</b></div>
+      <div class="score-row"><span>Zoro-Juurou</span><div class="score-track"><i class="gold" style="width:22%"></i></div><b>22</b></div>
+      <div class="score-row"><span>Franky</span><div class="score-track"><i class="gold" style="width:10%"></i></div><b>10</b></div>
+      <div class="score-row"><span>Other visible</span><div class="score-track"><i class="red" style="width:5%"></i></div><b>5</b></div>
+      <p>The visible book is concentrated, not diversified. That is acceptable early, but it means comp verification on Nami and Zoro matters more than adding random cheap slabs.</p>
+    </div>
+    <div class="chart-panel">
+      <h3>Open offer mix</h3>
+      <div class="score-row"><span>PSA exposure</span><div class="score-track"><i class="teal" style="width:70%"></i></div><b>70</b></div>
+      <div class="score-row"><span>CGC exposure</span><div class="score-track"><i class="gold" style="width:30%"></i></div><b>30</b></div>
+      <div class="score-row"><span>Keep / likely keep</span><div class="score-track"><i class="teal" style="width:72%"></i></div><b>72</b></div>
+      <div class="score-row"><span>Cancel / optional</span><div class="score-track"><i class="red" style="width:28%"></i></div><b>28</b></div>
+      <p>7 PSA bids and 6 CGC bids. The mix is fine only if the CGC pieces are pristine, iconic, or extremely cheap flips.</p>
+    </div>
+    <div class="chart-panel">
+      <h3>Character thesis</h3>
+      <div class="tag-cloud">
+        <span>Luffy</span><span>Zoro</span><span>Nami</span><span>Roger</span><span>Ace</span><span>Sabo</span><span>Crocodile</span><span>Mihawk</span><span>Boa</span><span>Shanks</span>
+      </div>
+      <p>The best version of this portfolio is not "many cheap One Piece slabs." It is a named-character thesis built around franchise gravity and scarce/event/promo variants.</p>
+    </div>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Phygitals inbound and Courtyard bought</div>
+    <h1>Owned Cards: Keep, Sell, Upgrade</h1>
+    <div class="page-body"><div class="card-grid">
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST03-001.png" alt="Crocodile"></div>
+      <div class="slab-meta">
+        <b>Crocodile</b>
+        <span>ST03-001</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Crocodile</h3>
+        <p class="muted">2022 ST03 The Seven Warlords of the Sea #001 Crocodile Super Pre-Release</p>
+        <div class="inline-tags"><span>Phygitals inbound</span><span>PSA 9 MINT</span><span>HOLD / WATCH</span></div>
+        <p>Early Seven Warlords leader with Super Pre-Release framing. This matters more as a theme/era piece than as a raw power play. It becomes more relevant around OP-14 Warlords attention.</p>
+        <p><b>Risk:</b> PSA 9 caps upside versus PSA 10; Crocodile demand is strong but below Luffy/Zoro/Nami/Roger.</p>
+        <p><b>Trigger:</b> Sell only into a Warlords/Crocodile hype premium or if you can upgrade to PSA 10 without overpaying.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="gold" style="width:74%"></i></div><b>74</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="gold" style="width:58%"></i></div><b>58</b></div>
+      </div>
+    </article>
+  
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>10 GEM</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST10-006.png" alt="Monkey.D.Luffy"></div>
+      <div class="slab-meta">
+        <b>Monkey.D.Luffy</b>
+        <span>ST10-006</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Monkey.D.Luffy</h3>
+        <p class="muted">2025 Japanese Promo 3rd Anniversary Treasure SR Luffy #ST10-006</p>
+        <div class="inline-tags"><span>Phygitals inbound</span><span>CGC 10 GEM</span><span>CORE HOLD</span></div>
+        <p>Luffy plus anniversary/promo context is the strongest fit in the current collection. Main-character demand gives this a better floor than many cheap modern slabs.</p>
+        <p><b>Risk:</b> Japanese modern promos can be reprinted or repriced quickly; CGC 10 does not always command PSA 10 liquidity.</p>
+        <p><b>Trigger:</b> Hold unless a PSA 10 comp premium appears large enough to justify selling or cross-grading risk.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="teal" style="width:90%"></i></div><b>90</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="teal" style="width:78%"></i></div><b>78</b></div>
+      </div>
+    </article>
+  
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>10 PRISTINE</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST18-004.png" alt="Zoro-Juurou"></div>
+      <div class="slab-meta">
+        <b>Zoro-Juurou</b>
+        <span>ST18-004</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Zoro-Juurou</h3>
+        <p class="muted">2024 Japanese SD Purple Luffy SR Zoro-Juurou #ST18-004</p>
+        <div class="inline-tags"><span>Phygitals inbound</span><span>CGC 10 PRISTINE</span><span>CORE HOLD</span></div>
+        <p>Personal brand fit for Zoro, strong character, Pristine label, and purple Straw Hat deck relevance. This is a collection identity card.</p>
+        <p><b>Risk:</b> Starter deck cards are more supply-sensitive than event promos or top chase rarities.</p>
+        <p><b>Trigger:</b> Hold through shipment; consider selling only if Courtyard/local buyers pay a strong pristine-label premium.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="teal" style="width:86%"></i></div><b>86</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="gold" style="width:70%"></i></div><b>70</b></div>
+      </div>
+    </article>
+  
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>10 GEM</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP01-021.png" alt="Franky"></div>
+      <div class="slab-meta">
+        <b>Franky</b>
+        <span>OP01-021</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Franky</h3>
+        <p class="muted">2023 Premium Collection Film Red Alt Art Franky #OP01-021</p>
+        <div class="inline-tags"><span>Phygitals inbound</span><span>CGC 10 GEM</span><span>WATCH / SELL INTO PREMIUM</span></div>
+        <p>Nice Film Red tie-in and high grade. Good visual card, but Franky is not a top liquidity character.</p>
+        <p><b>Risk:</b> Lower character liquidity; easy to hold too long if no specific buyer appears.</p>
+        <p><b>Trigger:</b> List or trade if it can fund Luffy/Zoro/Nami/Roger/Ace/Sabo upgrades.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="gold" style="width:62%"></i></div><b>62</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="red" style="width:48%"></i></div><b>48</b></div>
+      </div>
+    </article>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Nami, Courtyard purchases, and off-thesis cards</div>
+    <h1>Owned Cards: Concentration Notes</h1>
+    <div class="page-body"><div class="card-grid">
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST01-007.png" alt="Nami"></div>
+      <div class="slab-meta">
+        <b>Nami</b>
+        <span>ST01-007</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Nami</h3>
+        <p class="muted">2023 Tournament Pack Vol. 3 Nami #ST01-007</p>
+        <div class="inline-tags"><span>Phygitals inbound / Collectr</span><span>CGC 9 MINT</span><span>HOLD, VERIFY COMPS</span></div>
+        <p>Nami is one of the most liquid non-Luffy One Piece characters and this is the visible-value anchor of the book. The portfolio is currently concentrated around this position.</p>
+        <p><b>Risk:</b> CGC 9 is not a premium grade; if Collectr value is stale or thin, do not treat the $400 as instantly realizable.</p>
+        <p><b>Trigger:</b> Verify sold comps after arrival. Sell only if a buyer pays close to high comps, or upgrade into PSA 10/CGC 10 version.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="teal" style="width:84%"></i></div><b>84</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="teal" style="width:82%"></i></div><b>82</b></div>
+      </div>
+    </article>
+  
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/P-041.png" alt="Monkey.D.Luffy"></div>
+      <div class="slab-meta">
+        <b>Monkey.D.Luffy</b>
+        <span>P-041</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Monkey.D.Luffy</h3>
+        <p class="muted">2024 ST18 Purple Luffy #041 Monkey D. Luffy</p>
+        <div class="inline-tags"><span>Courtyard bought / not shipped</span><span>PSA 9 MINT</span><span>KEEP AS SHIPMENT FILLER</span></div>
+        <p>Low-dollar main-character slab. Not a trophy, but Luffy liquidity is useful when building a bigger Courtyard shipment.</p>
+        <p><b>Risk:</b> PSA 9 modern starter/promo cards can be common; do not average up heavily.</p>
+        <p><b>Trigger:</b> Keep if shipping anyway; sell first if it blocks capital for PSA 10 Sabo/Roger/Ace.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="gold" style="width:68%"></i></div><b>68</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="gold" style="width:74%"></i></div><b>74</b></div>
+      </div>
+    </article>
+  
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>10 GEM MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP08-023.png" alt="Carrot"></div>
+      <div class="slab-meta">
+        <b>Carrot</b>
+        <span>OP08-023</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>Carrot</h3>
+        <p class="muted">2024 OP08 Two Legends #023 Carrot</p>
+        <div class="inline-tags"><span>Courtyard bought / not shipped</span><span>PSA 10 GEM MINT</span><span>SELL / TRADE IF NEEDED</span></div>
+        <p>PSA 10 is good, and Carrot has fans, but she is not core to the Ghost x Zoro Luffy/Warlords/Roger/Ace/Sabo thesis.</p>
+        <p><b>Risk:</b> May sit longer than main-character slabs. Good grade does not equal strong demand.</p>
+        <p><b>Trigger:</b> Use as first quick sale/trade if you need room or funds before shipping.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="gold" style="width:52%"></i></div><b>52</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="red" style="width:45%"></i></div><b>45</b></div>
+      </div>
+    </article>
+  
+    <article class="card-analysis">
+      
+    <div class="slab slab-small">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>10 GEM</span>
+      </div>
+      <div class="slab-art"><img src="../assets/raw/drive/motion_13818_luffy_0001.png" alt="The Dark Magicians"></div>
+      <div class="slab-meta">
+        <b>The Dark Magicians</b>
+        <span>LED6-EN001</span>
+      </div>
+    </div>
+  
+      <div>
+        <h3>The Dark Magicians</h3>
+        <p class="muted">Yu-Gi-Oh! The Dark Magicians</p>
+        <div class="inline-tags"><span>Collectr visible</span><span>CGC 10 GEM</span><span>SELL / TRADE</span></div>
+        <p>Not a bad card, but it dilutes a One Piece-focused thesis. Use it as trade fuel.</p>
+        <p><b>Risk:</b> Keeping mixed-IP inventory makes the strategy harder to track.</p>
+        <p><b>Trigger:</b> Convert to One Piece sealed, Luffy/Zoro/Nami/Roger/Ace/Sabo slabs, or cash reserve.</p>
+      </div>
+      <div class="score-block">
+        <div class="score-row"><span>Conviction</span><div class="score-track"><i class="gold" style="width:35%"></i></div><b>35</b></div>
+        <div class="score-row"><span>Liquidity</span><div class="score-track"><i class="gold" style="width:55%"></i></div><b>55</b></div>
+      </div>
+    </article>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Highest-bidder screenshot state</div>
+    <h1>Offer Book Decision Matrix</h1>
+    <div class="page-body"><table class="decision-table">
+    <thead><tr><th>#</th><th>Card</th><th>Bid</th><th>Action</th><th>Reason</th><th>Score</th></tr></thead>
+    <tbody>
+    <tr>
+      <td><span class="rank">1</span></td>
+      <td><b>Sabo</b><br><small>PSA 10 GEM MINT</small></td>
+      <td>$19</td>
+      <td><span class="pill green">KEEP - TOP BID</span></td>
+      <td>Best risk/reward in the visible offer book. OP-13 anniversary context, popular character, PSA 10, tiny bid size.<br><small>Keep up to roughly the low $30s unless live comps say otherwise.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="teal" style="width:93%"></i></div><b>93</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">2</span></td>
+      <td><b>Monkey.D.Luffy B&W Alt</b><br><small>PSA 9 MINT</small></td>
+      <td>$25</td>
+      <td><span class="pill green">KEEP</span></td>
+      <td>Egghead Luffy and ST-29 are current-cycle demand. PSA 9 is acceptable at the current bid if you keep discipline.<br><small>Do not chase far above $30-$35 without verified comps.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="teal" style="width:88%"></i></div><b>88</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">3</span></td>
+      <td><b>Gol.D.Roger</b><br><small>PSA 9 MINT</small></td>
+      <td>$23</td>
+      <td><span class="pill green">KEEP</span></td>
+      <td>Roger is a franchise apex character, and the card text/identity is iconic. PSA 9 is fine at low cost.<br><small>Keep PSA 9; cancel lower-grade duplicate.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="teal" style="width:86%"></i></div><b>86</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">4</span></td>
+      <td><b>Portgas D. Ace</b><br><small>PSA 9 MINT</small></td>
+      <td>$18</td>
+      <td><span class="pill green">KEEP</span></td>
+      <td>Ace has emotional collector demand, pairs with Luffy/Sabo thesis, and the bid is small.<br><small>Hold if won; sell only into fast premium.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="teal" style="width:83%"></i></div><b>83</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">5</span></td>
+      <td><b>Monkey D. Luffy</b><br><small>PSA 9 MINT</small></td>
+      <td>$19</td>
+      <td><span class="pill green">KEEP IF BATCHING</span></td>
+      <td>Early starter Luffy is on-thesis, but not rare enough to become a big position.<br><small>Keep if shipment quality stays high; do not duplicate.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="gold" style="width:75%"></i></div><b>75</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">6</span></td>
+      <td><b>Edward Newgate</b><br><small>CGC 10 PRISTINE</small></td>
+      <td>$18.50</td>
+      <td><span class="pill green">KEEP IF UNDER CAP</span></td>
+      <td>Whitebeard is iconic and pristine label helps. CGC liquidity is lower than PSA.<br><small>Keep at current bid; do not overextend.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="gold" style="width:73%"></i></div><b>73</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">7</span></td>
+      <td><b>Monkey D. Luffy PRB01</b><br><small>PSA 9 MINT</small></td>
+      <td>$17</td>
+      <td><span class="pill green">KEEP LOW CAP</span></td>
+      <td>Luffy is liquid, but PRB reprint context reduces scarcity. Fine only because the bid is low.<br><small>Flip candidate if won and comps are thin.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="gold" style="width:70%"></i></div><b>70</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">8</span></td>
+      <td><b>Marshall D. Teach</b><br><small>CGC 10 GEM</small></td>
+      <td>$8</td>
+      <td><span class="pill yellow">OPTIONAL KEEP</span></td>
+      <td>Blackbeard is a real villain thesis, and $8 is low. But it is still a CGC 10 non-trophy.<br><small>Keep only if you want a villain slot.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="gold" style="width:64%"></i></div><b>64</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">9</span></td>
+      <td><b>Vinsmoke Reiju</b><br><small>CGC 10 GEM</small></td>
+      <td>$8</td>
+      <td><span class="pill red">OPTIONAL CANCEL</span></td>
+      <td>Popular character and low bid, but not aligned with the current crew thesis.<br><small>Cancel if you want a cleaner shipment.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="red" style="width:58%"></i></div><b>58</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">10</span></td>
+      <td><b>Marco</b><br><small>CGC 10 PRISTINE</small></td>
+      <td>$12</td>
+      <td><span class="pill red">OPTIONAL CANCEL</span></td>
+      <td>Pristine label helps, but Marco is not a first-wave capital target for this portfolio.<br><small>Keep only as a cheap flip.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="red" style="width:57%"></i></div><b>57</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">11</span></td>
+      <td><b>Sabo</b><br><small>PSA 9 MINT</small></td>
+      <td>$18</td>
+      <td><span class="pill red">CANCEL IF PSA 10 REMAINS LIVE</span></td>
+      <td>Duplicate exposure. The PSA 10 bid is only $1 higher, so the PSA 9 is inefficient unless both are deliberate ladder bids.<br><small>Cancel before capital locks if you can.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="red" style="width:54%"></i></div><b>54</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">12</span></td>
+      <td><b>Gol.D.Roger</b><br><small>CGC 8.5</small></td>
+      <td>$6</td>
+      <td><span class="pill red">CANCEL</span></td>
+      <td>Low grade and duplicate subject. Cheap does not mean investable.<br><small>Avoid low-grade modern slabs unless they are iconic scarce promos.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="red" style="width:32%"></i></div><b>32</b></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class="rank">13</span></td>
+      <td><b>Shiki</b><br><small>CGC 8</small></td>
+      <td>$6</td>
+      <td><span class="pill red">CANCEL</span></td>
+      <td>Old pre-Bandai curiosity, low grade, weak fit with the modern One Piece TCG thesis.<br><small>Cancel and keep the slot for Luffy/Roger/Ace/Sabo/Nami/Zoro.</small></td>
+      <td><div class="score-row"><span></span><div class="score-track"><i class="red" style="width:28%"></i></div><b>28</b></div></td>
+    </tr>
+  </tbody>
+  </table></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">What to keep if the bids hit</div>
+    <h1>Top Offer Targets</h1>
+    <div class="page-body"><div class="offer-hero-grid">
+    
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>10 GEM MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP13-120.png" alt="Sabo"></div>
+      <div class="slab-meta">
+        <b>Sabo</b>
+        <span>OP13-120</span>
+      </div>
+    </div>
+  
+        <h3>Sabo</h3>
+        <b>$19 - KEEP - TOP BID</b>
+        <p>Best risk/reward in the visible offer book. OP-13 anniversary context, popular character, PSA 10, tiny bid size.</p>
+      </article>
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST29-001.png" alt="Monkey.D.Luffy B&W Alt"></div>
+      <div class="slab-meta">
+        <b>Monkey.D.Luffy B&W Alt</b>
+        <span>ST29-001</span>
+      </div>
+    </div>
+  
+        <h3>Monkey.D.Luffy B&W Alt</h3>
+        <b>$25 - KEEP</b>
+        <p>Egghead Luffy and ST-29 are current-cycle demand. PSA 9 is acceptable at the current bid if you keep discipline.</p>
+      </article>
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP09-118.png" alt="Gol.D.Roger"></div>
+      <div class="slab-meta">
+        <b>Gol.D.Roger</b>
+        <span>OP09-118</span>
+      </div>
+    </div>
+  
+        <h3>Gol.D.Roger</h3>
+        <b>$23 - KEEP</b>
+        <p>Roger is a franchise apex character, and the card text/identity is iconic. PSA 9 is fine at low cost.</p>
+      </article>
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP07-119.png" alt="Portgas D. Ace"></div>
+      <div class="slab-meta">
+        <b>Portgas D. Ace</b>
+        <span>OP07-119</span>
+      </div>
+    </div>
+  
+        <h3>Portgas D. Ace</h3>
+        <b>$18 - KEEP</b>
+        <p>Ace has emotional collector demand, pairs with Luffy/Sabo thesis, and the bid is small.</p>
+      </article>
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/ST01-001.png" alt="Monkey D. Luffy"></div>
+      <div class="slab-meta">
+        <b>Monkey D. Luffy</b>
+        <span>ST01-001</span>
+      </div>
+    </div>
+  
+        <h3>Monkey D. Luffy</h3>
+        <b>$19 - KEEP IF BATCHING</b>
+        <p>Early starter Luffy is on-thesis, but not rare enough to become a big position.</p>
+      </article>
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head cgc">
+        <b>CGC</b>
+        <span>10 PRISTINE</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP13-042.png" alt="Edward Newgate"></div>
+      <div class="slab-meta">
+        <b>Edward Newgate</b>
+        <span>OP13-042</span>
+      </div>
+    </div>
+  
+        <h3>Edward Newgate</h3>
+        <b>$18.50 - KEEP IF UNDER CAP</b>
+        <p>Whitebeard is iconic and pristine label helps. CGC liquidity is lower than PSA.</p>
+      </article>
+      <article class="offer-card">
+        
+    <div class="slab slab-small">
+      <div class="slab-head psa">
+        <b>PSA</b>
+        <span>9 MINT</span>
+      </div>
+      <div class="slab-art"><img src="../assets/cards/official/OP05-119.png" alt="Monkey D. Luffy PRB01"></div>
+      <div class="slab-meta">
+        <b>Monkey D. Luffy PRB01</b>
+        <span>OP05-119</span>
+      </div>
+    </div>
+  
+        <h3>Monkey D. Luffy PRB01</h3>
+        <b>$17 - KEEP LOW CAP</b>
+        <p>Luffy is liquid, but PRB reprint context reduces scarcity. Fine only because the bid is low.</p>
+      </article>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Where Grok was too generous</div>
+    <h1>Cancel / Optional Bids</h1>
+    <div class="page-body"><div class="two-col">
+    <div class="chart-panel">
+      <h2>Immediate cancels</h2>
+      <p><b>CGC 8.5 Roger:</b> cancel. You already have the PSA 9 Roger bid. Low grade modern slabs are hard to move unless the card is truly scarce.</p>
+      <p><b>CGC 8 Shiki:</b> cancel. Interesting older curiosity, but not part of the modern Bandai One Piece TCG lane and not high grade.</p>
+      <p><b>PSA 9 Sabo:</b> cancel if PSA 10 remains live. A $1 gap between 9 and 10 makes the 9 inefficient.</p>
+    </div>
+    <div class="chart-panel">
+      <h2>Optional cheap flips</h2>
+      <p><b>Reiju CGC 10:</b> fine at $8 if you want a very cheap female-character flip, but not core.</p>
+      <p><b>Marco CGC 10 Pristine:</b> okay at $12, but only if you can keep the shipment focused.</p>
+      <p><b>Marshall D. Teach CGC 10:</b> optional keep because Blackbeard has villain gravity and the bid is only $8.</p>
+    </div>
+  </div>
+  <div class="decision-banner"><b>Grok correction:</b> Crocodile ST03-001 is a blue Seven Warlords leader on the official card list, not a black-deck thesis. The investment thesis is early Warlords/pre-release/theme, not black deck playability.</div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Capital should climb this ladder</div>
+    <h1>Buy Next: Target Ladder</h1>
+    <div class="page-body"><div class="ladder">
+    <div class="ladder-row"><b>Tier 1</b><p>Luffy, Zoro, Nami, Roger, Ace, Sabo PSA 10 / BGS 10 / CGC Pristine with event, promo, manga, super alt, serial, or early-set scarcity.</p></div><div class="ladder-row"><b>Tier 2</b><p>Warlords thesis around OP-14: Mihawk, Crocodile, Boa Hancock, Doflamingo, Kuma, Jinbe where art/rarity is strong and supply is not obvious.</p></div><div class="ladder-row"><b>Tier 3</b><p>Sealed at MSRP or near MSRP: OP-14, OP-15, OP-16, OP-17, starter waves, and premium collections. Sell early hype, hold sealed only when entry is disciplined.</p></div><div class="ladder-row"><b>Tier 4</b><p>Cheap slabs only when they are PSA 10/CGC Pristine, iconic character, or a very obvious local flip. Otherwise pass.</p></div><div class="ladder-row"><b>Avoid</b><p>Low-grade modern slabs, duplicate lower-grade versions, off-theme curiosities, stale Japanese reprints with no scarcity edge, and any slab where fees/shipping erase upside.</p></div>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">What to watch through August</div>
+    <h1>2026 Drop Calendar</h1>
+    <div class="page-body"><div class="timeline">
+    <div><b>Jan 16, 2026</b><h3>OP-14 / EB-04 The Azure Sea's Seven</h3><p>Official English product: Seven Warlords theme, Mihawk/Crocodile, 163+2 card types, $4.99 MSRP. This directly supports your Crocodile/Warlords lane. <span class="source-chip">S5</span></p></div>
+    <div><b>Jan 16, 2026</b><h3>ST-29 Egghead</h3><p>Official English starter: Egghead Luffy leader, $16.99 MSRP. This supports your ST29 Luffy bid. <span class="source-chip">S6</span></p></div>
+    <div><b>Jul 11, 2026</b><h3>ST31-ST36 starter wave</h3><p>TCG Portal lists Luffy, Zoro, Kuzan, Katakuri, Sabo, and Kid starter decks for July 11 in Japan. Use as preorder intelligence, not final English proof. <span class="source-chip">S7</span></p></div>
+    <div><b>Jul 31, 2026</b><h3>Live Action Edition vol.2 premium collections</h3><p>TCG Portal lists Straw Hat Crew and Baroque Works premium collections. Watch for exclusive art and low-print promo behavior. <span class="source-chip">S7</span></p></div>
+    <div><b>Aug 22, 2026</b><h3>OP-17 The World's Strongest Warriors</h3><p>TCG Portal lists OP-17 for August 22 in Japan; retailers/distributors are also surfacing August 2026 preorder pages. Treat as high-priority watchlist, but verify official Bandai English details before heavy capital.</p></div>
+  </div>
+  <div class="decision-banner"><b>OP-17 plan:</b> preorder sealed only near MSRP. For singles, wait 2-4 weeks after release unless a truly scarce chase appears at a mispriced level.</div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Cape Town plus online channels</div>
+    <h1>Where to Buy and Sell</h1>
+    <div class="page-body"><div class="channel-grid">
+    <article><h3>Courtyard</h3><p>Best for slab discovery, offers, buyback/testing liquidity, and one combined shipment. Use it for PSA/CGC inventory, but prune weak bids before shipping.</p></article><article><h3>Phygitals</h3><p>Good for inbound sealed/slab opportunities and marketplace browsing. Keep logistics redacted; verify each cert and comps after arrival.</p></article><article><h3>TCGplayer</h3><p>Best US singles/sealed marketplace and seller tool ecosystem. Strong comp source, less ideal for SA fulfillment without logistics planning. S8</p></article><article><h3>Cardmarket</h3><p>Best EU comp check and cross-market reference, especially for One Piece best sellers and lower-priced singles. S9</p></article><article><h3>eBay / PSA Vault</h3><p>Best broad slab liquidity. Use sold listings and vault fees before moving expensive PSA slabs. S10</p></article><article><h3>Collect-a-Con Cape Town</h3><p>Bring a small graded showcase, comp sheets, QR watchlist, and cash discipline. Best for networking and local buyer discovery. S11</p></article><article><h3>Card Cache / TCGXchange / Wizards</h3><p>Local stock and event checks. Confirm One Piece inventory, preorder windows, and whether they buy/trade graded slabs. S12/S13/S14</p></article>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">One big Courtyard shipment without junk</div>
+    <h1>Shipment Strategy</h1>
+    <div class="page-body"><div class="two-col">
+    <div class="chart-panel">
+      <h2>Ship only if the batch clears this filter</h2>
+      <ol>
+        <li>At least 5 high-conviction slabs.</li>
+        <li>At least 70% of shipment value in PSA 9/10 or CGC Pristine/Gem core characters.</li>
+        <li>No low-grade duplicate slabs unless they are true scarce promos.</li>
+        <li>Every optional cheap slab has an exit route: local flip, eBay comp, or trade target.</li>
+      </ol>
+    </div>
+    <div class="chart-panel">
+      <h2>Proposed ship list if won</h2>
+      <p>PSA 10 Sabo, ST29 Luffy PSA 9, Roger PSA 9, Ace PSA 9, ST01 Luffy PSA 9, P-041 Luffy PSA 9, Newgate CGC 10 Pristine, optional Teach CGC 10.</p>
+      <p><b>Leave out:</b> Shiki CGC 8, Roger CGC 8.5, duplicate Sabo PSA 9 unless it is part of a deliberate pair trade.</p>
+    </div>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Scenario analysis, not guarantees</div>
+    <h1>Projection Bands</h1>
+    <div class="page-body"><div class="projection-grid">
+    <div class="chart-panel">
+      <h3>Visible book only: $636.20</h3>
+      <div class="score-row"><span>Conservative 0-10%</span><div class="score-track"><i class="gold" style="width:35%"></i></div><b>35</b></div>
+      <p>$636.20 to $699.82</p>
+      <div class="score-row"><span>Base 10-25%</span><div class="score-track"><i class="teal" style="width:58%"></i></div><b>58</b></div>
+      <p>$699.82 to $795.25</p>
+      <div class="score-row"><span>Upside 25-45%</span><div class="score-track"><i class="teal" style="width:86%"></i></div><b>86</b></div>
+      <p>$795.25 to $922.49</p>
+    </div>
+    <div class="chart-panel">
+      <h3>Visible + open bid exposure: $833.70</h3>
+      <div class="score-row"><span>Drawdown -15% to +5%</span><div class="score-track"><i class="red" style="width:28%"></i></div><b>28</b></div>
+      <p>$708.65 to $875.39</p>
+      <div class="score-row"><span>Base +8% to +20%</span><div class="score-track"><i class="teal" style="width:60%"></i></div><b>60</b></div>
+      <p>$900.40 to $1,000.44</p>
+      <div class="score-row"><span>Upside +25% to +45%</span><div class="score-track"><i class="teal" style="width:86%"></i></div><b>86</b></div>
+      <p>$1,042.13 to $1,208.87</p>
+    </div>
+  </div>
+  <p class="fine">These are educational operating scenarios based on visible Collectr value and open offer exposure. They are not purchase-cost ROI, liquidation value, or guaranteed returns. Actual profit depends on buy price, fees, shipping, FX, platform liquidity, grading-company premiums, and timing.</p></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Rules that protect the treasure</div>
+    <h1>Risk Controls</h1>
+    <div class="page-body"><div class="rules-grid">
+    <article><h3>Comp before shipping</h3><p>After arrival, photograph each slab, verify cert, check at least 3 sold comps or active low asks, then decide hold/sell/trade.</p></article><article><h3>PSA premium discipline</h3><p>Prefer PSA 10 for maximum liquidity; buy CGC only when the label is Pristine/Gem, the price is clearly discounted, or the character is core.</p></article><article><h3>No low-grade traps</h3><p>CGC 8/8.5 and PSA 8/9 modern slabs are not bargains by default. The lower the grade, the more iconic/scarce the card must be.</p></article><article><h3>Reprint risk</h3><p>Modern Bandai supply can expand quickly. Promos, exclusives, and event cards can still be reissued or outshined.</p></article><article><h3>Cash reserve</h3><p>Keep 15%-20% cash for OP-17, local event buys, distress deals, and shipping/fee surprises.</p></article><article><h3>Exit plan</h3><p>Every card should have an exit: Courtyard buyback, eBay/PSA Vault, Cardmarket comp, local Cape Town buyer, or trade-up target.</p></article>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">What was right and what changes</div>
+    <h1>Grok Audit</h1>
+    <div class="page-body"><div class="two-col">
+    <div class="chart-panel">
+      <h2>Grok was right on</h2>
+      <p>Strong start around Luffy/Zoro/Nami/Crocodile, hold the best promos, keep the best Sabo/Luffy/Roger/Ace bids, and avoid spreading too thin.</p>
+      <p>It was also right that Carrot is less synergistic and that low-grade/duplicate Roger exposure should be trimmed.</p>
+    </div>
+    <div class="chart-panel">
+      <h2>Where I tighten it</h2>
+      <p>Do not keep both Sabo bids by default. The PSA 10 is only $1 more, so PSA 9 is inefficient unless intentionally laddering.</p>
+      <p>Crocodile ST03 is blue Warlords leader, not black-deck support. Treat it as Warlords/pre-release collector thesis.</p>
+      <p>OP-14 is already January 2026 in English; the August 2026 watch item appears to be OP-17, but official English details need another confirmation pass.</p>
+    </div>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Operating map</div>
+    <h1>30 / 60 / 90 Day Plan</h1>
+    <div class="page-body"><div class="plan-grid">
+    <article><b>30</b><h3>Receive and verify</h3><p>Photograph every Phygitals slab, verify certs, update Collectr with grade/company, record purchase basis, and check sold comps before listing anything.</p></article>
+    <article><b>60</b><h3>Prune and batch</h3><p>Cancel weak bids, win only top offers, decide one Courtyard shipment, and test one local/eBay/Courtyard sale for liquidity data.</p></article>
+    <article><b>90</b><h3>Rebalance</h3><p>Move off-thesis cards into core names or sealed. Build OP-17 preorder watchlist and attend/local-check Cape Town seller channels.</p></article>
+  </div>
+  <div class="allocation">
+    <div><b>60%</b><span>Core holds: Luffy, Zoro, Nami, Roger, Ace, Sabo, Shanks, Warlords trophy cards</span></div>
+    <div><b>25%</b><span>Flips: duplicate slabs, cheap CGC 10s, hype-cycle pieces, off-thesis inventory</span></div>
+    <div><b>15%</b><span>Cash: OP-17, local events, shipping/fees, distress buys</span></div>
+  </div></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section>
+<section class="page">
+    <img class="watermark-map" src="../assets/raw/drive/areamap_bg_0000_t.png" alt="">
+    <div class="page-kicker">Evidence and confidence</div>
+    <h1>Source Ledger</h1>
+    <div class="page-body"><table class="source-table">
+    <thead><tr><th>ID</th><th>Source</th><th>Use in dossier</th></tr></thead>
+    <tbody><tr><td>S1</td><td><b>PSA infrastructure demand</b><br><small>https://www.psacard.com/articles/articleview/15715/200-million-investment-grading-experience</small></td><td>PSA says it graded 2M cards in 2020 and more than 19M in 2025; Jan-Apr 2026 output was up 39% year over year.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S2</td><td><b>PSA x Bandai promo signal</b><br><small>https://www.psacard.com/articles/articleview/15211/ahoy-psa-x-bandai-partner-on-third-exclusive-one-piece-promo</small></td><td>PSA says the first PSA/Bandai Straw Hat promo became the most-graded English One Piece card of all time.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S3</td><td><b>PSA One Piece basics</b><br><small>https://www.psacard.com/info/tcg/one-piece-collecting-basics-guide</small></td><td>Useful for set-code, rarity, promo, franchise, and modern Bandai TCG context.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S4</td><td><b>Bandai card business growth</b><br><small>https://www.bandainamco.co.jp/en/ir/library/feature02_01_2025.html</small></td><td>Bandai discusses global card-game growth, regional strategy, supply capacity, localization, TCG+ data, and fan demand.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S5</td><td><b>OP-14 The Azure Sea's Seven</b><br><small>https://en.onepiece-cardgame.com/products/boosters/op14-eb04.php</small></td><td>Official page: Seven Warlords theme, January 16, 2026 English release, MSRP $4.99, 163+2 card types.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S6</td><td><b>ST-29 Egghead</b><br><small>https://en.onepiece-cardgame.com/products/decks/st29.php</small></td><td>Official page: Egghead starter, January 16, 2026 release, $16.99 MSRP, Luffy leader, Rush: Character and Unblockable.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S7</td><td><b>TCG Portal release tracker</b><br><small>https://tcg-portal.jp/onepiece/releases</small></td><td>Non-official release tracker: ST31-ST36 July 11, 2026; OP-17 listed for August 22, 2026 in Japan. Treat as schedule intelligence until Bandai English page appears.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S8</td><td><b>TCGplayer sellers</b><br><small>https://seller.tcgplayer.com/</small></td><td>Seller channel with global reach, listing/pricing/fulfillment tools, and marketplace trust layer.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S9</td><td><b>Cardmarket One Piece</b><br><small>https://www.cardmarket.com/en/OnePiece</small></td><td>European market surface for One Piece comps, trends, best sellers, singles, sealed, and cross-market arbitrage checks.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S10</td><td><b>eBay Vault fees</b><br><small>https://pages.ebay.com/vault/fees/</small></td><td>Vault/fee source to check before moving higher-value graded slabs into eBay fulfillment.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S11</td><td><b>Collect-a-Con Cape Town</b><br><small>https://www.collectacon.co.za/</small></td><td>Local event surface for in-person buying, selling, trade, auction, and vendor networking.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S12</td><td><b>Card Cache Cape Town</b><br><small>https://cardcache.co.za/pages/about</small></td><td>Cape Town store signal for TCG singles, sealed, and local liquidity checks.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S13</td><td><b>TCGXchange South Africa</b><br><small>https://tcgxchange.co.za/</small></td><td>South African online TCG store surface for stock, preorder, and local pricing comparison.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S14</td><td><b>Wizards Books and Games</b><br><small>https://www.wizardsworld.co.za/</small></td><td>Local hobby-store surface to verify events, stock, and buy/sell opportunities.<br><small>Retrieved 2026-05-25</small></td></tr><tr><td>S15</td><td><b>Official One Piece Card List</b><br><small>https://en.onepiece-cardgame.com/cardlist/</small></td><td>Official card art and gameplay text used for private analytical slab renders.<br><small>Retrieved 2026-05-25</small></td></tr></tbody>
+  </table>
+  <p class="fine">Platform data comes from your supplied screenshots and the local read-only captures in this project. Address, phone, email, wallet, tracking, order logistics, and full account details are deliberately omitted.</p></div>
+    <footer>Private investment dossier - educational scenario analysis only - not financial advice</footer>
+  </section></body>
+</html>

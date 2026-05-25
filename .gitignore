@@ -1,0 +1,27 @@
+node_modules/
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+.remotion/
+.playwright-mcp/
+.env
+.env.*
+!.env.example
+
+# Unity generated folders
+unity/**/Library/
+unity/**/Temp/
+unity/**/Obj/
+unity/**/Logs/
+unity/**/UserSettings/
+unity/**/.vs/
+unity/**/*.csproj
+unity/**/*.sln
+unity/**/*.user
+
+# Keep generated WebGL output deployable only when explicitly accepted.
+deploy/game/
+.vercel/

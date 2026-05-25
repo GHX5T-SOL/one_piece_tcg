@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ghost x Zoro HyperFrames Title Proof</title>
+    <style>
+      :root {
+        --ink: #071014;
+        --teal: #12c7b8;
+        --gold: #f2c14e;
+        --red: #e54b4b;
+        --paper: #f3efe2;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--ink);
+        color: var(--paper);
+        font-family: Arial, sans-serif;
+      }
+      .frame {
+        width: 1920px;
+        height: 1080px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 70% 40%, rgba(242,193,78,0.18), transparent 25%),
+          radial-gradient(circle at 30% 65%, rgba(18,199,184,0.2), transparent 30%),
+          linear-gradient(140deg, #071014, #0f3140 56%, #020506);
+      }
+      .grid {
+        position: absolute;
+        inset: 0;
+        opacity: 0.12;
+        background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+        background-size: 80px 80px;
+      }
+      .title {
+        position: absolute;
+        left: 96px;
+        top: 148px;
+        width: 1120px;
+      }
+      .eyebrow {
+        color: var(--teal);
+        font-size: 28px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 18px 0 0;
+        font-size: 128px;
+        line-height: .92;
+      }
+      p {
+        margin: 26px 0 0;
+        width: 820px;
+        font-size: 34px;
+        line-height: 1.18;
+        color: rgba(243,239,226,.82);
+      }
+      .bars {
+        position: absolute;
+        left: 96px;
+        bottom: 160px;
+        width: 890px;
+        display: grid;
+        gap: 18px;
+      }
+      .bar {
+        display: grid;
+        grid-template-columns: 180px 1fr 120px;
+        gap: 20px;
+        align-items: center;
+        font-size: 26px;
+      }
+      .bar span:nth-child(2) {
+        height: 20px;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--teal), var(--gold), var(--red));
+      }
+      .bar:nth-child(1) span:nth-child(2) { width: 34%; }
+      .bar:nth-child(2) span:nth-child(2) { width: 60%; }
+      .bar:nth-child(3) span:nth-child(2) { width: 84%; }
+      .chip {
+        position: absolute;
+        right: 96px;
+        bottom: 96px;
+        border: 1px solid rgba(255,255,255,.16);
+        padding: 14px 18px;
+        border-radius: 6px;
+        color: rgba(243,239,226,.78);
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      id="ghost-zoro-title"
+      class="frame"
+      data-composition-id="ghost-zoro-title"
+      data-start="0"
+      data-duration="12"
+      data-track-index="0"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="grid"></div>
+      <section class="title">
+        <div class="eyebrow">Private investment brief</div>
+        <h1>Ghost x Zoro<br />One Piece TCG</h1>
+        <p>Build the crew. Protect the treasure. Sell into hype. Hold the legends.</p>
+      </section>
+      <section class="bars" aria-label="Scenario bands">
+        <div class="bar"><span>Conservative</span><span></span><b>0-10%</b></div>
+        <div class="bar"><span>Base</span><span></span><b>10-25%</b></div>
+        <div class="bar"><span>Upside</span><span></span><b>25-45%</b></div>
+      </section>
+      <div class="chip">Source-backed scenario analysis / not financial advice</div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".title", { opacity: 0, y: 48, duration: 0.9, ease: "power3.out" }, 0);
+      tl.from(".bars", { opacity: 0, y: 34, duration: 0.75, ease: "power3.out" }, 0.6);
+      tl.from(".chip", { opacity: 0, x: 26, duration: 0.6, ease: "power2.out" }, 1.1);
+      tl.to(".grid", { opacity: 0.2, duration: 10.5, ease: "none" }, 0);
+      window.__timelines["ghost-zoro-title"] = tl;
+    </script>
+  </body>
+</html>

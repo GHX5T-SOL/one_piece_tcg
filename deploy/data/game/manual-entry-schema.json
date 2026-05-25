@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "requiredFields": [
+    "title",
+    "character",
+    "set",
+    "cardNumber",
+    "gradeCompany",
+    "grade",
+    "platform",
+    "status",
+    "sourceNote"
+  ],
+  "nullableFields": [
+    "certNumber",
+    "visibleMarketValueUsd",
+    "localImage",
+    "localVideo",
+    "officialArt"
+  ],
+  "enums": {
+    "gradeCompany": ["PSA", "CGC", "BGS", "Raw", "Other"],
+    "status": ["owned", "inbound-shipping", "bought-not-shipped", "open-bid", "watchlist", "sold", "trade-target"],
+    "action": ["core-hold", "hold-watch", "watch", "sell-trade", "cancel", "keep", "avoid"]
+  },
+  "privacyRules": [
+    "Do not enter address, phone, email, wallet, order numbers, tracking numbers, payment details, or account secrets.",
+    "Do not invent cert numbers.",
+    "Every manual card needs a source note."
+  ]
+}

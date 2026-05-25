@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T00:00:00+02:00",
+  "npcs": [
+    {
+      "id": "nami",
+      "displayName": "Nami",
+      "role": "Portfolio Navigator",
+      "topic": "Portfolio value and concentration",
+      "summary": "Visible Collectr value is $636.20, but the book is concentrated: Nami alone is about 63 percent of visible value. Verify comps before treating app value as cash.",
+      "panel": "valuation",
+      "sourceIds": ["CAP-COLLECTR-2026-05-24"],
+      "dialogue": [
+        "Our treasure map says $636.20 visible value, but one orange-haired card is carrying most of the chest.",
+        "Hold the Nami until sold comps prove the number. If a serious buyer pays high comps, upgrade into a stronger grade instead of adding weak filler."
+      ]
+    },
+    {
+      "id": "robin",
+      "displayName": "Robin",
+      "role": "Archive Scholar",
+      "topic": "Research and release calendar",
+      "summary": "Official sources verify OP14/EB04 Warlords, OP13 context, EB03 heroine context, and the English 3rd Anniversary Set delivery month of August 2026.",
+      "panel": "source-ledger",
+      "sourceIds": ["SRC-OP14-EB04", "SRC-ANNIVERSARY-SET-2026", "SRC-PSA-BASICS"],
+      "dialogue": [
+        "The records are clear: OP14/EB04 is a Warlords signal, and the August 2026 anniversary set is the Three Brothers watch item.",
+        "I keep the evidence ledger here. If a claim cannot survive the ledger, it does not enter the captain's plan."
+      ]
+    },
+    {
+      "id": "franky",
+      "displayName": "Franky",
+      "role": "Vault Engineer",
+      "topic": "Card assets and shipments",
+      "summary": "The vault has local media for Crocodile, Luffy, Zoro-Juurou, Franky, Nami, and Carrot, plus official card art where available.",
+      "panel": "card-vault",
+      "sourceIds": ["CAP-PHYGITALS-2026-05-24", "CAP-COURTYARD-BOUGHT-2026-05-25"],
+      "dialogue": [
+        "I built pedestals for every slab we can show safely. No address, no tracking, no account details, just the cards.",
+        "When new card media lands, drop it into the vault and tag the provenance before it reaches the scene."
+      ]
+    },
+    {
+      "id": "usopp",
+      "displayName": "Usopp",
+      "role": "Bid Sniper",
+      "topic": "Open bids",
+      "summary": "Open Courtyard exposure is $197.50. Top keep is PSA 10 Sabo at $19. First cancels are Shiki CGC 8 and duplicate Roger CGC 8.5.",
+      "panel": "bid-board",
+      "sourceIds": ["CAP-COURTYARD-OFFERS-2026-05-25"],
+      "dialogue": [
+        "Thirteen shots on the board, $197.50 exposed. The best shot is Sabo PSA 10 at $19.",
+        "Cancel the low-grade Shiki and duplicate Roger. Keep the cannon loaded for Luffy, Roger, Ace, Sabo, Whitebeard, and Warlords."
+      ]
+    },
+    {
+      "id": "sanji",
+      "displayName": "Sanji",
+      "role": "Market Chef",
+      "topic": "Buying and selling routes",
+      "summary": "Use Courtyard/Phygitals for slabs, eBay/PSA Vault and TCGplayer/Cardmarket for broader liquidity checks, and Cape Town routes for local buyers.",
+      "panel": "market-routes",
+      "sourceIds": ["SRC-CARD-CACHE", "SRC-TCGXCHANGE", "SRC-TCGPLAYER-SELLERS", "SRC-CARDMARKET-ONEPIECE", "SRC-EBAY-VAULT-FEES"],
+      "dialogue": [
+        "Do not cook every dish in the same pan. Slabs, sealed, local buyers, and vault routes all price differently.",
+        "For Cape Town, check Card Cache, TCGXchange, Wizards, Facebook/Discord safeguards, and Collect-a-Con timing before listing."
+      ]
+    },
+    {
+      "id": "chopper",
+      "displayName": "Chopper",
+      "role": "Risk Doctor",
+      "topic": "Risk controls",
+      "summary": "Avoid low-grade traps, thin comps, modern PSA 9 duplicates, and assuming CGC 10 equals PSA 10 liquidity.",
+      "panel": "risk-controls",
+      "sourceIds": ["SRC-PSA-INFRA-2026", "SRC-PSA-BASICS"],
+      "dialogue": [
+        "The medicine is discipline: no weak low-grade slabs, no fake certainty, no oversized bids without comps.",
+        "A CGC 10 can be excellent, but the exit channel decides the premium. Check the buyer pool before you prescribe a price."
+      ]
+    },
+    {
+      "id": "brook",
+      "displayName": "Brook",
+      "role": "Archive Musician",
+      "topic": "Media theater",
+      "summary": "The prior dossier PDF and HTML are archived under media/reports, with narration/music and stills available for the theater.",
+      "panel": "media-theater",
+      "sourceIds": ["CAP-COLLECTR-2026-05-24", "CAP-PHYGITALS-2026-05-24"],
+      "dialogue": [
+        "The report is on stage, the audio is ready, and the hidden soundtrack waits for explorers who finish the vault.",
+        "If the final MP4 returns, place it in media/video and I will put it in the theater lineup."
+      ]
+    }
+  ]
+}

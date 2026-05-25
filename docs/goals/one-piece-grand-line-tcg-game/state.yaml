@@ -1,0 +1,20 @@
+goal: Ghost x Zoro Grand Line TCG Game
+created_at: "2026-05-25T00:00:00+02:00"
+status: active
+private_use_only: true
+current_phase: qa-and-private-deploy
+acceptance:
+  unity_webgl: complete
+  password_gate: complete-local
+  npc_interactions: complete
+  inventory_database: complete
+  open_bid_database: complete
+  valuation_database: complete
+  source_ledger: complete
+  qa_receipt: complete-local
+blocked: []
+next:
+  - Rebuild wrapper without local test hash before committing.
+  - Verify git status and stage source files.
+  - Push to verified private GitHub repo.
+  - Deploy to Vercel with a production passcode hash.

@@ -1,0 +1,11 @@
+node_modules
+.git
+.env
+.env.*
+.playwright-mcp
+unity/GhostZoroGrandLine/Library
+unity/GhostZoroGrandLine/Temp
+unity/GhostZoroGrandLine/Obj
+unity/GhostZoroGrandLine/Logs
+unity/GhostZoroGrandLine/UserSettings
+*.log

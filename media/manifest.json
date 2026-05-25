@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T00:00:00+02:00",
+  "privateUseOnly": true,
+  "notes": [
+    "Media files are local private-use artifacts for the Ghost x Zoro workspace.",
+    "Do not publish or commercialize without rights clearance.",
+    "No PII or order logistics should be stored here."
+  ],
+  "items": [
+    {
+      "id": "media-crocodile-jpg",
+      "title": "Crocodile Super Pre-Release PSA 9 image",
+      "localPath": "media/cards/2022_ONE_PIECE_STARTER_DECK_ST03-THE_SEVEN_WARLORDS_OF_THE_SEA_001_CROCODILE_SUPER_PRE-RELEASE_PSA_9.jpg",
+      "type": "image",
+      "provenance": "User supplied local card asset",
+      "tags": ["card", "owned", "phygitals", "crocodile"]
+    },
+    {
+      "id": "media-luffy-anniversary-jpg",
+      "title": "Luffy 3rd Anniversary CGC 10 image",
+      "localPath": "media/cards/2025_One_Piece_Japanese_Promo_3rd_Anniversary_Treasure_SR_Monkey_D._Luffy__ST10-006_CGC_10.jpg",
+      "type": "image",
+      "provenance": "User supplied local card asset",
+      "tags": ["card", "owned", "phygitals", "luffy"]
+    },
+    {
+      "id": "media-zoro-juurou-jpg",
+      "title": "Zoro-Juurou CGC 10 Pristine image",
+      "localPath": "media/cards/2024_One_Piece_Japanese_SD_Purple_Monkey_D._Luffy_SR_Zoro-Juurou__ST18-004_CGC_10_PRISTINE.jpg",
+      "type": "image",
+      "provenance": "User supplied local card asset",
+      "tags": ["card", "owned", "phygitals", "zoro"]
+    },
+    {
+      "id": "media-franky-jpg",
+      "title": "Franky Film Red CGC 10 image",
+      "localPath": "media/cards/2023_One_Piece_Promo_Premium_Collection_Film_Red_Alt_Art_Franky__OP01-021_CGC_10_GEM_MINT.jpg",
+      "type": "image",
+      "provenance": "User supplied local card asset",
+      "tags": ["card", "owned", "phygitals", "franky"]
+    },
+    {
+      "id": "media-nami-jpg",
+      "title": "Nami Tournament Pack CGC 9 image",
+      "localPath": "media/cards/2023_One_Piece_Promo_Tournament_Pack_Volume_3_Nami__ST01-007_CGC_9_MINT.jpg",
+      "type": "image",
+      "provenance": "User supplied local card asset",
+      "tags": ["card", "owned", "phygitals", "nami"]
+    },
+    {
+      "id": "media-dossier-pdf",
+      "title": "Ghost x Zoro One Piece Investment Dossier PDF",
+      "localPath": "media/reports/ghost-zoro-one-piece-investment-dossier.pdf",
+      "type": "report",
+      "provenance": "Generated in prior workspace pass",
+      "tags": ["archive", "pdf", "research"]
+    },
+    {
+      "id": "media-dossier-html",
+      "title": "Ghost x Zoro One Piece Investment Dossier HTML",
+      "localPath": "media/reports/ghost-zoro-one-piece-investment-dossier.html",
+      "type": "report",
+      "provenance": "Generated in prior workspace pass",
+      "tags": ["archive", "html", "research"]
+    },
+    {
+      "id": "media-narration",
+      "title": "Private narration",
+      "localPath": "media/audio/narration.wav",
+      "type": "audio",
+      "provenance": "Generated in prior video pass",
+      "tags": ["archive", "audio", "theater"]
+    },
+    {
+      "id": "media-music-bed",
+      "title": "Private music bed",
+      "localPath": "media/audio/music-bed.wav",
+      "type": "audio",
+      "provenance": "Generated in prior video pass",
+      "tags": ["archive", "audio", "theater"]
+    }
+  ]
+}

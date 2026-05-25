@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T00:00:00+02:00",
+  "quests": [
+    {
+      "id": "choose-captain",
+      "title": "Choose Your Captain",
+      "objective": "Select Luffy or Zoro on the character select screen.",
+      "reward": "Unlock the Grand Line Hub.",
+      "status": "required"
+    },
+    {
+      "id": "inspect-owned-cards",
+      "title": "Inspect the Treasure",
+      "objective": "Inspect all owned One Piece card pedestals in the Card Vault.",
+      "reward": "Unlock the Captain's Plan watchlist.",
+      "status": "required"
+    },
+    {
+      "id": "clean-bid-book",
+      "title": "Clean the Bid Book",
+      "objective": "Review all 13 open Courtyard offers and mark keep/cancel decisions.",
+      "reward": "Unlock Usopp's bid-cap overlay.",
+      "status": "required"
+    },
+    {
+      "id": "read-sources",
+      "title": "Read the Poneglyphs",
+      "objective": "Open Robin's source ledger and view OP14/EB04 plus August 2026 anniversary notes.",
+      "reward": "Unlock release calendar map marker.",
+      "status": "required"
+    },
+    {
+      "id": "risk-checkup",
+      "title": "Chopper's Checkup",
+      "objective": "Review the low-grade, duplicate, and CGC/PSA liquidity warnings.",
+      "reward": "Unlock safe-buy checklist.",
+      "status": "optional"
+    },
+    {
+      "id": "add-test-card",
+      "title": "New Crew Member",
+      "objective": "Add a test card manually and export the local JSON.",
+      "reward": "Unlock manual-entry badge.",
+      "status": "required"
+    },
+    {
+      "id": "brook-theater",
+      "title": "Soul King Encore",
+      "objective": "Open the dossier archive and play the private soundtrack.",
+      "reward": "Hidden media theater surprise.",
+      "status": "optional"
+    }
+  ]
+}

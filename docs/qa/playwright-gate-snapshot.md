@@ -1,0 +1,11 @@
+- main [ref=e2] [box=0,0,1280,720]:
+  - generic [ref=e5] [box=280,158,720,404]:
+    - paragraph [ref=e6] [box=321,199,638,17]: Private crew access
+    - heading "Ghost x Zoro Grand Line TCG" [level=1] [ref=e7] [box=321,224,638,97]
+    - paragraph [ref=e8] [box=321,339,638,52]: A password-gated strategy ship for portfolio analytics, open bids, source-backed research, and the Unity WebGL game build.
+    - generic [ref=e9] [box=321,408,638,113]:
+      - generic [ref=e10] [box=321,408,638,22]: Passcode
+      - generic [ref=e11] [box=321,438,638,49]:
+        - textbox "Passcode" [ref=e12] [box=321,438,555,49]
+        - button "Enter" [ref=e13] [cursor=pointer] [box=886,438,73,49]
+      - paragraph [ref=e14] [box=321,499,638,22]: No public access. No PII. Private-use One Piece assets only.
