@@ -17,6 +17,9 @@ Generated: 2026-05-25
 - Static wrapper build passed with Unity build present.
 - Playwright local QA passed after fixes: password gate unlocks with a local test hash, Unity reports `Unity loaded.`, inventory renders 8 cards, bid board renders 13 rows, and manual test-card entry persists to browser local storage.
 - Current browser console: 0 errors, 7 WebGL/password-field warnings.
+- Private GitHub push succeeded to `GHX5T-SOL/one_piece_tcg` on branch `master`.
+- Vercel production deployment succeeded: `https://one-piece-tcg-lac.vercel.app`.
+- Final Vercel Playwright QA passed: gate hides after passcode, Unity reports `Unity loaded.`, inventory renders 8 cards, bid board renders 13 rows, and browser console has 0 errors.
 
 ## Screenshot Evidence
 
@@ -27,6 +30,7 @@ Generated: 2026-05-25
 - `docs/qa/screenshots/ghost-zoro-inventory-desktop.png`
 - `docs/qa/screenshots/ghost-zoro-bids-desktop.png`
 - `docs/qa/screenshots/ghost-zoro-entry-desktop.png`
+- `docs/qa/screenshots/ghost-zoro-vercel-final.png`
 
 ## Fixes From QA
 
@@ -37,10 +41,8 @@ Generated: 2026-05-25
 
 ## Pending Checks
 
-- GitHub push.
-- Vercel deployment with a production passcode hash.
 - Netlify deployment remains fallback because `netlify` CLI is not installed.
 
 ## Blockers
 
-None for local build. GitHub repo privacy verified true on 2026-05-25. Vercel account is authenticated as `ghxstofsolana-1585`. Netlify CLI is not installed.
+No local or Vercel blocker. GitHub repo privacy verified true on 2026-05-25. Vercel account is authenticated and production is live. Netlify CLI is not installed.

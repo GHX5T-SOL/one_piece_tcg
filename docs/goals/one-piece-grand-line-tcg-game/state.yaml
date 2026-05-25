@@ -5,16 +5,15 @@ private_use_only: true
 current_phase: qa-and-private-deploy
 acceptance:
   unity_webgl: complete
-  password_gate: complete-local
+  password_gate: complete-local-and-vercel
   npc_interactions: complete
   inventory_database: complete
   open_bid_database: complete
   valuation_database: complete
   source_ledger: complete
-  qa_receipt: complete-local
+  qa_receipt: complete-local-and-vercel
 blocked: []
 next:
-  - Rebuild wrapper without local test hash before committing.
-  - Verify git status and stage source files.
-  - Push to verified private GitHub repo.
-  - Deploy to Vercel with a production passcode hash.
+  - Keep the deployment passcode outside git.
+  - Add higher fidelity character models/assets when budget/tooling is confirmed.
+  - Regenerate or restore the final MP4 if needed for the Brook Theater.

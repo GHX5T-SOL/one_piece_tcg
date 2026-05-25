@@ -1,0 +1,4 @@
+Total messages: 60 (Errors: 1, Warnings: 7)
+Returning 1 messages for level "error"
+
+[ERROR] Failed to load resource: the server responded with a status of 404 () @ https://one-piece-tcg-lac.vercel.app/favicon.ico:0

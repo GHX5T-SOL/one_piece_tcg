@@ -41,5 +41,5 @@ Build order:
 - [x] Finish password-gated deploy wrapper and local scanner/manual-entry persistence.
 - [x] Run browser screenshots across desktop/tablet/mobile-ish sizes.
 - [x] Verify GitHub repo privacy.
-- [ ] Push only after final no-secret rebuild.
-- [ ] Deploy to Vercel, or record exact blocker.
+- [x] Push only after final no-secret rebuild.
+- [x] Deploy to Vercel, or record exact blocker.
