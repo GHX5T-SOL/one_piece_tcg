@@ -1,14 +1,28 @@
-# Ghost x Zoro Grand Line TCG Design System
+# Ghost x Zoro Grand Line TCG + OP CPT Design System
 
 ## Project Context
 
 Private, password-gated One Piece TCG strategy workspace for Ghost and Zoro. Current deliverables include the earlier Remotion/report package plus a Unity WebGL game portal where Ghost and Zoro can walk a 3D ship/island hub, speak to Straw Hat NPCs, inspect slab pedestals, review portfolio analytics, and maintain the card database. One Piece-themed Drive, official card-list, and platform capture assets are private-use only and must not be treated as public/commercial release assets.
+
+New community layer: `OP CPT`, a member-beta Cape Town One Piece TCG community platform. It is an unofficial fan/community project for cards, battles, trades, events, rankings, group buys, and collection discovery. It must preserve the Ghost/Zoro private archive while adding a separate public-safe landing shell and gated fan-themed member experience.
 
 ## Visual Identity
 
 - Mood: premium trading desk meets sea-chart adventure.
 - Composition: full-bleed ocean map, stylized Thousand Sunny trading post, readable HUD panels, metallic PSA/CGC slab pedestals, bounty-board analytics, and archive-room media surfaces.
 - Avoid: public-release branding claims, fake official endorsement, cluttered fan-collage layouts, unreadable fantasy typography, and UI panels that block the player view.
+
+## OP CPT Visual Identity
+
+- Brand: `OP CPT`.
+- Tagline: `Cape Town's Grand Line for cards, battles, and trades.`
+- Primary mark: compass + trading card slab + Table Mountain silhouette, inspired by the approved Route 01 concept board.
+- App concept: immersive Cape Town harbor card-map portal with collectible islands, slab pedestals, rankings, market watch, event panels, and member-beta sign-in.
+- Public shell: original nautical/card/Cape Town motifs only; no official One Piece logo, skull mark, exact character likenesses, or fake official endorsement.
+- Gated member areas: fan assets from Drive may be used with private fan-project disclaimers.
+- Approved references:
+  - Brand board: `/Users/mx/.codex/generated_images/019e5aad-8f01-7693-af95-0b5f09d91496/ig_041738cae703eb21016a2048b346a08191b88754c2334b99ee.png`
+  - App concept: `/Users/mx/.codex/generated_images/019e5aad-8f01-7693-af95-0b5f09d91496/ig_041738cae703eb21016a204985e36c8191ab20af778233dc8c.png`
 
 ## Tokens
 
@@ -25,6 +39,12 @@ Private, password-gated One Piece TCG strategy workspace for Ghost and Zoro. Cur
   - `red`: `#e54b4b`
   - `paper`: `#f3efe2`
   - `silver`: `#bcc8d1`
+  - `op-cpt-navy`: `#081d2a`
+  - `op-cpt-teal`: `#0fa3a6`
+  - `op-cpt-gold`: `#d4af37`
+  - `op-cpt-cream`: `#f2e9d6`
+  - `op-cpt-red`: `#d72638`
+  - `op-cpt-storm`: `#39424e`
 - Type:
   - Display: system serif fallback for title moments, `Georgia`, `Times New Roman`, serif.
   - Interface/data: `Inter`, `Avenir Next`, `Helvetica Neue`, Arial, sans-serif.
@@ -57,6 +77,13 @@ Private, password-gated One Piece TCG strategy workspace for Ghost and Zoro. Cur
 - NPC Dialogue: speaker portrait, topic chip, concise current recommendation, detail tabs for evidence.
 - Bid Board: keep/cancel badges, total exposure, duplicate/low-grade warnings, no account-sensitive details.
 - Manual Entry: scanner/manual split, nullable cert number, required source/provenance field.
+- OP CPT Harbor Hub: full-bleed React Three Fiber canvas with DOM HUD, landmark buttons, member CTA, and responsive bottom nav.
+- OP CPT Member Card: avatar/crew tag, collection value, battle points, trade count, privacy chip.
+- OP CPT Trade Offer: offered/requested items, status, expiration, message, no payment fields.
+- OP CPT Event Card: venue, date, format, cap, RSVP state, prize/pack-rip notes.
+- OP CPT Price Tile: source, latest snapshot, trend delta, confidence, retrieved date.
+- OP CPT Scanner Entry: camera/upload affordance plus manual fallback; never claims recognition is final until verified.
+- OP CPT Admin Queue: pending beta requests, flagged trades, event approvals, group-buy moderation.
 
 ## Unity Scene Rules
 

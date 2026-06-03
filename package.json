@@ -13,7 +13,12 @@
     "validate:data": "node scripts/validate-data.mjs",
     "pii:scan": "node scripts/pii-scan.mjs",
     "build:wrapper": "node scripts/build-wrapper.mjs",
-    "qa:workspace": "npm run validate:data && npm run pii:scan && npm run build:wrapper"
+    "qa:workspace": "npm run validate:data && npm run pii:scan && npm run build:wrapper",
+    "op-cpt:install": "npm --prefix apps/op-cpt install",
+    "op-cpt:dev": "npm --prefix apps/op-cpt run dev",
+    "op-cpt:build": "npm --prefix apps/op-cpt run build",
+    "op-cpt:typecheck": "npm --prefix apps/op-cpt run typecheck",
+    "op-cpt:qa": "npm --prefix apps/op-cpt run qa"
   },
   "dependencies": {
     "@react-three/fiber": "8.17.10",

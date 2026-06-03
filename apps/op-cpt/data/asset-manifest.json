@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-06-03",
+  "sourceFolder": {
+    "id": "0B2876gCiqJjGQXhfZlRVd2JJUmM",
+    "title": "Graphics",
+    "url": "https://drive.google.com/drive/folders/0B2876gCiqJjGQXhfZlRVd2JJUmM?resourcekey=0--YPuu7q99JeKiHG2aFFduw"
+  },
+  "policy": "Fan assets are for the private/member-beta experience only. Public shell uses original OP CPT marks and nautical/card/Cape Town motifs.",
+  "folders": [
+    { "title": "Audio", "id": "1s0VWOY-xA0qgDkIYYrt-s31i-ZxdP-0D", "usage": "music and sound effects" },
+    { "title": "UI", "id": "14MXQu_r_3dc1b-Up0DYaEQx7ysKJ4dQZ", "usage": "menus, icons, title treatments, banners" },
+    { "title": "Artworks", "id": "119Rg9qtzcY2c6_zLLVKE5aNqn6wsLQkR", "usage": "member-only art panels and archive surfaces" },
+    { "title": "Sprites", "id": "1Q4d5bwDpLMBvhHUQffda76En36WXyy4p", "usage": "member-only avatars and NPC-style motion art" },
+    { "title": "Ships", "id": "1ad-mvQsLiH_7WeLDOqtDCl0b1nLgHC6P", "usage": "harbor and ship scene references" },
+    { "title": "Portrait", "id": "12tLG32EcfgCDkWhbBIk0qWCM1LbgrWGf", "usage": "member-only dialogue/profile art" },
+    { "title": "Area", "id": "1mN6lSKOFap9DLr2fhWWwDUCxyIw2F0Lg", "usage": "map and environment backdrops" },
+    { "title": "Cutscenes", "id": "11LWMQblvpMP4T3jV-4gLNIpjYAKYMzSw", "usage": "future video/theater moments" }
+  ],
+  "importedAssets": [
+    {
+      "path": "public/design/op-cpt-brand-board.png",
+      "source": "Image Gen approved brand board",
+      "usage": "design reference"
+    },
+    {
+      "path": "public/design/op-cpt-app-concept.png",
+      "source": "Image Gen approved app concept",
+      "usage": "design reference"
+    }
+  ]
+}

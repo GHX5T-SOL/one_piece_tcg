@@ -1,0 +1,36 @@
+{
+  "name": "op-cpt-member-beta",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Member-beta Cape Town One Piece TCG community portal.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "qa": "npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.6.1",
+    "@supabase/supabase-js": "2.107.0",
+    "lucide-react": "1.17.0",
+    "next": "16.2.7",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "three": "0.184.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.2",
+    "@types/react": "19.2.16",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "^0.181.0",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.7",
+    "typescript": "5.7.2"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}

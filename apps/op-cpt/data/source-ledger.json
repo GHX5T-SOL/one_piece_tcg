@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-06-03",
+  "project": "OP CPT",
+  "notes": "Source-backed seed references for the member-beta app. Price and stock values are snapshots and must be refreshed before purchase decisions.",
+  "sources": [
+    {
+      "id": "official-events-op16",
+      "title": "Official One Piece events page",
+      "url": "https://en.onepiece-cardgame.com/events/",
+      "retrievedAt": "2026-06-03",
+      "usage": "Release calendar and OP-16 event context"
+    },
+    {
+      "id": "official-rules-op16",
+      "title": "Official One Piece rules page",
+      "url": "https://en.onepiece-cardgame.com/rules/",
+      "retrievedAt": "2026-06-03",
+      "usage": "Rules and OP-16 errata/revision context"
+    },
+    {
+      "id": "limitless-one-piece",
+      "title": "Limitless One Piece",
+      "url": "https://onepiece.limitlesstcg.com/",
+      "retrievedAt": "2026-06-03",
+      "usage": "Competitive decklists, tournament results, card data reference"
+    },
+    {
+      "id": "optcg-gg",
+      "title": "OPTCG.GG",
+      "url": "https://optcg.gg/",
+      "retrievedAt": "2026-06-03",
+      "usage": "Card search and deckbuilding reference"
+    },
+    {
+      "id": "pricecharting-api",
+      "title": "PriceCharting API documentation",
+      "url": "https://www.pricecharting.com/api-documentation",
+      "retrievedAt": "2026-06-03",
+      "usage": "Future server-side price integration"
+    }
+  ]
+}
