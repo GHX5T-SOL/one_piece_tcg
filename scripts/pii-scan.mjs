@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const excludedDirs = new Set([".git", "node_modules", "Library", "Temp", "Obj", "Logs", "dist"]);
+const excludedDirs = new Set([".git", ".next", "node_modules", "Library", "Temp", "Obj", "Logs", "dist"]);
 const excludedPathFragments = ["/deploy/game/"];
 const excludedFiles = new Set(["docs/qa/pii-scan.json"]);
 const allowedExtensions = new Set([".md", ".json", ".js", ".mjs", ".ts", ".tsx", ".css", ".html", ".toml", ".yaml", ".yml", ".example", ".txt", ".cs"]);
@@ -30,7 +30,7 @@ const walk = (dir) => {
       continue;
     }
     const ext = path.extname(entry.name) || (entry.name.includes(".") ? "" : `.${entry.name}`);
-    const relative = `/${path.relative(root, abs)}`;
+    const relative = `/${path.relative(root, abs).replaceAll(path.sep, "/")}`;
     if (excludedFiles.has(relative.slice(1))) continue;
     if (excludedPathFragments.some((fragment) => relative.includes(fragment))) continue;
     if (!allowedExtensions.has(ext) && !entry.name.endsWith(".example")) continue;

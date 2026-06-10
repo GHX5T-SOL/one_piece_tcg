@@ -9,3 +9,17 @@
 7. Never guess when a tool can verify the answer. Use tool calls, then summarize the verified result.
 8. Keep designs implementation-aware: accessible, responsive, and grounded in the real component or token system.
 9. After done with a task always clear all caches, rebuild, check everything for errors, fix everything, clean all code, and then upload, deploy, push, sync everything and restart, then test everything and do a full status check.
+
+<!-- OP CPT BUSINESS OPS -->
+
+# OP CPT Business Operating Desk
+
+Use this repo as the persistent OP CPT operating brain. Before pricing, inventory, website, content, or acquisition work, read the relevant files in `memory/`, `pricing/`, `inventory/`, `website/`, and `source_ledger.md`.
+
+Hard rules:
+
+- Do not commit secrets or private customer/consignment data.
+- This repo was verified public on 2026-06-10; treat sensitive data accordingly.
+- For pricing, follow `pricing/pricing_protocol.md`.
+- For major card decisions, use the OP CPT AI Council in `market_research/agent_council_context.md`.
+- For website work, inspect `apps/op-cpt` and run typecheck/build before claiming safety.

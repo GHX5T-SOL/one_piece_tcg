@@ -54,7 +54,7 @@ export function AuthPanel() {
           id="email"
           name="email"
           onChange={(event) => setEmail(event.target.value)}
-          placeholder="captain@example.com"
+          placeholder="your email address"
           required
           type="email"
           value={email}

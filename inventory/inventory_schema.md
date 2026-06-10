@@ -1,0 +1,53 @@
+# Inventory Schema
+
+`inventory/master_inventory.csv` and `.xlsx` use these columns:
+
+- `item_id`
+- `source_row_id`
+- `ownership_status`
+- `inventory_status`
+- `card_name`
+- `card_number`
+- `set_code`
+- `set_name`
+- `product_name`
+- `rarity`
+- `variant`
+- `finish`
+- `language`
+- `condition`
+- `grade_company`
+- `grade`
+- `cert_number`
+- `quantity`
+- `sealed_or_single`
+- `raw_or_slab`
+- `cost_basis_zar`
+- `cost_status`
+- `collectr_market_zar`
+- `research_market_usd`
+- `research_market_zar`
+- `quick_sale_zar`
+- `fair_market_zar`
+- `patient_local_ask_zar`
+- `event_ask_zar`
+- `online_ask_usd`
+- `online_ask_zar`
+- `stretch_ask_zar`
+- `walkaway_minimum_zar`
+- `expected_net_local_zar`
+- `expected_net_ebay_zar`
+- `expected_net_cardtrader_zar`
+- `expected_net_cardmarket_zar`
+- `expected_net_tcgplayer_zar`
+- `grading_candidate_score`
+- `psa10_estimate_usd`
+- `bgs10_estimate_usd`
+- `cgc10_estimate_usd`
+- `availability_score`
+- `liquidity_score`
+- `trend_score`
+- `confidence_rating`
+- `last_researched_at`
+- `source_links`
+- `notes`
