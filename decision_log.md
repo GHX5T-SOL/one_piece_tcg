@@ -1,9 +1,10 @@
 # Decision Log
 
-| Date | Decision | Reason | Follow-up |
+| date | decision | reason | impact |
 |---|---|---|---|
-| 2026-06-10 | Cloned `GHX5T-SOL/one_piece_tcg` into `OP_CPT` and created branch `op-cpt-workspace-bootstrap`. | User requested repo-backed OP CPT workspace and Git branch. | Commit and push bootstrap files if verification passes. |
-| 2026-06-10 | Treat repo as public for data-safety decisions. | `gh repo view` returned `visibility=PUBLIC`. | Do not commit private scans, owner details, cost-basis evidence, or sensitive cert/private data. |
-| 2026-06-10 | Did not import Drive consignment image contents. | Consignment photos are private-sensitive and the repo is public. | Log folder metadata/source only; use private storage later. |
-| 2026-06-10 | No `export.csv` imported. | No local `export.csv` found in repo or parent workspace. | User to add export later; templates created meanwhile. |
-| 2026-06-10 | Website work remains documentation-only. | Existing `apps/op-cpt` app is already present; prompt did not ask for destructive website changes. | Future changes should inspect app and run typecheck/build first. |
+| 2026-06-16 | Treat The Vault Room as the public brand and OP CPT as the internal workspace. | User supplied new branding, Instagram handle, WhatsApp community, logo, and poster examples. | Future docs, pricing, content, and website revamp work should use The Vault Room publicly while preserving OP CPT continuity. |
+| 2026-06-16 | Treat OP CPT / The Vault Room as one operating workspace. | User supplied pricing protocol and business bootstrap prompt. | All future card pricing, inventory, content, website, and consignment work should route through this workspace. |
+| 2026-06-16 | Use Collectr export as in-hand inventory baseline, not pricing truth. | Protocol says Collectr is weak only; export has market baseline but not sell prices. | Master inventory uses pending researched fields until live comps are checked. |
+| 2026-06-16 | Make Card Ladder a required source for serious One Piece pricing. | Pricing Protocol v2 explicitly added Card Ladder. | High-end slabs, manga rares, prize cards, promos, and low-pop cards need Card Ladder checks when accessible. |
+| 2026-06-16 | Keep current website enquiry-first. | Bootstrap prompt says checkout/payment can wait. | Website roadmap focuses on public catalogue, contact, scans, and admin workflow. |
+| 2026-06-16 | Commit workspace artifacts despite public repo per user instruction, but never commit secrets. | User explicitly approved pushing everything and will make the repo private later. | Inventory export and generated sheets are included; secrets remain excluded. |

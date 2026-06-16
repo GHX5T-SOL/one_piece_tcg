@@ -1,31 +1,33 @@
-# Pricing Recommendation - [Card Name / Number]
+# Pricing Recommendation — [Card Name / Number]
 
 ## Exact Identification
 - Name:
 - Number:
-- Set/Product:
+- Set/source:
 - Language:
-- Rarity/Variant:
-- Condition:
-- Raw/Slab:
-- Confidence:
+- Variant:
+- Raw/graded:
+- Cert if slabbed:
+- Identity confidence:
 
 ## Market Evidence
 | Source | Signal | Notes |
 |---|---:|---|
-| TCGplayer | | |
+| TCGplayer / Limitless | | |
+| CardTrader / Cardmarket | | |
 | PriceCharting | | |
+| Card Ladder | | |
+| Market Movers / Alt | | |
 | eBay sold | | |
 | eBay active | | |
-| CardTrader | | |
-| Cardmarket | | |
-| Alt.xyz | | |
-| PSA/BGS/CGC pop | | |
+| PSA APR / pop | | |
+| BGS / CGC / GemRate | | |
+| MySlabs / Fanatics / Goldin / Heritage | | |
 | Social/local | | |
 
 ## Clean Comp Interpretation
 - Bad data filtered:
-- Realistic raw market:
+- Realistic market:
 - Availability:
 - Scarcity:
 - Trend:
@@ -34,10 +36,10 @@
 ## Grading Upside
 - PSA 10 potential:
 - BGS 10 potential:
-- CGC 10 potential:
-- Grade now vs sell raw:
+- CGC 10 / Pristine potential:
+- Grade / sell / hold verdict:
 
-## OP CPT Price Ladder
+## The Vault Room Price Ladder
 | Price Type | USD | ZAR | Purpose |
 |---|---:|---:|---|
 | Quick-sale floor | | | |
@@ -49,12 +51,9 @@
 | Walk-away minimum | | | |
 
 ## Final Recommendation
-List at:
-Accept serious offers from:
-Do not go below:
-Verdict:
-Confidence:
-
-## Saved Test Example
-
-Monkey.D.Luffy P-033, P rarity / promo, English, Event Pack Vol. 2 style promo, raw ungraded, described by owner as perfect mint and a strong PSA 10 GEM MINT candidate. When pricing later, research current data and do not rely on cached numbers.
+- List at:
+- Accept serious offers from:
+- Do not go below:
+- Expected net by channel:
+- Verdict:
+- Confidence:

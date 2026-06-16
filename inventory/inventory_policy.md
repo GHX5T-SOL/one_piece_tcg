@@ -1,25 +1,99 @@
 # Inventory Policy
 
+Updated: 2026-06-16
+
 ## Bootstrap Import Status
 
-- status: missing
-- note: No export.csv was found in the cloned repo or parent TCG workspace during bootstrap.
+- status: imported
+- source: `/Users/mx/Downloads/export.csv`
+- raw copy: `inventory/raw/export.csv`
+- generated files: `inventory/master_inventory.csv`, `inventory/master_inventory.xlsx`
+
+## Baseline
+
+```json
+{
+  "generated_at": "2026-06-16",
+  "source_file": "/Users/mx/Downloads/export.csv",
+  "raw_export_copied_to": "inventory/raw/export.csv",
+  "rows": 252,
+  "total_quantity": 352,
+  "category_rows": {
+    "One Piece": 251,
+    "YuGiOh": 1
+  },
+  "grade_rows": {
+    "Ungraded": 241,
+    "PSA 10.0 GEM - MT": 5,
+    "CGC 10.0 Pristine": 5,
+    "CGC 9.0 Mint": 1
+  },
+  "rarity_rows": {
+    "SR": 37,
+    "SEC": 6,
+    "UC": 22,
+    "DON!!": 8,
+    "R": 89,
+    "L": 17,
+    "C": 44,
+    "DON!! Cards": 1,
+    "Unknown": 4,
+    "PR": 5,
+    "Promo": 1,
+    "UR": 8,
+    "P": 9,
+    "Starlight Rare": 1
+  },
+  "top_sets_by_rows": {
+    "Egghead Crisis": 54,
+    "PRB02 - One Piece Card the Best Vol. 2": 45,
+    "Emperors in the New World": 35,
+    "One Piece Promotion Cards": 25,
+    "Extra Booster: One Piece Heroine's Edition": 13,
+    "Carrying On His Will": 12,
+    "Premium Booster -The Best- Vol. 2": 8,
+    "Royal Blood": 8,
+    "500 Years In The Future": 5,
+    "Learn Together Deck Set": 5,
+    "Adventure on Kami's Island": 4,
+    "A Fist of Divine Speed": 4
+  },
+  "top_sets_by_collectr_market_zar": {
+    "One Piece Promotion Cards": 19565.020000000004,
+    "Egghead Crisis": 6420.79,
+    "Premium Booster -The Best- Vol. 2": 2973.3199999999997,
+    "A Fist of Divine Speed": 2402.35,
+    "Wings of the Captain": 2316.02,
+    "PRB02 - One Piece Card the Best Vol. 2": 2291.4399999999996,
+    "Starter Deck 18: PURPLE Monkey.D.Luffy": 2278.09,
+    "Carrying On His Will": 2243.61,
+    "Extra Booster: One Piece Heroine's Edition": 2139.8900000000003,
+    "Emperors in the New World": 2078.8900000000003,
+    "Royal Blood": 1799.7200000000003,
+    "Legacy of the Master": 1568.6000000000001
+  },
+  "zero_cost_rows": 229,
+  "recorded_cost_rows": 23,
+  "csv_market_value_baseline_zar": 55463.14,
+  "recorded_cost_basis_zar": 16730.0,
+  "watchlist_rows": 0,
+  "raw_rows": 241,
+  "slabbed_rows": 11,
+  "sealed_product_rows": 4,
+  "collectr_warning": "Collectr values are portfolio baselines only and are not sell prices."
+}
+```
 
 ## Standing Assumptions
 
-- All rows in the current CSV are physically in hand once an export is imported.
+- All CSV rows are physically in hand.
 - No CSV rows are inbound unless separately marked.
 - No CSV rows are consignment unless separately added.
 - No CSV rows are watch-only unless separately marked.
-- Zero cost means cost-basis unknown, not free.
-- Many zero-cost rows may be box pulls and can be corrected later.
+- Zero cost means cost-basis unknown or box pull, not free.
 - Existing CSV market price is treated as ZAR by default.
 - Fresh researched comps must be stored in USD and ZAR.
 - Sealed products are complete sealed products unless stated otherwise.
-- Premium Card Collection -Best Selection Vol. 4-, Premium Card Collection -Live Action Edition-, Learn Together Deck Set, and similar sealed products stay in the sealed / never-break bucket unless a break-value analysis is explicitly requested.
+- Premium Card Collection -Best Selection Vol. 4-, Premium Card Collection -Live Action Edition-, Learn Together Deck Set, boosters, and similar sealed products stay sealed unless break-value analysis is explicitly requested.
 - Consignment cards from Drive are separate from CSV inventory.
-- Consignment baseline is 80% of researched market value to owner unless changed.
-
-## Public Repo Safeguard
-
-Because this GitHub repo is public, raw private inventory exports, high-resolution scans, cert-sensitive images, owner/customer data, private addresses, payment details, and cost-basis evidence should not be committed here without explicit approval.
+- Consignment baseline is 80% of researched market value unless changed.

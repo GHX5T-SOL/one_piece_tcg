@@ -1,29 +1,25 @@
 # Platform Pricing Guide
 
 ## TCGplayer
-
-Use for US retail market, market price, sales velocity, listing depth, near-mint English singles, and sealed signals. Verify exact variant and seller quality. Low listing does not always equal credible sellable value.
+US retail benchmark. Good for market price, low listing, and liquidity. Verify exact variant.
 
 ## CardTrader
-
-Use for international supply and cross-border liquidity. CardTrader Zero / Ready economics can matter. Fees, shipping, language, condition, and availability must be filtered.
+Global supply and CardTrader Zero/Ready context. Adjust for fees, shipping, and South African access.
 
 ## Cardmarket
-
-Use for EU floor, availability count, and trend signals. EU prices are not Cape Town landed prices; shipping, customs, and language filters matter.
+EU floor and trend source. EU floors are useful but not equal to Cape Town local sell prices.
 
 ## PriceCharting
+Historical raw/graded sale snapshots. Always verify SKU and individual sales.
 
-Use for historical raw versus graded snapshots. Verify SKU because variants and languages can be mixed.
+## Card Ladder
+Required for serious One Piece pricing, especially high-end slabs, manga rares, prize cards, promos, low-pop cards, and graded market movement.
 
 ## eBay
+Strong active/sold comp source. Filter fake listings, title stuffing, stock photos, weak sellers, and accepted-offer opacity.
 
-Use for active global listings, sold listings, market highs, and rare-card scarcity. Filter fake listings, title stuffing, best-offer ambiguity, low-feedback sellers, stock photos, shill risk, shipping, and imports.
-
-## Alt.xyz
-
-Use for graded portfolio perspective and premium collectible sentiment. Verify with raw sales and population reports.
+## PSA/BGS/CGC/GemRate
+Use for cert verification, population, grade distribution, and grading-volume context.
 
 ## Collectr
-
-Use only as a rough inventory baseline and quick portfolio view. Collectr can map to wrong variants and be badly mispriced. Never use as final sell price.
+Portfolio baseline only. Never final sell price.

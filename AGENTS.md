@@ -23,3 +23,16 @@ Hard rules:
 - For pricing, follow `pricing/pricing_protocol.md`.
 - For major card decisions, use the OP CPT AI Council in `market_research/agent_council_context.md`.
 - For website work, inspect `apps/op-cpt` and run typecheck/build before claiming safety.
+
+## OP CPT Business Desk
+
+For OP CPT / The Vault Room pricing, inventory, consignment, content, and website work:
+
+- Use `pricing/pricing_protocol.md` before quoting prices.
+- Never price from Collectr alone.
+- Card Ladder is required for serious One Piece pricing when accessible.
+- Save pricing evidence to `inventory/pricing_research_log.csv`.
+- Use `inventory/master_inventory.csv` and `inventory/master_inventory.xlsx` as the operating inventory.
+- Preserve raw exports in `inventory/raw/`.
+- Keep secrets and payment/customer data out of commits.
+- Public catalogue work lives under `apps/op-cpt` and `website/`.

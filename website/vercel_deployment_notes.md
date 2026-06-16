@@ -1,12 +1,16 @@
 # Vercel Deployment Notes
 
-Current live site is reachable at https://op-cpt.vercel.app.
+Primary deployment: Vercel.
 
-Before website changes:
+Live URL: https://op-cpt.vercel.app
 
-```powershell
-npm --prefix apps/op-cpt run typecheck
-npm --prefix apps/op-cpt run build
+Before deploying:
+
+```bash
+cd apps/op-cpt
+npm run lint
+npm run typecheck
+npm run build
 ```
 
-Do not expose service-role Supabase keys to the browser. Keep private env vars in Vercel or local `.env`, not Git.
+Do not expose service-role keys, private scans, owner data, customer details, payment details, or private cost basis in browser bundles.

@@ -1,7 +1,14 @@
 # Grading and Population Guide
 
-For One Piece, grading value depends on exact card identity, language, variant, condition, grade company, grade, and population. PSA tends to have broad liquidity; BGS 10 and Black Label can be trophy labels; CGC 10/Pristine can work but buyer acceptance varies by market.
+Check PSA, BGS, CGC, and GemRate before pricing serious raw or slabbed cards.
 
-Use PSA/BGS/CGC population reports when accessible. If unavailable, log access limitation and do not fabricate population numbers.
+Separate:
 
-Photograph grading candidates front/back under diffuse light, include corners, edges, surface, and foil angles. Store in sleeves/toploaders/team bags and avoid handling.
+- PSA 10
+- BGS 9.5
+- BGS 10
+- BGS Black Label
+- CGC Gem Mint 10
+- CGC Pristine 10
+
+Grading makes sense when the card is clean, liquidity improves meaningfully, and expected net after grading beats a patient raw sale.

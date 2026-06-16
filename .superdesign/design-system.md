@@ -1,10 +1,10 @@
-# Ghost x Zoro Grand Line TCG + OP CPT Design System
+# Ghost x Zoro Grand Line TCG + The Vault Room Design System
 
 ## Project Context
 
 Private, password-gated One Piece TCG strategy workspace for Ghost and Zoro. Current deliverables include the earlier Remotion/report package plus a Unity WebGL game portal where Ghost and Zoro can walk a 3D ship/island hub, speak to Straw Hat NPCs, inspect slab pedestals, review portfolio analytics, and maintain the card database. One Piece-themed Drive, official card-list, and platform capture assets are private-use only and must not be treated as public/commercial release assets.
 
-New community layer: `OP CPT`, a member-beta Cape Town One Piece TCG community platform. It is an unofficial fan/community project for cards, battles, trades, events, rankings, group buys, and collection discovery. It must preserve the Ghost/Zoro private archive while adding a separate public-safe landing shell and gated fan-themed member experience.
+New community/business layer: `The Vault Room`, formerly tracked internally as OP CPT, is a Cape Town collector community and trading-card business for cards, collectibles, grails, pricing, trades, consignment, events, and collection discovery. It must preserve the Ghost/Zoro private archive while adding a public-safe Vault Room shell and gated fan-themed member experience.
 
 ## Visual Identity
 
@@ -12,17 +12,21 @@ New community layer: `OP CPT`, a member-beta Cape Town One Piece TCG community p
 - Composition: full-bleed ocean map, stylized Thousand Sunny trading post, readable HUD panels, metallic PSA/CGC slab pedestals, bounty-board analytics, and archive-room media surfaces.
 - Avoid: public-release branding claims, fake official endorsement, cluttered fan-collage layouts, unreadable fantasy typography, and UI panels that block the player view.
 
-## OP CPT Visual Identity
+## The Vault Room Visual Identity
 
-- Brand: `OP CPT`.
-- Tagline: `Cape Town's Grand Line for cards, battles, and trades.`
-- Primary mark: compass + trading card slab + Table Mountain silhouette, inspired by the approved Route 01 concept board.
-- App concept: immersive Cape Town harbor card-map portal with collectible islands, slab pedestals, rankings, market watch, event panels, and member-beta sign-in.
+- Brand: `The Vault Room`.
+- Tagline: `Cards. Collectibles. Grails.`
+- Secondary lines: `Unlock your grail.`, `Every card has a story.`, `More than cards. We're a community.`
+- Social: Instagram `@thevaultroom.cpt`; WhatsApp community `https://chat.whatsapp.com/LgAy8Q0NgVp9NcU7oJXBDy`.
+- Primary mark: circular vault-keyhole crest with gold ring, ocean waves, collector symbols, and cream parchment base.
+- App concept: premium collector vault and Cape Town harbor portal with collectible islands, slab pedestals, rankings, market watch, event panels, and member-beta sign-in.
 - Public shell: original nautical/card/Cape Town motifs only; no official One Piece logo, skull mark, exact character likenesses, or fake official endorsement.
 - Gated member areas: fan assets from Drive may be used with private fan-project disclaimers.
 - Approved references:
-  - Brand board: `/Users/mx/.codex/generated_images/019e5aad-8f01-7693-af95-0b5f09d91496/ig_041738cae703eb21016a2048b346a08191b88754c2334b99ee.png`
-  - App concept: `/Users/mx/.codex/generated_images/019e5aad-8f01-7693-af95-0b5f09d91496/ig_041738cae703eb21016a204985e36c8191ab20af778233dc8c.png`
+  - Poster example: `media/branding/vault-room-poster-example.jpg`
+  - Crest: `media/branding/vault-room-crest.jpg`
+  - Primary logo: `media/branding/vault-room-primary-logo.jpg`
+  - Brand board: `media/branding/vault-room-brand-board.jpg`
 
 ## Tokens
 
@@ -45,6 +49,12 @@ New community layer: `OP CPT`, a member-beta Cape Town One Piece TCG community p
   - `op-cpt-cream`: `#f2e9d6`
   - `op-cpt-red`: `#d72638`
   - `op-cpt-storm`: `#39424e`
+  - `vault-navy`: `#0D4EA2`
+  - `vault-blue`: `#2176D2`
+  - `vault-gold`: `#D4AF37`
+  - `vault-coral`: `#FF6B5B`
+  - `vault-sky`: `#7EC6F0`
+  - `vault-cream`: `#FFF7E6`
 - Type:
   - Display: system serif fallback for title moments, `Georgia`, `Times New Roman`, serif.
   - Interface/data: `Inter`, `Avenir Next`, `Helvetica Neue`, Arial, sans-serif.
@@ -77,13 +87,13 @@ New community layer: `OP CPT`, a member-beta Cape Town One Piece TCG community p
 - NPC Dialogue: speaker portrait, topic chip, concise current recommendation, detail tabs for evidence.
 - Bid Board: keep/cancel badges, total exposure, duplicate/low-grade warnings, no account-sensitive details.
 - Manual Entry: scanner/manual split, nullable cert number, required source/provenance field.
-- OP CPT Harbor Hub: full-bleed React Three Fiber canvas with DOM HUD, landmark buttons, member CTA, and responsive bottom nav.
-- OP CPT Member Card: avatar/crew tag, collection value, battle points, trade count, privacy chip.
-- OP CPT Trade Offer: offered/requested items, status, expiration, message, no payment fields.
-- OP CPT Event Card: venue, date, format, cap, RSVP state, prize/pack-rip notes.
-- OP CPT Price Tile: source, latest snapshot, trend delta, confidence, retrieved date.
-- OP CPT Scanner Entry: camera/upload affordance plus manual fallback; never claims recognition is final until verified.
-- OP CPT Admin Queue: pending beta requests, flagged trades, event approvals, group-buy moderation.
+- Vault Room Harbor Hub: full-bleed React Three Fiber canvas with DOM HUD, landmark buttons, member CTA, and responsive bottom nav.
+- Vault Room Member Card: avatar/crew tag, collection value, battle points, trade count, privacy chip.
+- Vault Room Trade Offer: offered/requested items, status, expiration, message, no payment fields.
+- Vault Room Event Card: venue, date, format, cap, RSVP state, prize/pack-rip notes.
+- Vault Room Price Tile: source, latest snapshot, trend delta, confidence, retrieved date.
+- Vault Room Scanner Entry: camera/upload affordance plus manual fallback; never claims recognition is final until verified.
+- Vault Room Admin Queue: pending beta requests, flagged trades, event approvals, group-buy moderation.
 
 ## Unity Scene Rules
 

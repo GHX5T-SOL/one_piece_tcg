@@ -1,9 +1,11 @@
 # Business Context
 
-Business name: OP CPT.
+The Vault Room is the public Cape Town collector-community brand. OP CPT remains the internal workspace name and existing app/repo continuity label.
 
-Business type: Cape Town One Piece TCG buying, selling, pricing, inventory, grading, consignment, trade-day, event, content, and website business.
+Channels: Cape Town local deals, WhatsApp, Instagram, trade shows, Vault Room trade days, Vault Room tournaments, online sales, future website catalogue, and possible international channels such as eBay, CardTrader, or Cardmarket.
 
-Channels: Cape Town local deals, WhatsApp, Instagram, local trade shows, OP CPT trade days, OP CPT tournaments, online sales, future website catalogue, and later eBay/CardTrader/Cardmarket when useful.
+Live site: https://op-cpt.vercel.app
+Instagram: @thevaultroom.cpt
+WhatsApp community: https://chat.whatsapp.com/LgAy8Q0NgVp9NcU7oJXBDy
 
-Website direction: evolve https://op-cpt.vercel.app into a public sales catalogue. First commercial version should likely be enquiry-only, not direct checkout.
+Brand posture: premium, trusted, collector-first, research-backed, local, and community-driven.

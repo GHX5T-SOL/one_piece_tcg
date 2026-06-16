@@ -1,10 +1,9 @@
 # Questions
 
-These are non-blocking and do not stop workspace setup.
+Non-blocking questions saved during bootstrap:
 
-- No `export.csv` was found during bootstrap. Please place the current Collectr/export CSV in the OP_CPT repo root or parent TCG workspace when ready.
-- The GitHub repo is public. Should OP CPT create a separate private repo or encrypted storage location for raw inventory exports, consignment owner data, high-resolution scans, cert-sensitive slab images, and cost-basis records?
-- Should the current Drive consignment HEIC files be mirrored to private storage outside Git, or only referenced from Drive?
-- What ZAR/USD exchange-rate source should OP CPT treat as the default for pricing outputs?
-- Which sales channel has priority first: local WhatsApp/Instagram, trade-day/event table, website enquiry catalogue, eBay, CardTrader, or Cardmarket?
-- For consignment, confirm whether the default deal remains 80% of researched market value to owner / 20% OP CPT margin unless changed per item.
+1. Should the GitHub repo be made private before future high-resolution scans, cert images, private cost-basis notes, and consignment-owner details are committed?
+2. The shared ChatGPT context at https://chatgpt.com/share/6a294dd4-ea44-8326-85c8-127becfd71fa loaded only a login shell through web fetch. Please export or paste the transcript if it contains details not already captured here.
+3. Confirm whether the public catalogue should show exact available quantities or only `available / reserved / sold` status.
+4. Confirm whether consignment owner names should be stored as aliases only, even locally.
+5. Confirm target margin for owned stock by tier: fast flip, fair sale, premium hold, and event/show sticker.

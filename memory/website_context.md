@@ -1,7 +1,11 @@
 # Website Context
 
-OP CPT website is live at https://op-cpt.vercel.app and repo app is `apps/op-cpt`.
+Live: https://op-cpt.vercel.app
 
-Current app: Next 16, React 19, Supabase helpers, collection/market/trade/event/news/admin routes, and existing Supabase migration.
+Local app: `apps/op-cpt`
 
-Public catalogue should separate public listing data from private business data.
+Stack: Next.js App Router, React, React Three Fiber, Supabase-ready API routes, Vercel primary deploy, Netlify fallback.
+
+Current public shell already exposes navigation for Harbor, Collection, Scanner, Trades, Market, Events, Rankings, Group Buys, News, and Admin.
+
+Next commercial step: enquiry-only catalogue with public-safe scans, ZAR pricing, condition, language, status, WhatsApp/Instagram contact, and private admin fields.

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-10T20:06:09.354Z",
+  "generatedAt": "2026-06-16T10:32:30.579Z",
   "status": "pass",
   "deployDir": "deploy",
   "passcodeHashConfigured": false,
-  "unityBuildPresent": false
+  "unityBuildPresent": true
 }

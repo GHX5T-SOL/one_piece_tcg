@@ -1,57 +1,13 @@
 # Set-by-Set Guide
 
-## OP01 - Romance Dawn
+Use official product pages and card list as the source of truth before pricing.
 
-Launch foundation; early Nami/Zoro/Luffy/Romance Dawn cards remain collector-relevant.
+## Working Buckets
 
-## OP02 - Paramount War
+- OP01-OP03: early-set collector gravity; prioritize iconic leaders, manga rares, and early alt arts.
+- OP04-OP08: maturing era; evaluate by character, meta relevance, and special printings.
+- OP09-OP13: strong modern chase lane; validate overprinting and grading populations.
+- OP14-OP16: current-cycle attention; watch release hype, early price spikes, and errata/restriction effects.
+- EB/ST/Premium products: separate sealed-product value from individual-card break value.
 
-Marineford/Ace/Whitebeard demand; key competitive and collector overlap.
-
-## OP03 - Pillars of Strength
-
-Strong character spread; verify parallel and wanted variants.
-
-## OP04 - Kingdoms of Intrigue
-
-Dressrosa/Alabasta collector lanes; Doflamingo and Vivi signals matter.
-
-## OP05 - Awakening of the New Era
-
-Major anniversary/chase set; manga and Gear 5 era demand.
-
-## OP06 - Wings of the Captain
-
-Zoro/Sanji/Reiju and playable-card demand; check reprint pressure.
-
-## OP07 - 500 Years in the Future
-
-Bonney/Hancock/Future Island demand; strong OP CPT catalogue relevance.
-
-## OP08 - Two Legends
-
-Rayleigh/Chopper/Carrot and older-character collector lanes.
-
-## OP09 - Emperors in the New World
-
-Emperor/Roger/Luffy demand; strong chase-card watch.
-
-## OP10 - Royal Blood
-
-Donquixote/royal theme; verify meta leaders and SPs.
-
-## OP11 - A Fist of Divine Speed
-
-Luffy and high-energy current-cycle demand; verify TR/SP variants.
-
-## OP12 - Legacy of the Master
-
-Current/near-current official card-list set; recheck official products before listing.
-
-## OP13 - Carrying on His Will
-
-Sabo/Ace/Luffy family thesis; current product/market data must be refreshed before pricing.
-
-## OP14+ - Announced/current watch
-
-Do not rely on cached names. Verify from official products/card list before decisions.
+Each set-specific price decision should record release date, chase cards, manga/SP/treasure cards, meta leaders, reprint risk, active supply, and grading population.

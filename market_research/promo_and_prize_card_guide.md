@@ -1,7 +1,13 @@
 # Promo and Prize Card Guide
 
-Promo identity is a major OP CPT risk area. Always distinguish P cards, event pack promos, store tournament cards, championship cards, winner cards, participant cards, finalist cards, Treasure Cup cards, regional cards, serial-numbered cards, Super Pre-Release cards, Pre-Release cards, Premium Card Collection cards, and sealed promo products.
+Highest OP CPT priority categories:
 
-Do not treat participant and winner cards as interchangeable. Do not treat reprints as originals. Always verify stamp, language, foil, product source, and card number.
+- manga rares and true prize/trophy cards
+- championship, regional, Treasure Cup, finalist, winner, and participant cards
+- event pack promos
+- super pre-release and pre-release cards
+- serial-numbered cards
+- anniversary and premium collection cards
+- scarce local Cape Town slabs
 
-Rare promos can justify market-maker asks when active supply is thin, but the ask must be backed by availability checks, past sales, character demand, and grading upside.
+Pricing rule: exact stamp/source matters. Participant, finalist, winner, and normal promo versions must never be mixed.

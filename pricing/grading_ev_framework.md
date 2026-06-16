@@ -1,18 +1,14 @@
 # Grading EV Framework
 
-Grade when condition, scarcity, character demand, and grade-pop spread justify costs and time. Sell raw when liquidity, grade risk, or cash velocity beats expected slab upside.
+Grade when expected net graded value beats raw patient-sale value after:
 
-Evaluate:
+- grading fee
+- shipping and insurance
+- turnaround time
+- grade risk
+- cashflow lockup
+- platform fees
 
-- centering
-- corners
-- edges
-- surface
-- print quality
-- foil quality
-- back condition
-- overall grade confidence
+Score raw candidates on centering, corners, edges, surface, print quality, foil quality, and back condition.
 
-Compare PSA, BGS, and CGC. PSA often has the broadest liquidity; BGS 10 / Black Label can command trophy premiums when population is low; CGC 10 / Pristine can be strong but buyer acceptance varies.
-
-Treat raw OP CPT cards as carefully handled and potential grading candidates, not guaranteed 10s.
+Never advertise a raw card as a guaranteed 10.

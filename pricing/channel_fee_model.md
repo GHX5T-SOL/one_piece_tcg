@@ -1,14 +1,12 @@
 # Channel Fee Model
 
-Track fees by channel before making price decisions.
+Track gross, fees, shipping, payment costs, returns/dispute risk, and expected net by channel.
 
-| Channel | Gross Price | Platform Fee | Payment Fee | Shipping/Packaging | FX/Customs | Expected Net | Notes |
-|---|---:|---:|---:|---:|---:|---:|---|
-| Local cash/EFT | | | | | | | Lowest fee, strongest trust if in person. |
-| WhatsApp/Instagram | | | | | | | Needs proof photos and reputation-safe wording. |
-| Trade day/event | | | | | | | Strong discovery and bundle potential. |
-| Website enquiry | | | | | | | Manual close; public/private field separation needed. |
-| eBay | | | | | | | Global reach but scams, fees, shipping, chargebacks. |
-| CardTrader | | | | | | | International liquidity; check CardTrader Zero economics. |
-| Cardmarket | | | | | | | EU floor useful but not directly local. |
-| TCGplayer | | | | | | | US signal; selling access may be constrained. |
+Channels:
+
+- Local cash/EFT: lowest fee, highest trust, limited audience.
+- WhatsApp/Instagram: patient ask, relationship-driven, manual payment.
+- Trade day/event: sticker premium, bundle negotiation.
+- eBay: global demand but high fees, shipping, disputes, and return risk.
+- CardTrader/Cardmarket: international benchmark; access and logistics vary from South Africa.
+- TCGplayer: benchmark only unless selling access is available.

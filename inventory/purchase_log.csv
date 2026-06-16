@@ -1,1 +1,1 @@
-purchased_at,item_id,source,gross_cost_zar,shipping_zar,fees_zar,landed_cost_zar,status,notes
+purchased_at,item_id,card_name,source,gross_zar,fees_zar,shipping_zar,landed_cost_zar,ownership_status,notes

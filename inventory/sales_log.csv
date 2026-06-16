@@ -1,1 +1,1 @@
-sold_at,item_id,buyer_channel,gross_zar,fees_zar,net_zar,payment_status,delivery_status,notes
+sold_at,item_id,card_name,channel,gross_zar,fees_zar,shipping_zar,net_zar,buyer_handle,payment_status,delivery_status,notes

@@ -1,8 +1,9 @@
 # Memory Index
 
-- `business_context.md`: identity, channels, pricing posture.
-- `inventory_context.md`: inventory assumptions and import status.
-- `pricing_context.md`: pricing protocol summary and test example.
-- `market_context.md`: market research summary.
-- `website_context.md`: app/repo/website context.
-- `agent_council_context.md`: operating roles.
+- `brand_context.md`: The Vault Room public identity, links, palette, brand lines, and app-revamp constraint.
+- `business_context.md`: The Vault Room / OP CPT mission, channels, positioning, and rules.
+- `inventory_context.md`: current Collectr export baseline and inventory assumptions.
+- `pricing_context.md`: Vault Room pricing protocol and example card.
+- `market_context.md`: One Piece market research summary and source hierarchy.
+- `website_context.md`: current Next.js OP CPT app and catalogue roadmap.
+- `agent_council_context.md`: internal council roles for pricing and operations.

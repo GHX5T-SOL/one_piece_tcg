@@ -1,20 +1,19 @@
 # Public Catalogue Roadmap
 
-First commercial version should be enquiry-only, not checkout.
+MVP:
 
-Recommended public listing fields:
+- public card listing
+- own scan/photo
+- price in ZAR with optional USD reference
+- condition, language, variant, raw/slab
+- status: available, reserved, sold, hold
+- enquiry button to WhatsApp/Instagram
+- source-backed notes where useful
 
-- card name
-- card number
-- set
-- rarity
-- language
-- condition
-- price in ZAR
-- optional USD reference
-- status: available / reserved / sold
-- public notes
-- front image from OP CPT-owned scan/photo
-- WhatsApp/Instagram enquiry button
+Admin needs:
 
-Private fields must stay private: cost basis, seller/source, consignment owner, minimum price, private cert fields, margin, negotiation history, and private notes.
+- import from master inventory
+- hide private fields
+- mark reserved/sold
+- upload scans
+- create pricing decision records

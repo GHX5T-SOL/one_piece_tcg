@@ -1,15 +1,13 @@
 # Consignment Pricing Framework
 
-Default baseline: owner receives 80% of researched market value unless a different deal is agreed.
+Default baseline: owner receives 80% of researched sellable market value unless another deal is agreed.
 
-Workflow:
+Accept consignment only when:
 
-1. Intake item and owner alias privately.
-2. Identify exact card/product.
-3. Photograph/scan front, back, and defects.
-4. Research clean comps.
-5. Set fair market, patient ask, event ask, quick-sale floor, and walk-away.
-6. Confirm split, reserve, and payout timing.
-7. Track listing, offers, sale, fees, payout, and unsold return.
+- identity is clear
+- condition can be verified
+- price spread supports OP CPT effort
+- card adds content, customer acquisition, or catalogue strength
+- owner accepts realistic timelines and walk-away rules
 
-Because this repo is public, owner identity and private payout details do not belong here.
+Do not use Collectr as the market value. Research the card first.

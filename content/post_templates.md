@@ -1,32 +1,19 @@
 # Post Templates
 
-## Instagram Post
+## New Stock Drop
 
-Hook:
-Card:
-Why collectors care:
-Condition / language:
-Price posture:
-CTA:
+New arrival at The Vault Room: [card].
 
-## Reel Script
+- Set/card number:
+- Condition/grade:
+- Why collectors care:
+- Price:
+- DM to reserve or inspect in Cape Town.
 
-1. Show real scan/photo.
-2. Call out exact card number and variant.
-3. Explain one market signal.
-4. Invite local inspection or enquiry.
+## Market Watch
 
-## WhatsApp Sales Post
+Market watch: [card/category].
 
-Card:
-Number:
-Language:
-Condition:
-Ask:
+What changed:
 Why it matters:
-Photos available:
-Collection / delivery:
-
-## Website Listing Copy
-
-[Card Name] [Number] - [Language] [Condition]. Available from OP CPT in Cape Town. Enquire for photos, inspection, and current availability.
+Vault Room view:

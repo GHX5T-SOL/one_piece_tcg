@@ -26,9 +26,9 @@ Archived video/report components:
 - Scenario band.
 - Subtitle bar.
 
-OP CPT components:
+The Vault Room components:
 
-- Brand lockup with compass/card/Table Mountain mark.
+- Brand lockup with circular vault-keyhole crest and `Cards. Collectibles. Grails.` line.
 - Member-beta gate and sign-in CTA.
 - React Three Fiber harbor map canvas.
 - Landmark beacon for Collect, Battle, Trade, Events, Market, Rankings, Group Buys, News, Lore.

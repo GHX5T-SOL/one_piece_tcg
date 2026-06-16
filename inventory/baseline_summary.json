@@ -1,12 +1,3 @@
-# Inventory Context
-
-Updated: 2026-06-16
-
-The current Collectr export was imported from `/Users/mx/Downloads/export.csv`.
-
-Summary:
-
-```json
 {
   "generated_at": "2026-06-16",
   "source_file": "/Users/mx/Downloads/export.csv",
@@ -77,6 +68,3 @@ Summary:
   "sealed_product_rows": 4,
   "collectr_warning": "Collectr values are portfolio baselines only and are not sell prices."
 }
-```
-
-Rows are treated as physically in hand. Consignment Drive items are separate until individually imported.

@@ -1,8 +1,11 @@
 # Instagram Strategy
 
-Brand: trusted Cape Town One Piece TCG hub, premium collector-first sourcing, transparent research-backed pricing, rare promos, grading candidates, trade days, and tournaments.
+Position The Vault Room as Cape Town's trusted collector community: grail access, transparent pricing, community trading, game nights, grading candidates, and local trust.
 
-Pillars:
+Primary handle: @thevaultroom.cpt
+Community join link: https://chat.whatsapp.com/LgAy8Q0NgVp9NcU7oJXBDy
+
+Content pillars:
 
 - new arrivals
 - rare card spotlight
@@ -11,10 +14,5 @@ Pillars:
 - behind-the-scenes scanning
 - trade-day announcements
 - tournament announcements
-- price education
 - fake listing warnings
-- collector stories
-- sealed product watch
 - consignment highlights
-
-Use own scans/photos and OP CPT original branding. Do not use copyrighted official assets publicly unless legally safe.

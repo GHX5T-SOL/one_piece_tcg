@@ -8,7 +8,7 @@ Planned local entry points:
 - HyperFrames storyboard/check page: `hyperframes/ghost-zoro/index.html`
 - Local docs: `docs/research.md`, `docs/strategy-whitepaper.md`, `docs/script.md`, `docs/storyboard.md`, `docs/qa.md`
 
-OP CPT member-beta app entry points:
+The Vault Room member-beta app entry points:
 
 - `/` public-safe landing and beta gate.
 - `/app` playable 3D Cape Town card-harbor hub.

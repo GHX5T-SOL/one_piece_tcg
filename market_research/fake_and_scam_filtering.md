@@ -2,17 +2,14 @@
 
 Red flags:
 
-- wrong card number or language in title
-- base art listed as alt art
-- participant listed as winner
-- reprint listed as original
-- stock photo only
-- no back photo for expensive raw cards
-- suspiciously low seller feedback
-- too-good-to-be-true high-end manga rare
-- slab label mismatch
-- cert number not matching card/grade when checked
-- hidden damage, glare, or cropped corners
-- best-offer sold listing with unknown accepted price
+- wrong language hidden in title
+- stock photos for expensive raw cards
+- base card titled as alt art/SP/manga
+- participant card titled as winner
+- fake slab labels or mismatched certs
+- low-feedback seller with too-good pricing
+- relisted auctions that did not really sell
+- old comps before reprint/meta/banlist shifts
+- Collectr or PriceCharting SKU mismatch
 
-OP CPT public listings should use own scans/photos where legally safe and avoid official art as a replacement for actual condition evidence.
+Require front/back scans for high-end raw cards and cert verification for slabs.

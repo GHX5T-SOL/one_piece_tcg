@@ -1,13 +1,12 @@
 # Card Spotlight Template
 
 Card:
-Card number:
-Set/product:
+Number:
+Set/source:
 Language:
 Variant:
+Condition/grade:
 Why it matters:
-Collector angle:
-Player/meta angle:
-Condition notes:
-Local availability angle:
-CTA:
+Market context:
+Vault Room price:
+Inspection/pickup:
