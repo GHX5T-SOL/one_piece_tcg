@@ -6,8 +6,8 @@ type BrandMarkProps = {
 
 export function BrandMark({ compact = false }: BrandMarkProps) {
   return (
-    <Link className="brand-mark" href="/" aria-label="OP CPT home">
-      <svg className="brand-mark__icon" viewBox="0 0 96 96" role="img" aria-label="OP CPT compass card mark">
+    <Link className="brand-mark" href="/" aria-label="The Vault Room home">
+      <svg className="brand-mark__icon" viewBox="0 0 96 96" role="img" aria-label="The Vault Room compass card mark">
         <defs>
           <linearGradient id="op-cpt-gold" x1="0" x2="1" y1="0" y2="1">
             <stop offset="0" stopColor="#f8df8c" />
@@ -23,7 +23,7 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
         <path d="M18 73h60" stroke="#d4af37" strokeWidth="3" strokeLinecap="round" />
       </svg>
       <span className="brand-mark__text">
-        <strong>OP CPT</strong>
+        <strong>The Vault Room</strong>
         {!compact && <em>Cape Town TCG Community</em>}
       </span>
     </Link>

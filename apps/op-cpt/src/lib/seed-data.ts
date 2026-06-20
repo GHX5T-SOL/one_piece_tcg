@@ -11,12 +11,12 @@ import type {
 } from "./types";
 
 export const brand = {
-  name: "OP CPT",
-  tagline: "Cape Town's Grand Line for cards, battles, and trades.",
+  name: "The Vault Room",
+  tagline: "Cards. Collectibles. Grails.",
   disclaimer:
     "Unofficial member-beta fan community. Not affiliated with Bandai, Toei, Shueisha, or official One Piece rights holders.",
-  telegramUrl: process.env.NEXT_PUBLIC_TELEGRAM_URL || "https://t.me/opcpt-placeholder",
-  instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/opcpt-placeholder"
+  whatsappUrl: process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://chat.whatsapp.com/LgAy8Q0NgVp9NcU7oJXBDy",
+  instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/thevaultroom.cpt"
 };
 
 export const profiles: MemberProfile[] = [
@@ -119,7 +119,7 @@ export const cards: CardRecord[] = [
     privacy: "members",
     marketValueZar: null,
     source: "Collectr profile and user-supplied inventory",
-    notes: "Core OP CPT identity piece because it fits the Zoro/crew theme and pristine label.",
+    notes: "Core Vault Room identity piece because it fits the Zoro/crew theme and pristine label.",
     tags: ["zoro", "graded", "pristine", "hold"]
   },
   {
@@ -336,7 +336,7 @@ export const landmarks: Landmark[] = [
 export const events: EventRecord[] = [
   {
     id: "game-night-june-6",
-    title: "OP CPT Game Night",
+    title: "The Vault Room Game Night",
     date: "2026-06-06",
     venue: "Fanaticus Clubhouse, Cape Town",
     format: "Casual battles, teaching table, trade window, pack-rip corner",

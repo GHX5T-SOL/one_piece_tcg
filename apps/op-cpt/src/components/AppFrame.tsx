@@ -28,8 +28,8 @@ export function AppFrame({ children, active = "", gateLabel = "Member Beta" }: A
           })}
         </nav>
         <div className="topbar__actions">
-          <a className="social-link social-link--telegram" href={brand.telegramUrl}>
-            Join Telegram
+          <a className="social-link social-link--telegram" href={brand.whatsappUrl}>
+            Join WhatsApp
           </a>
           <a className="social-link social-link--instagram" href={brand.instagramUrl}>
             Instagram
@@ -41,7 +41,7 @@ export function AppFrame({ children, active = "", gateLabel = "Member Beta" }: A
         </div>
       </header>
 
-      <aside className="side-rail" aria-label="OP CPT sections">
+      <aside className="side-rail" aria-label="The Vault Room sections">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = active === item.href;

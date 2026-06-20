@@ -40,7 +40,7 @@ export function AuthPanel() {
     <section className="auth-panel">
       <div>
         <p className="kicker">Member beta access</p>
-        <h1>Sign in to OP CPT</h1>
+        <h1>Sign in to The Vault Room</h1>
         <p>
           Supabase magic-link auth is wired for the beta. Profiles, collection privacy, trades, RSVPs, and watchlists are protected by
           the RLS migration once the production Supabase project is connected.

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OP CPT | Cape Town One Piece TCG Community",
-  description: "Cape Town's Grand Line for cards, battles, and trades.",
+  title: "The Vault Room | Cards. Collectibles. Grails.",
+  description: "Cape Town collector community for cards, collectibles, grails, trades, events, consignments and pre-grading.",
   icons: {
     icon: "/favicon.svg"
   },

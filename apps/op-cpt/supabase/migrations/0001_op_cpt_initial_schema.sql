@@ -1,4 +1,4 @@
--- OP CPT member-beta initial schema.
+-- The Vault Room member-beta initial schema.
 -- Apply with Supabase CLI/MCP after project selection. Every exposed table has RLS.
 
 create schema if not exists private;

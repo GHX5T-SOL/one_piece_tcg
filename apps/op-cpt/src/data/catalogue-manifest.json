@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-06-20T13:17:45.856Z",
+  "source": "sales/loyverse/2026-06-19/the-vault-room-loyverse-import-2026-06-19.csv",
+  "sourceRows": 324,
+  "publicProducts": 325,
+  "serviceProductsAdded": 1,
+  "categoryCounts": {
+    "One Piece": 321,
+    "Yu-Gi-Oh": 1,
+    "Pokemon": 2,
+    "Services": 1
+  },
+  "publicSafetyPolicy": "Customer-facing product data is sanitized for public display."
+}

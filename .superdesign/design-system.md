@@ -27,6 +27,10 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
   - Crest: `media/branding/vault-room-crest.jpg`
   - Primary logo: `media/branding/vault-room-primary-logo.jpg`
   - Brand board: `media/branding/vault-room-brand-board.jpg`
+  - Brand kit source: `/Users/mx/Desktop/the_vault_room_brandkit/`
+  - Transparent crest: `/Users/mx/Desktop/the_vault_room_brandkit/assets/icon_mark_crest_transparent.png`
+  - Transparent horizontal lockup: `/Users/mx/Desktop/the_vault_room_brandkit/assets/horizontal_lockup_transparent.png`
+  - Transparent primary lockup: `/Users/mx/Desktop/the_vault_room_brandkit/assets/primary_logo_lockup_transparent.png`
 
 ## Tokens
 
@@ -34,6 +38,7 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Unity WebGL: desktop-first `16:9` responsive canvas with mobile-ish fallback, camera-safe HUD margins `32px`, dialogue max width `720px`.
 - Interaction: WASD/arrow movement, mouse camera, `E` interact, `Esc` menu, visible focus state for wrapper forms.
 - PDF: A4 landscape for visual analytics pages, `12mm` page margin, print-safe dark mode with high-contrast panels and page-level source footers.
+- Certificate PDF: A4 landscape, print-safe cream canvas, double border inside `10mm`, all text at least `12mm` from page edge, official-looking but explicitly independent from PSA/BGS/CGC.
 - Colors:
   - `ink`: `#071014`
   - `night`: `#0b1720`
@@ -79,6 +84,7 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Scenario Band: conservative/base/upside bars; clear disclaimer that these are educational scenarios, not guaranteed profit.
 - Subtitle Bar: bottom-safe caption strip with 72px minimum margin and two-line maximum.
 - Report Page: one dominant thesis per page, 2-3 visual anchors max, no tiny spreadsheet walls.
+- Lab Certificate Page: clear certificate number, reviewer, inspection date, signature/stamp, result panel, grade projection table, front/back specimen photo, and independence note.
 - Decision Matrix: clear action column first, then rationale, risk, and next trigger.
 - Projection Chart: conservative/base/upside bands labeled as scenario analysis only.
 - Source Ledger: full URL list with retrieval dates and confidence notes.
@@ -113,3 +119,13 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Web wrapper must block unauthenticated access before loading the Unity build.
 - Keyboard-only passcode entry and menu close must work.
 - Text panels must remain readable at desktop, tablet, and mobile-ish viewport screenshots.
+
+## The Vault Room Web App Rebuild Contract
+
+- Approved web-app concept: `/Users/mx/.codex/generated_images/019e5aad-8f01-7693-af95-0b5f09d91496/ig_0aa7a08c7ea83174016a36846e3b0081919a8a2d075c98d527.png`.
+- Public web brand is `The Vault Room`; old `OP CPT` language must not appear in customer-facing copy.
+- Desktop layout must follow the concept: parchment sea-map canvas, dark navy top strip, left brand/CTA area, central Table Mountain/vault/card-table hero art, right cart rail, live auction rail, product grid, and bottom community strip.
+- Mobile layout must follow the concept: compact top bar, poster-style hero, show RSVP card, collector strip, featured product card, and bottom navigation.
+- Catalogue source of truth is the combined Loyverse file. Every public sale item must appear in `/shop` with a price, stock status, image/fallback render, and detail page.
+- Public catalogue must strip all internal owner/source labels. Forbidden in customer UI: `Yaseen`, `Yaseen's Cards`, `Vault Room main collection`, `source row`, `staff note`, `cost basis`, `floor`, `walk-away`.
+- Pre-grading/authentication service is a public product/service at `R150` per card, excluding shipping if not dropped off.

@@ -133,7 +133,7 @@ export function HarborScene({ compact = false }: { compact?: boolean }) {
   );
 
   return (
-    <section className={compact ? "harbor harbor--compact" : "harbor"} aria-label="OP CPT playable harbor">
+    <section className={compact ? "harbor harbor--compact" : "harbor"} aria-label="The Vault Room playable harbor">
       <Canvas camera={{ position: [0, 5.4, 6.6], fov: 46 }} dpr={[1, 1.8]} gl={{ antialias: true }}>
         <ambientLight intensity={0.55} />
         <directionalLight position={[3, 6, 4]} intensity={1.4} color="#f6d990" />
