@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, FlaskConical, Gavel, Menu, Search, ShoppingBag, UserRound, UsersRound } from "lucide-react";
+import { CalendarDays, FlaskConical, Gavel, Menu, Search, ShoppingBag, Sparkles, UserRound, UsersRound } from "lucide-react";
 import { CartDrawer } from "@/components/store/CartDrawer";
 
 const nav = [
   { href: "/shop", label: "Shop", icon: ShoppingBag },
+  { href: "/gacha", label: "Gacha", icon: Sparkles },
   { href: "/auctions", label: "Auctions", icon: Gavel },
   { href: "/events", label: "Events", icon: CalendarDays },
   { href: "/grade-lab", label: "Grade Lab", icon: FlaskConical },

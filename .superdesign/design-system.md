@@ -135,3 +135,13 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Image provenance must stay public-safe: do not expose local `file:///Users/...` paths or internal ownership notes in browser data.
 - Public catalogue must strip all internal owner/source labels. Forbidden in customer UI: `Yaseen`, `Yaseen's Cards`, `Vault Room main collection`, `source row`, `staff note`, `cost basis`, `floor`, `walk-away`.
 - Pre-grading/authentication service is a public product/service at `R150` per card, excluding shipping if not dropped off.
+
+## Vault Gacha Demo Contract
+
+- Route: `/gacha`.
+- Status: visual demo / coming soon until payment, legal rules, odds publication, stock reservation, shipping terms, refund terms, and compliance controls are finalized.
+- References: Phygitals East Blue Pack, CollectorCrypt Gacha, Gacha Game One Piece packs, Courtyard One Piece Pro Pack.
+- Core interaction: select pack tier, spin a glossy 3D vault/gacha machine, reveal a real catalogue-backed prize, then preview `Redeem / ship` or `Auto-sell 70% FMV`.
+- Payment methods shown as future rails only: Crypto, Visa, Mastercard, EFT, PayPal, Apple Pay, Google Pay, Stripe, PayFast.
+- Public prize pool may use only public catalogue fields and images. It must not expose internal owner/source names, staff floors, cost basis, or consignment notes.
+- Design must feel AAA/premium, not low-poly: high-segment geometry, metallic vault materials, glass dome, capsule lights, slab reveal, parchment sea-map UI, and mobile stacked controls.
