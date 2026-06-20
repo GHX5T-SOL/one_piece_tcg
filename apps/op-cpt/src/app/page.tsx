@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <VaultRoomShell>
       <VaultHero />
-      <ShopGrid limit={16} />
+      <ShopGrid limit={7} />
       <section className="trust-row">
         <article>
           <ShieldCheck aria-hidden size={28} />

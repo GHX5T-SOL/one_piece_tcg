@@ -123,9 +123,13 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 ## The Vault Room Web App Rebuild Contract
 
 - Approved web-app concept: `/Users/mx/.codex/generated_images/019e5aad-8f01-7693-af95-0b5f09d91496/ig_0aa7a08c7ea83174016a36846e3b0081919a8a2d075c98d527.png`.
+- Current hero-art layer: `apps/op-cpt/public/branding/vault-room-anime-packrip-hero.jpg`, generated from the user's direction for an anime collector crew ripping packs, holding graded slabs, and trading around the Vault Room harbor table.
+- Future visual build direction: assemble the homepage layer by layer instead of as a flat screenshot. Keep separate assets for parchment map background, Table Mountain harbor, collector crew, vault door glow, product renders, cart rail, auction rail, and mobile preview so the live UI remains responsive and editable.
+- Owned Courtyard slab photo source: `/Users/mx/Documents/my_slabs`. Use these photos for matching existing catalogue listings and selected featured cards, but do not expose Courtyard/source wording in customer-facing UI. Do not white out, blur, mask, or cover certification labels/cert numbers in owned-card photos, hero artwork, product cards, cart thumbnails, or detail views.
 - Public web brand is `The Vault Room`; old `OP CPT` language must not appear in customer-facing copy.
 - Desktop layout must follow the concept: parchment sea-map canvas, dark navy top strip, left brand/CTA area, central Table Mountain/vault/card-table hero art, right cart rail, live auction rail, product grid, and bottom community strip.
 - Mobile layout must follow the concept: compact top bar, poster-style hero, show RSVP card, collector strip, featured product card, and bottom navigation.
+- Homepage product rail should show one curated featured row only, then route users to `/shop` for the complete inventory and sorting.
 - Catalogue source of truth is the combined Loyverse file. Every public sale item must appear in `/shop` with a price, stock status, image/fallback render, and detail page.
 - Public catalogue must strip all internal owner/source labels. Forbidden in customer UI: `Yaseen`, `Yaseen's Cards`, `Vault Room main collection`, `source row`, `staff note`, `cost basis`, `floor`, `walk-away`.
 - Pre-grading/authentication service is a public product/service at `R150` per card, excluding shipping if not dropped off.

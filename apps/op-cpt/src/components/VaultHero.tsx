@@ -49,10 +49,10 @@ export function VaultHero() {
         </div>
         <Image
           className="crew-hero-art"
-          src="/branding/vault-room-crew-hero.jpg"
-          alt="Vault Room collector crew trading cards at the Cape Town harbor"
-          width={1400}
-          height={1089}
+          src="/branding/vault-room-anime-packrip-hero.jpg"
+          alt="Anime collector crew ripping packs and holding graded slabs at the Vault Room harbor"
+          width={1672}
+          height={941}
           priority
         />
         <div className="card-table">
