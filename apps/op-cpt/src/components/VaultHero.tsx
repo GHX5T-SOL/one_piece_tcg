@@ -6,7 +6,7 @@ import { ProductVisual } from "@/components/store/ProductVisual";
 
 export function VaultHero() {
   const stats = productStats();
-  const auction = grailProducts[1] || grailProducts[0] || featuredProducts[0];
+  const auction = featuredProducts.find((product) => product.id === "TVR-CAT-0010") || grailProducts[1] || grailProducts[0] || featuredProducts[0];
 
   return (
     <section className="vault-hero">

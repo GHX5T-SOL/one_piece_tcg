@@ -131,5 +131,7 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Mobile layout must follow the concept: compact top bar, poster-style hero, show RSVP card, collector strip, featured product card, and bottom navigation.
 - Homepage product rail should show one curated featured row only, then route users to `/shop` for the complete inventory and sorting.
 - Catalogue source of truth is the combined Loyverse file. Every public sale item must appear in `/shop` with a price, stock status, image/fallback render, and detail page.
+- Catalogue imagery is driven by `apps/op-cpt/src/data/product-images.json`: use owned Courtyard slab photos first for matching slabs, official One Piece card/product images for exact card-number/product matches, and Vault Room branded fallback renders only where exact product photography has not been sourced yet.
+- Image provenance must stay public-safe: do not expose local `file:///Users/...` paths or internal ownership notes in browser data.
 - Public catalogue must strip all internal owner/source labels. Forbidden in customer UI: `Yaseen`, `Yaseen's Cards`, `Vault Room main collection`, `source row`, `staff note`, `cost basis`, `floor`, `walk-away`.
 - Pre-grading/authentication service is a public product/service at `R150` per card, excluding shipping if not dropped off.

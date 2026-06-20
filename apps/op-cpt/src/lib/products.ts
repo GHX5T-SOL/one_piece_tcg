@@ -1,5 +1,6 @@
 import products from "@/data/products.json";
 import manifest from "@/data/catalogue-manifest.json";
+import productImageManifest from "@/data/product-images.json";
 
 export type Product = {
   id: string;
@@ -49,13 +50,17 @@ export const featuredProductIds = [
 const featuredProductIdSet = new Set<string>(featuredProductIds);
 
 export const productImages: Record<string, { src: string; width: number; height: number }> = {
-  "TVR-CAT-0010": { src: "/products/featured/roronoa-zoro-25th-cgc10.jpg", width: 952, height: 1620 },
-  "TVR-CAT-0011": { src: "/products/featured/koby-prb02-cgc10.jpg", width: 1000, height: 1717 },
-  "TVR-CAT-0007": { src: "/products/featured/borsalino-op06-psa10.jpg", width: 1000, height: 1664 },
-  "TVR-CAT-0017": { src: "/products/featured/doflamingo-prb02-psa10.jpg", width: 1000, height: 1677 },
-  "TVR-CAT-0022": { src: "/products/featured/cavendish-op10-psa10.jpg", width: 1000, height: 1667 },
-  "TVR-CAT-0026": { src: "/products/featured/i-know-youre-strong-3rd-anniversary-psa10.jpg", width: 1000, height: 1676 },
-  "TVR-CAT-0030": { src: "/products/featured/koala-op12-psa10.jpg", width: 1000, height: 1672 }
+  ...Object.fromEntries(
+    Object.entries(
+      (
+        productImageManifest as {
+          images: Record<string, { src: string | null; width: number; height: number }>;
+        }
+      ).images
+    )
+      .filter(([, image]) => Boolean(image.src))
+      .map(([id, image]) => [id, { src: image.src as string, width: image.width, height: image.height }])
+  )
 };
 
 export const featuredProducts = [
