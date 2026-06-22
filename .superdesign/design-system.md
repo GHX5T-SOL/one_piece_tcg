@@ -145,3 +145,16 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Payment methods shown as future rails only: Crypto, Visa, Mastercard, EFT, PayPal, Apple Pay, Google Pay, Stripe, PayFast.
 - Public prize pool may use only public catalogue fields and images. It must not expose internal owner/source names, staff floors, cost basis, or consignment notes.
 - Design must feel AAA/premium, not low-poly: high-segment geometry, metallic vault materials, glass dome, capsule lights, slab reveal, parchment sea-map UI, and mobile stacked controls.
+- Odds must be internally consistent: every displayed tier needs at least one prize in that tier, and demo EV should be calculated from the current prize pool rather than hard-coded marketing copy.
+
+## Vault Room Platform Expansion Contract
+
+- Customer-facing feature pages must be honest beta surfaces, not fake live infrastructure. If profiles, marketplace, auctions, gacha, payments, messages, or scanner recognition are not fully wired, say so in-product and route users to WhatsApp/manual confirmation.
+- New platform routes should support the business vision without exposing internal data:
+  - `/collection`: portfolio search, scanner entry, manual card draft, public/private visibility model.
+  - `/market`: pricing protocol, watchlist, source ledger, confidence labels, no blind Collectr-only valuations.
+  - `/trades`: negotiation prompts and wishlists only; no escrow or payment claims.
+  - `/rankings`: opt-in battle/collection leaderboard preview.
+  - `/group-buys`: admin-moderated interest board only; no deposit collection until terms are approved.
+  - `/profile`: member sign-in readiness, portfolio privacy, marketplace/comment/DM roadmap.
+- Public copy must position The Vault Room as a trusted Cape Town collector operating desk: browse, enquire, confirm, pay/collect through approved human workflow until checkout, moderation, and legal terms are production-ready.

@@ -38,11 +38,24 @@ function weightedPrize(pack: GachaPack, prizes: GachaPrize[]) {
     pack.odds.find((entry) => {
       cursor += entry.chance;
       return roll <= cursor;
-    })?.tier ?? "single";
+  })?.tier ?? "single";
   const tierPrizes = prizes.filter((prize) => prize.gachaTier === tier);
-  const fallback = prizes.length ? prizes : [];
+  const fallback = prizes.filter((prize) => prize.gachaTier === "booster").length
+    ? prizes.filter((prize) => prize.gachaTier === "booster")
+    : prizes;
   const pool = tierPrizes.length ? tierPrizes : fallback;
   return pool[Math.floor(Math.random() * pool.length)] ?? prizes[0];
+}
+
+function expectedPackValue(pack: GachaPack, prizes: GachaPrize[]) {
+  return Math.round(
+    pack.odds.reduce((sum, entry) => {
+      const tierPrizes = prizes.filter((prize) => prize.gachaTier === entry.tier);
+      if (!tierPrizes.length) return sum;
+      const average = tierPrizes.reduce((tierSum, prize) => tierSum + prize.priceZar, 0) / tierPrizes.length;
+      return sum + average * (entry.chance / 100);
+    }, 0)
+  );
 }
 
 export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProps) {
@@ -55,6 +68,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
   const pendingPrizeRef = useRef<GachaPrize | null>(null);
 
   const selectedPack = (packs.find((pack) => pack.id === selectedPackId) ?? packs[0]) as GachaPack;
+  const selectedExpectedValue = expectedPackValue(selectedPack, prizes);
 
   const topHits = useMemo(() => prizes.slice(0, 8), [prizes]);
   const featuredPrizes = useMemo(() => {
@@ -169,7 +183,9 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
           </div>
           <div className="gacha-machine-panel__bottom">
             <span>{isSpinning ? "Vault sequence playing" : selectedPack.headline}</span>
-            <strong>{formatZar(selectedPack.priceZar)} demo price</strong>
+            <strong>
+              {formatZar(selectedPack.priceZar)} demo price · {formatZar(selectedExpectedValue)} calc EV
+            </strong>
           </div>
         </div>
 
@@ -188,7 +204,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
                   <strong>{pack.name}</strong>
                   <span>{pack.tagline}</span>
                   <em>
-                    {formatZar(pack.priceZar)} · EV {formatZar(pack.estimatedValueZar)}
+                    {formatZar(pack.priceZar)} · calc EV {formatZar(expectedPackValue(pack, prizes))}
                   </em>
                 </button>
               ))}
@@ -260,8 +276,8 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
               {pull.mode !== "revealed" && (
                 <p className="gacha-resolution">
                   {pull.mode === "redeem"
-                    ? "Demo status: item reserved for redemption workflow preview."
-                    : `Demo status: sell-back credit would show ${formatZar(pull.prize.buybackZar)} before fees/terms.`}
+                    ? "Demo status: item reserved for redemption workflow preview. Live redemption will require confirmed stock and shipping terms."
+                    : `Demo status: sell-back credit would show ${formatZar(pull.prize.buybackZar)} before fees, terms and manual approval.`}
                 </p>
               )}
             </div>
@@ -300,7 +316,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
         <article>
           <ShieldCheck aria-hidden size={26} />
           <strong>Transparent odds first</strong>
-          <span>Every live pack needs published odds, prize pool limits, stock controls and timestamped results.</span>
+          <span>Every live pack needs published odds, prize pool limits, stock controls, timestamped results and admin audit logs.</span>
         </article>
         <article>
           <Truck aria-hidden size={26} />

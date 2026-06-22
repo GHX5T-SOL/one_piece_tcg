@@ -75,6 +75,12 @@ const manualImages = {
 const localCardMediaRoot = path.join(appRoot, "..", "..", "media", "cards");
 
 const manualLocalImages = {
+  "TVR-CAT-0001": {
+    path: path.join(appRoot, "assets/product-sources/st13-003-monkey-d-luffy-bvb-transparent.png"),
+    source: "local-user-supplied-card-photo",
+    confidence: "exact-user-supplied-card-photo",
+    suffix: "transparent-card-photo"
+  },
   "TVR-CAT-0005": {
     path: path.join(localCardMediaRoot, "2024_One_Piece_Japanese_SD_Purple_Monkey_D._Luffy_SR_Zoro-Juurou__ST18-004_CGC_10_PRISTINE.jpg"),
     source: "local-owned-slab",
@@ -294,7 +300,7 @@ async function writeManualRemoteImage(product, manual) {
 async function writeManualLocalImage(product, manual) {
   const buffer = fs.readFileSync(manual.path);
   const optimized = await optimizeProductImage(buffer);
-  const fileName = `${product.id}-${slugify(product.name)}-owned-slab.webp`;
+  const fileName = `${product.id}-${slugify(product.name)}-${manual.suffix || "owned-slab"}.webp`;
   fs.writeFileSync(path.join(imageRoot, fileName), optimized);
   const dimensions = await getDimensions(optimized);
   return {
@@ -415,6 +421,7 @@ async function fallbackFor(product, reason = "no-exact-image-found") {
 const manifest = {};
 const stats = {
   total: products.length,
+  manualUserPhoto: 0,
   manualOwnedSlab: 0,
   officialDownloaded: 0,
   fallback: 0
@@ -429,7 +436,11 @@ for (const product of products) {
 
   if (manualLocalImages[product.id]) {
     manifest[product.id] = await writeManualLocalImage(product, manualLocalImages[product.id]);
-    stats.manualOwnedSlab += 1;
+    if (manualLocalImages[product.id].source === "local-owned-slab") {
+      stats.manualOwnedSlab += 1;
+    } else {
+      stats.manualUserPhoto += 1;
+    }
     continue;
   }
 
@@ -464,7 +475,7 @@ for (const product of products) {
 
 const payload = {
   generatedAt: new Date().toISOString(),
-  policy: "Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
+  policy: "Exact user-supplied product photos override generic official card-code art. Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
   stats,
   images: manifest
 };

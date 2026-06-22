@@ -12,9 +12,17 @@ export default function ConsignPage() {
   return (
     <VaultRoomShell>
       <section className="page-hero">
-        <span>Consign with us</span>
+        <span>Sell, trade or consign with us</span>
         <h1>Put your grails in the vault</h1>
-        <p>We help photograph, price, list, show, negotiate and sell collector cards through our Cape Town community channels.</p>
+        <p>
+          We buy cards, trade toward stronger pieces, and help photograph, price, list, show, negotiate and sell collector cards through our
+          Cape Town community channels.
+        </p>
+        <div className="stat-capsules">
+          <b>Buy-in guide: 75-95% of market</b>
+          <b>Higher range for liquid grails, slabs, promos and sealed demand</b>
+          <b>Final offer depends on condition, proof, supply and speed</b>
+        </div>
       </section>
       <section className="process-grid">
         {steps.map(({ title, body, icon: Icon }) => (

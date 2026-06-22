@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, FlaskConical, Gavel, Menu, Search, ShoppingBag, Sparkles, UserRound, UsersRound } from "lucide-react";
+import { CalendarDays, FlaskConical, Gavel, LibraryBig, Menu, Radar, Search, ShoppingBag, Sparkles, UsersRound } from "lucide-react";
 import { CartDrawer } from "@/components/store/CartDrawer";
 
 const nav = [
   { href: "/shop", label: "Shop", icon: ShoppingBag },
   { href: "/gacha", label: "Gacha", icon: Sparkles },
+  { href: "/collection", label: "Collection", icon: LibraryBig },
+  { href: "/market", label: "Market", icon: Radar },
   { href: "/auctions", label: "Auctions", icon: Gavel },
   { href: "/events", label: "Events", icon: CalendarDays },
   { href: "/grade-lab", label: "Grade Lab", icon: FlaskConical },
-  { href: "/community", label: "Community", icon: UsersRound },
-  { href: "/consign", label: "Consign", icon: UserRound }
+  { href: "/community", label: "Community", icon: UsersRound }
 ];
 
 export function VaultRoomShell({ children, showCart = true }: { children: React.ReactNode; showCart?: boolean }) {
@@ -37,9 +38,9 @@ export function VaultRoomShell({ children, showCart = true }: { children: React.
           })}
         </nav>
         <div className="header-tools">
-          <button aria-label="Search" type="button">
+          <Link href="/shop" aria-label="Search catalogue">
             <Search aria-hidden size={20} />
-          </button>
+          </Link>
           <Link href="/profile" aria-label="Profile">
             <Image src="/branding/vault-room-crest.png" alt="" width={38} height={38} />
             <span>Captain</span>

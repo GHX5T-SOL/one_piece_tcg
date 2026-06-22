@@ -36,6 +36,11 @@ const prizePoolIds = [
   "TVR-CAT-0017",
   "TVR-CAT-0022",
   "TVR-CAT-0026",
+  "TVR-CAT-0031",
+  "TVR-CAT-0032",
+  "TVR-CAT-0035",
+  "TVR-CAT-0038",
+  "TVR-CAT-0040",
   "TVR-CAT-0324",
   "TVR-CAT-0018",
   "TVR-CAT-0286",
@@ -94,7 +99,7 @@ export const gachaPacks: GachaPack[] = [
       { tier: "booster", label: "Booster / pack line", chance: 30, description: "Pack-stock baseline with redeem or 70% sell-back." },
       { tier: "single", label: "Raw single", chance: 33, description: "Alt arts, promos and mint candidate singles." },
       { tier: "sealed", label: "Sealed product", chance: 22, description: "Decks, Japanese booster boxes and sealed specials." },
-      { tier: "slab", label: "Graded slab", chance: 13, description: "Featured Courtyard-owned slabs and PSA/CGC/BGS stock." },
+      { tier: "slab", label: "Graded slab", chance: 13, description: "Featured Vault Room slabs and PSA/CGC/BGS stock." },
       { tier: "grail", label: "Grail", chance: 2, description: "Top shelf Vault Room chase prize." }
     ],
     featuredPrizeIds: ["TVR-CAT-0010", "TVR-CAT-0011", "TVR-CAT-0278", "TVR-CAT-0324"]

@@ -72,12 +72,12 @@ export function VaultHero() {
       </div>
 
       <aside className="live-auction-card">
-        <span>Live auction</span>
+        <span>Claim drop</span>
         <strong>01d : 06h : 32m : 18s</strong>
         {auction && <ProductVisual product={auction} />}
         <p>{auction?.name || "Featured grail"}</p>
-        <em>Current bid {formatZar(auction ? Math.max(auction.priceZar - 500, 150) : 150)}</em>
-        <Link href="/auctions">Bid now</Link>
+        <em>Interest guide {formatZar(auction ? Math.max(auction.priceZar - 500, 150) : 150)}</em>
+        <Link href="/auctions">Register interest</Link>
       </aside>
 
       <aside className="mobile-preview">

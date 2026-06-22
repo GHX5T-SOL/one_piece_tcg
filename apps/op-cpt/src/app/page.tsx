@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Award, PackageCheck, ShieldCheck, Truck } from "lucide-react";
+import { Award, HandCoins, PackageCheck, ShieldCheck, Truck } from "lucide-react";
 import { ShopGrid } from "@/components/store/ShopGrid";
 import { VaultHero } from "@/components/VaultHero";
 import { VaultRoomShell } from "@/components/VaultRoomShell";
@@ -26,10 +26,24 @@ export default function HomePage() {
           <span>Toploaders, slabs and grade-lab review options.</span>
         </article>
         <article>
-          <PackageCheck aria-hidden size={28} />
-          <strong>Complete catalogue</strong>
-          <span>Every sellable item from our current stock list.</span>
+          <HandCoins aria-hidden size={28} />
+          <strong>We buy cards</strong>
+          <span>Sell or trade to us. We usually buy at 75-95% of market depending on demand, condition and liquidity.</span>
         </article>
+      </section>
+      <section className="sell-to-us-band">
+        <div>
+          <span>Sell or trade your cards</span>
+          <h2>Need cash, a grail upgrade, or a cleaner collection?</h2>
+          <p>
+            Bring raw mint candidates, sealed product, promos, alt arts, slabs and grails. We can buy outright, trade, consign, or build a
+            bundle toward a stronger piece.
+          </p>
+        </div>
+        <Link className="primary-action" href="/consign">
+          <PackageCheck aria-hidden size={18} />
+          Start intake
+        </Link>
       </section>
       <section className="community-band">
         <div>

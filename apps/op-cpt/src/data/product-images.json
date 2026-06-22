@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-22T12:13:45.483Z",
-  "policy": "Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
+  "generatedAt": "2026-06-22T12:57:24.433Z",
+  "policy": "Exact user-supplied product photos override generic official card-code art. Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
   "stats": {
     "total": 325,
     "manualOwnedSlab": 12,
-    "officialDownloaded": 291,
-    "fallback": 22
+    "officialDownloaded": 290,
+    "fallback": 22,
+    "manualUserPhoto": 1
   },
   "images": {
     "TVR-CAT-0001": {
-      "src": "/products/catalogue/TVR-CAT-0001-st13-003.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/ST13-003.png",
-      "confidence": "official-code-match",
-      "cardCode": "ST13-003",
-      "variant": "ST13-003"
+      "src": "/products/catalogue/TVR-CAT-0001-st13-003-monkey-d-luffy-bvb-transparent.webp",
+      "width": 900,
+      "height": 1220,
+      "source": "local-user-supplied-card-photo",
+      "sourceUrl": null,
+      "confidence": "exact-user-supplied-card-photo",
+      "cardCode": "ST13-003"
     },
     "TVR-CAT-0002": {
       "src": "/products/catalogue/TVR-CAT-0002-p-033.webp",
