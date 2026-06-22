@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T12:57:24.433Z",
+  "generatedAt": "2026-06-22T16:01:59.170Z",
   "policy": "Exact user-supplied product photos override generic official card-code art. Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
   "stats": {
     "total": 325,
@@ -187,12 +187,12 @@
       "variant": "OP14-041_p1"
     },
     "TVR-CAT-0020": {
-      "src": "/products/catalogue/TVR-CAT-0020-op09-070-nami-best-collection-jp-cgc-10-0-gem-mint-fallback.webp",
-      "width": 900,
-      "height": 1260,
-      "source": "vault-room-generated-fallback",
+      "src": "/products/catalogue/TVR-CAT-0020-op09-070-nami-best-collection-jp-cgc-10-0-gem-mint-user-slab.webp",
+      "width": 678,
+      "height": 1136,
+      "source": "local-user-supplied-slab-photo",
       "sourceUrl": null,
-      "confidence": "graded-slab-photo-needed",
+      "confidence": "exact-user-supplied-slab-photo",
       "cardCode": "OP09-070"
     },
     "TVR-CAT-0021": {
@@ -261,12 +261,12 @@
       "variant": "OP13-003_p1"
     },
     "TVR-CAT-0028": {
-      "src": "/products/catalogue/TVR-CAT-0028-op13-079-imu-alternate-art-psa-9-0-mint-fallback.webp",
-      "width": 900,
+      "src": "/products/catalogue/TVR-CAT-0028-op13-079-imu-alternate-art-psa-9-0-mint-user-slab.webp",
+      "width": 790,
       "height": 1260,
-      "source": "vault-room-generated-fallback",
+      "source": "local-user-supplied-slab-photo",
       "sourceUrl": null,
-      "confidence": "graded-slab-photo-needed",
+      "confidence": "exact-user-supplied-slab-photo",
       "cardCode": "OP13-079"
     },
     "TVR-CAT-0029": {
@@ -2702,12 +2702,12 @@
       "variant": "ST13-004"
     },
     "TVR-CAT-0274": {
-      "src": "/products/catalogue/TVR-CAT-0274-op01-016-nami-op01-016-alternate-art-psa-10-gem-mint-fallback.webp",
-      "width": 900,
+      "src": "/products/catalogue/TVR-CAT-0274-op01-016-nami-op01-016-alternate-art-psa-10-gem-mint-user-slab.webp",
+      "width": 750,
       "height": 1260,
-      "source": "vault-room-generated-fallback",
+      "source": "local-user-supplied-slab-photo",
       "sourceUrl": null,
-      "confidence": "graded-slab-photo-needed",
+      "confidence": "exact-user-supplied-slab-photo",
       "cardCode": "OP01-016"
     },
     "TVR-CAT-0275": {
@@ -2741,12 +2741,12 @@
       "cardCode": null
     },
     "TVR-CAT-0278": {
-      "src": "/products/catalogue/TVR-CAT-0278-st03-013-boa-hancock-st03-013-bgs-10-pristine-fallback.webp",
-      "width": 900,
-      "height": 1260,
-      "source": "vault-room-generated-fallback",
+      "src": "/products/catalogue/TVR-CAT-0278-st03-013-boa-hancock-st03-013-bgs-10-pristine-user-slab.webp",
+      "width": 480,
+      "height": 768,
+      "source": "local-user-supplied-slab-photo",
       "sourceUrl": null,
-      "confidence": "graded-slab-photo-needed",
+      "confidence": "exact-user-supplied-slab-photo",
       "cardCode": "ST03-013"
     },
     "TVR-CAT-0279": {

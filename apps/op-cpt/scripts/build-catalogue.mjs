@@ -131,6 +131,29 @@ function publicDescription(row, type, universe) {
     : "The Vault Room catalogue item. Availability and final condition confirmed before handover.";
 }
 
+const publicRecordOverrides = {
+  "TVR-CAT-0020": {
+    publicDescription:
+      "Premium Card Collection: Best Selection Vol.4 • OP09-070 • CGC GEM MINT 10 • cert 6124522036 • graded display piece",
+    searchTextExtra: "6124522036 cgc cert"
+  },
+  "TVR-CAT-0028": {
+    publicDescription:
+      "Carrying On His Will • OP13-079 Imu Alternate Art • PSA MINT 9 • cert 153963574 • graded display piece",
+    searchTextExtra: "153963574 psa cert"
+  },
+  "TVR-CAT-0274": {
+    publicDescription:
+      "Japanese Romance Dawn / OP-01 • OP01-016 Nami Alternate Art • PSA GEM MINT 10 • cert 96095956 • graded display piece",
+    searchTextExtra: "96095956 psa cert"
+  },
+  "TVR-CAT-0278": {
+    publicDescription:
+      "Starter Deck 3 / Best Selection Vol.2 • ST03-013 Boa Hancock • BGS PRISTINE 10 • cert 0017679037 • subgrades: centering 9.5, corners 10, edges 10, surface 10",
+    searchTextExtra: "0017679037 bgs cert beckett pristine subgrades"
+  }
+};
+
 function makeProduct(row, index) {
   const sku = `TVR-CAT-${String(index + 1).padStart(4, "0")}`;
   const name = cleanName(row.Name || sku);
@@ -148,6 +171,9 @@ function makeProduct(row, index) {
   const grade = gradeMatch ? gradeMatch[0].replace(/\s+/g, " ").trim() : "";
   const baseSlug = slugify(`${sku}-${name}`);
 
+  const override = publicRecordOverrides[sku] || {};
+  const searchFields = [name, sku, displayCategory, setName, rarity, condition, grade];
+  if (override.searchTextExtra) searchFields.push(override.searchTextExtra);
   return {
     id: sku,
     sku,
@@ -166,8 +192,8 @@ function makeProduct(row, index) {
     featured: index < 18 || priceZar >= 2500,
     askOnly: /ASK ONLY|live-check|Verify/i.test(description),
     visualKind: visualKind(type, universe),
-    publicDescription: publicDescription(row, type, universe),
-    searchText: `${name} ${sku} ${displayCategory} ${setName} ${rarity} ${condition} ${grade}`.toLowerCase()
+    publicDescription: override.publicDescription || publicDescription(row, type, universe),
+    searchText: searchFields.join(" ").toLowerCase()
   };
 }
 

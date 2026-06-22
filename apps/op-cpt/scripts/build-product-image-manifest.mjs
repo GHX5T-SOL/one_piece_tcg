@@ -105,6 +105,30 @@ const manualLocalImages = {
     path: path.join(localCardMediaRoot, "2025_One_Piece_Japanese_Promo_3rd_Anniversary_Treasure_SR_Monkey_D._Luffy__ST10-006_CGC_10.jpg"),
     source: "local-owned-slab",
     confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0020": {
+    path: path.join(appRoot, "assets/product-sources/op09-070-nami-best-collection-jp-cgc10-gem-mint.jpeg"),
+    source: "local-user-supplied-slab-photo",
+    confidence: "exact-user-supplied-slab-photo",
+    suffix: "user-slab"
+  },
+  "TVR-CAT-0028": {
+    path: path.join(appRoot, "assets/product-sources/op13-079-imu-alternate-art-psa9-mint.png"),
+    source: "local-user-supplied-slab-photo",
+    confidence: "exact-user-supplied-slab-photo",
+    suffix: "user-slab"
+  },
+  "TVR-CAT-0274": {
+    path: path.join(appRoot, "assets/product-sources/op01-016-nami-alternate-art-psa10-gem-mint.jpeg"),
+    source: "local-user-supplied-slab-photo",
+    confidence: "exact-user-supplied-slab-photo",
+    suffix: "user-slab"
+  },
+  "TVR-CAT-0278": {
+    path: path.join(appRoot, "assets/product-sources/st03-013-boa-hancock-bgs10-pristine.jpg"),
+    source: "local-user-supplied-slab-photo",
+    confidence: "exact-user-supplied-slab-photo",
+    suffix: "user-slab"
   }
 };
 
