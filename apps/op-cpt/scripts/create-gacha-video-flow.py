@@ -31,6 +31,7 @@ HEIGHT = 900
 FPS = 30
 IDLE_DURATION = 8.0
 RIP_DURATION = 6.4
+CATALOGUE_DIR = ROOT / "public" / "products" / "catalogue"
 
 NAVY = (7, 24, 44)
 DEEP = (9, 32, 61)
@@ -67,6 +68,47 @@ FONT_DISPLAY_SMALL = font(48, bold=True, serif=True)
 FONT_UI = font(30, bold=True)
 FONT_UI_SMALL = font(21, bold=True)
 FONT_UI_TINY = font(16, bold=True)
+
+PACK_ASSET_PATHS = [
+    CATALOGUE_DIR / "TVR-CAT-0322-egghead-crisis-jp-booster-pack.webp",
+    CATALOGUE_DIR / "TVR-CAT-0323-op16-time-of-battle-jp-booster-pack.webp",
+    CATALOGUE_DIR / "TVR-CAT-0276-dp-08-one-piece-card-game-double-pack-set-vol-8-dp-08-leg.webp",
+    CATALOGUE_DIR / "TVR-CAT-0275-me03-pokemon-tcg-mega-evolution-perfect-order-sleeved-pack-s.webp",
+]
+
+SLAB_ASSET_PATHS = [
+    CATALOGUE_DIR / "TVR-CAT-0274-op01-016-nami-op01-016-alternate-art-psa-10-gem-mint-user-slab.webp",
+    CATALOGUE_DIR / "TVR-CAT-0278-st03-013-boa-hancock-st03-013-bgs-10-pristine-user-slab.webp",
+    CATALOGUE_DIR / "TVR-CAT-0005-st18-004-zoro-juurou-st18-004-cgc-10-0-pristine-owned-slab.webp",
+    CATALOGUE_DIR / "TVR-CAT-0028-op13-079-imu-alternate-art-psa-9-0-mint-user-slab.webp",
+]
+
+PACK_ASSETS: list[Image.Image] = []
+SLAB_ASSETS: list[Image.Image] = []
+
+
+def load_assets() -> None:
+    PACK_ASSETS.clear()
+    SLAB_ASSETS.clear()
+    for path in PACK_ASSET_PATHS:
+        if path.exists():
+            PACK_ASSETS.append(Image.open(path).convert("RGBA"))
+    for path in SLAB_ASSET_PATHS:
+        if path.exists():
+            SLAB_ASSETS.append(Image.open(path).convert("RGBA"))
+
+
+def contain_asset(img: Image.Image, max_width: int, max_height: int) -> Image.Image:
+    scale = min(max_width / img.width, max_height / img.height)
+    size = (max(1, int(img.width * scale)), max(1, int(img.height * scale)))
+    return img.resize(size, Image.Resampling.LANCZOS)
+
+
+def rounded_shadow(width: int, height: int, radius: int, color: tuple[int, int, int], alpha: int) -> Image.Image:
+    layer = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(layer)
+    draw.rounded_rectangle((0, 0, width - 1, height - 1), radius=radius, fill=(*color, alpha))
+    return layer.filter(ImageFilter.GaussianBlur(16))
 
 
 def ease(x: float) -> float:
@@ -237,6 +279,26 @@ def draw_idle_ui(frame: Image.Image, t: float) -> None:
     frame.alpha_composite(layer)
 
 
+def draw_real_pack_table(frame: Image.Image, t: float) -> None:
+    if not PACK_ASSETS:
+        return
+    layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
+    center_y = 540 + math.sin(t * 2.2) * 12
+    positions = [(-460, 0.62, -12), (-255, 0.78, 8), (255, 0.76, -6), (455, 0.62, 13)]
+    for idx, (offset, scale, angle) in enumerate(positions):
+        asset = PACK_ASSETS[idx % len(PACK_ASSETS)]
+        visual = contain_asset(asset, int(260 * scale), int(360 * scale))
+        visual = ImageEnhance.Contrast(visual).enhance(1.08)
+        visual = ImageEnhance.Sharpness(visual).enhance(1.08)
+        visual = visual.rotate(angle + math.sin(t * 2.4 + idx) * 2.5, resample=Image.Resampling.BICUBIC, expand=True)
+        x = WIDTH // 2 + offset - visual.width // 2
+        y = int(center_y - visual.height // 2 + math.sin(t * 2.8 + idx) * 9)
+        shadow = rounded_shadow(visual.width + 26, visual.height + 22, 18, NAVY, 90)
+        layer.alpha_composite(shadow, (x - 13, y + 12))
+        layer.alpha_composite(visual, (x, y))
+    frame.alpha_composite(layer)
+
+
 def draw_pack(frame: Image.Image, t: float) -> None:
     appear = ease_out_back((t - 0.4) / 1.2)
     if appear <= 0:
@@ -253,46 +315,62 @@ def draw_pack(frame: Image.Image, t: float) -> None:
     shadow = glow(max(w, h) + 210, GOLD, 0.45 + burst * 0.55)
     frame.alpha_composite(shadow, (WIDTH // 2 - shadow.width // 2, HEIGHT // 2 - shadow.height // 2 - 8))
 
-    pack = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(pack)
-    draw.rounded_rectangle((0, 0, w - 1, h - 1), radius=max(18, w // 10), fill=(10, 16, 42, 245), outline=(*GOLD, 255), width=max(3, w // 60))
-    for i in range(8):
-        yy = int(h * (0.12 + i * 0.09))
-        draw.line((18, yy, w - 18, yy + int(math.sin(i + t) * 18)), fill=(126, 198, 240, 72 + i * 8), width=max(2, w // 70))
-    draw.rounded_rectangle((w * 0.16, h * 0.14, w * 0.84, h * 0.42), radius=max(10, w // 18), fill=(7, 24, 44, 230), outline=(*SKY, 190), width=2)
-    draw.ellipse((w * 0.36, h * 0.2, w * 0.64, h * 0.36), outline=(*GOLD, 230), width=max(2, w // 42))
-    draw.rectangle((w * 0.485, h * 0.31, w * 0.515, h * 0.41), fill=(*GOLD, 230))
-    draw.text((w * 0.2, h * 0.55), "VAULT", font=font(max(20, w // 6), bold=True, serif=True), fill=CREAM)
-    draw.text((w * 0.21, h * 0.71), "MYSTERY PACK", font=font(max(12, w // 13), bold=True), fill=GOLD)
+    if PACK_ASSETS:
+        asset = PACK_ASSETS[int(t * 1.4) % len(PACK_ASSETS)]
+        pack = contain_asset(asset, w, h)
+        pack = ImageEnhance.Contrast(pack).enhance(1.1)
+        pack = ImageEnhance.Sharpness(pack).enhance(1.12)
+        pack_shadow = rounded_shadow(pack.width + 34, pack.height + 30, 28, NAVY, 120)
+        frame.alpha_composite(pack_shadow, (WIDTH // 2 - pack_shadow.width // 2, HEIGHT // 2 - pack_shadow.height // 2 + 12))
+    else:
+        pack = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(pack)
+        draw.rounded_rectangle((0, 0, w - 1, h - 1), radius=max(18, w // 10), fill=(10, 16, 42, 245), outline=(*GOLD, 255), width=max(3, w // 60))
+        for i in range(8):
+            yy = int(h * (0.12 + i * 0.09))
+            draw.line((18, yy, w - 18, yy + int(math.sin(i + t) * 18)), fill=(126, 198, 240, 72 + i * 8), width=max(2, w // 70))
+        draw.rounded_rectangle((w * 0.16, h * 0.14, w * 0.84, h * 0.42), radius=max(10, w // 18), fill=(7, 24, 44, 230), outline=(*SKY, 190), width=2)
+        draw.ellipse((w * 0.36, h * 0.2, w * 0.64, h * 0.36), outline=(*GOLD, 230), width=max(2, w // 42))
+        draw.rectangle((w * 0.485, h * 0.31, w * 0.515, h * 0.41), fill=(*GOLD, 230))
+        draw.text((w * 0.2, h * 0.55), "VAULT", font=font(max(20, w // 6), bold=True, serif=True), fill=CREAM)
+        draw.text((w * 0.21, h * 0.71), "MYSTERY PACK", font=font(max(12, w // 13), bold=True), fill=GOLD)
     if tear > 0:
+        draw = ImageDraw.Draw(pack)
+        w, h = pack.size
         tear_y = int(h * (0.12 + 0.28 * tear))
         draw.line((w * 0.08, tear_y, w * 0.92, tear_y + math.sin(t * 18) * 14), fill=(*CREAM, 235), width=max(4, w // 35))
         draw.polygon([(0, 0), (w, 0), (w, tear_y), (w * (0.5 + 0.14 * tear), tear_y + h * 0.08), (w * (0.5 - 0.14 * tear), tear_y + h * 0.08), (0, tear_y)], fill=(255, 247, 230, int(125 * tear)))
-    frame.alpha_composite(pack, (x, y))
+    frame.alpha_composite(pack, (WIDTH // 2 - pack.width // 2, HEIGHT // 2 - pack.height // 2 - 10))
 
 
 def draw_reveal_slab(frame: Image.Image, t: float) -> None:
     reveal = ease_out_back((t - 3.12) / 1.2)
     if reveal <= 0:
         return
-    w = int(260 * reveal)
-    h = int(384 * reveal)
-    if w < 8 or h < 8:
-        return
-    slab = Image.new("RGBA", (max(1, w), max(1, h)), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(slab)
-    draw.rounded_rectangle((0, 0, w - 1, h - 1), radius=max(14, w // 12), fill=(226, 237, 246, 240), outline=(*CREAM, 255), width=max(3, w // 54))
-    draw.rounded_rectangle((w * 0.08, h * 0.04, w * 0.92, h * 0.18), radius=max(7, w // 32), fill=(248, 248, 230, 255), outline=(185, 35, 42, 255), width=2)
-    draw.text((w * 0.14, h * 0.075), "VAULT ROOM", font=font(max(14, w // 14), bold=True), fill=NAVY)
-    draw.text((w * 0.7, h * 0.064), "10", font=font(max(22, w // 8), bold=True), fill=GOLD)
-    draw.rounded_rectangle((w * 0.18, h * 0.24, w * 0.82, h * 0.86), radius=max(6, w // 35), fill=(9, 17, 40, 255), outline=(*GOLD, 230), width=2)
-    for i in range(8):
-        y = h * (0.31 + i * 0.06)
-        draw.line((w * 0.25, y, w * 0.75, y + math.sin(i + t * 3) * 13), fill=(126, 198, 240, 100), width=max(2, w // 120))
-    draw.text((w * 0.25, h * 0.50), "HIT", font=font(max(34, w // 5), bold=True, serif=True), fill=CREAM)
+    if SLAB_ASSETS:
+        asset = SLAB_ASSETS[int(t * 0.72) % len(SLAB_ASSETS)]
+        slab = contain_asset(asset, int(330 * reveal), int(520 * reveal))
+        slab = ImageEnhance.Contrast(slab).enhance(1.07)
+        slab = ImageEnhance.Sharpness(slab).enhance(1.1)
+    else:
+        w = int(260 * reveal)
+        h = int(384 * reveal)
+        if w < 8 or h < 8:
+            return
+        slab = Image.new("RGBA", (max(1, w), max(1, h)), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(slab)
+        draw.rounded_rectangle((0, 0, w - 1, h - 1), radius=max(14, w // 12), fill=(226, 237, 246, 240), outline=(*CREAM, 255), width=max(3, w // 54))
+        draw.rounded_rectangle((w * 0.08, h * 0.04, w * 0.92, h * 0.18), radius=max(7, w // 32), fill=(248, 248, 230, 255), outline=(185, 35, 42, 255), width=2)
+        draw.text((w * 0.14, h * 0.075), "VAULT ROOM", font=font(max(14, w // 14), bold=True), fill=NAVY)
+        draw.text((w * 0.7, h * 0.064), "10", font=font(max(22, w // 8), bold=True), fill=GOLD)
+        draw.rounded_rectangle((w * 0.18, h * 0.24, w * 0.82, h * 0.86), radius=max(6, w // 35), fill=(9, 17, 40, 255), outline=(*GOLD, 230), width=2)
+        for i in range(8):
+            y = h * (0.31 + i * 0.06)
+            draw.line((w * 0.25, y, w * 0.75, y + math.sin(i + t * 3) * 13), fill=(126, 198, 240, 100), width=max(2, w // 120))
+        draw.text((w * 0.25, h * 0.50), "HIT", font=font(max(34, w // 5), bold=True, serif=True), fill=CREAM)
     angle = math.sin(t * 1.8) * 3
     slab = slab.rotate(angle, resample=Image.Resampling.BICUBIC, expand=True)
-    aura = glow(max(w, h) + 240, SKY, 0.95)
+    aura = glow(max(slab.width, slab.height) + 240, SKY, 0.95)
     frame.alpha_composite(aura, (WIDTH // 2 - aura.width // 2, HEIGHT // 2 - aura.height // 2 + 12))
     frame.alpha_composite(slab, (WIDTH // 2 - slab.width // 2, HEIGHT // 2 - slab.height // 2 + 20))
 
@@ -338,6 +416,7 @@ def render_rip_frame(base: Image.Image, idx: int) -> Image.Image:
     frame.alpha_composite(Image.new("RGBA", (WIDTH, HEIGHT), (*NAVY, 76)))
     draw_machine_light_sweeps(frame, t, RIP_DURATION)
     draw_particles(frame, t, 9349, density=150, strength=1.05)
+    draw_real_pack_table(frame, t)
     draw_speed_lines(frame, t)
     draw_shockwave(frame, t)
     if 2.72 < t < 3.28:
@@ -431,6 +510,7 @@ def main() -> None:
         raise SystemExit(f"Missing source plate: {SOURCE}")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    load_assets()
     base = Image.open(SOURCE).convert("RGB")
 
     encode_raw_video(
