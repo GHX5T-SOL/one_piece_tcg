@@ -65,7 +65,7 @@ export const gachaPrizes: GachaPrize[] = allProducts
   .map((product) => ({
     ...product,
     gachaTier: tierForProduct(product),
-    buybackZar: Math.round(product.priceZar * 0.7)
+    buybackZar: Math.round(product.priceZar * 0.75)
   }))
   .sort((a, b) => b.priceZar - a.priceZar);
 
@@ -96,7 +96,7 @@ export const gachaPacks: GachaPack[] = [
     pullRate: "100% visual demo pull",
     headline: "Built for collectors who want real hits, not filler.",
     odds: [
-      { tier: "booster", label: "Booster / pack line", chance: 30, description: "Pack-stock baseline with redeem or 70% sell-back." },
+      { tier: "booster", label: "Booster / pack line", chance: 30, description: "Pack-stock baseline with redeem, vault or 75% buyback." },
       { tier: "single", label: "Raw single", chance: 33, description: "Alt arts, promos and mint candidate singles." },
       { tier: "sealed", label: "Sealed product", chance: 22, description: "Decks, Japanese booster boxes and sealed specials." },
       { tier: "slab", label: "Graded slab", chance: 13, description: "Featured Vault Room slabs and PSA/CGC/BGS stock." },

@@ -141,10 +141,11 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Route: `/gacha`.
 - Status: visual demo / coming soon until payment, legal rules, odds publication, stock reservation, shipping terms, refund terms, and compliance controls are finalized.
 - References: Phygitals East Blue Pack, CollectorCrypt Gacha, Gacha Game One Piece packs, Courtyard One Piece Pro Pack.
-- Core interaction: select pack tier, spin a glossy 3D vault/gacha machine, reveal a real catalogue-backed prize, then preview `Redeem / ship` or `Auto-sell 70% FMV`.
+- Current video direction: use a clean Vault Room vending-machine idle loop first, then trigger a separate pack-rip/reveal clip when the user presses the CTA. The result panel appears only after the reveal clip ends.
+- Core interaction: select pack tier, watch the looped glossy vault/gacha machine, rip a virtual pack, reveal a real catalogue-backed prize, then preview `Redeem`, `Vault`, or `Accept 75% FMV buyback`.
 - Payment methods shown as future rails only: Crypto, Visa, Mastercard, EFT, PayPal, Apple Pay, Google Pay, Stripe, PayFast.
 - Public prize pool may use only public catalogue fields and images. It must not expose internal owner/source names, staff floors, cost basis, or consignment notes.
-- Design must feel AAA/premium, not low-poly: high-segment geometry, metallic vault materials, glass dome, capsule lights, slab reveal, parchment sea-map UI, and mobile stacked controls.
+- Design must feel AAA/premium, not low-poly: polished metallic vending cabinet, glowing shelves, glass slab display, capsule lights, pack-rip flash, prize spotlight, parchment sea-map UI, and mobile stacked controls.
 - Odds must be internally consistent: every displayed tier needs at least one prize in that tier, and demo EV should be calculated from the current prize pool rather than hard-coded marketing copy.
 
 ## Vault Room Platform Expansion Contract

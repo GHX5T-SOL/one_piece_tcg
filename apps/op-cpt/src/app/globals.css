@@ -2149,6 +2149,7 @@ main {
 }
 
 .gacha-stage {
+  align-items: start;
   display: grid;
   gap: 16px;
   grid-template-columns: minmax(500px, 1.2fr) minmax(320px, 0.8fr);
@@ -2173,7 +2174,7 @@ main {
     radial-gradient(circle at 50% 40%, rgba(126, 198, 240, 0.34), transparent 30rem),
     linear-gradient(180deg, #07182c, #0d2e56 54%, #fff7e6);
   color: #fff7e6;
-  min-height: 620px;
+  min-height: 0;
 }
 
 .gacha-machine-panel__top,
@@ -2216,7 +2217,9 @@ main {
 }
 
 .gacha-cinematic-wrap {
-  height: 620px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
   position: relative;
 }
 
@@ -2241,7 +2244,29 @@ main {
   display: block;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   width: 100%;
+}
+
+.gacha-video-layer {
+  inset: 0;
+  position: absolute;
+}
+
+.gacha-video-layer--idle {
+  opacity: 1;
+  z-index: 1;
+}
+
+.gacha-video-layer--rip {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+  z-index: 3;
+}
+
+.gacha-video-layer--rip.is-active {
+  opacity: 1;
 }
 
 .gacha-video-start {
@@ -2718,15 +2743,6 @@ main {
     min-height: 360px;
   }
 
-  .gacha-machine-panel,
-  .gacha-cinematic-wrap {
-    min-height: 560px;
-  }
-
-  .gacha-cinematic-wrap {
-    height: 560px;
-  }
-
   .gacha-console {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3075,19 +3091,6 @@ main {
 
   .gacha-hero__art {
     min-height: 330px;
-  }
-
-  .gacha-machine-panel,
-  .gacha-cinematic-wrap {
-    min-height: 360px;
-  }
-
-  .gacha-cinematic-wrap {
-    height: 360px;
-  }
-
-  .gacha-cinematic-video {
-    object-fit: contain;
   }
 
   .gacha-machine-panel__top,

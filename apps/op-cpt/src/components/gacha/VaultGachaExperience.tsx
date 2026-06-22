@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { PackageOpen, RotateCw, ShieldCheck, Sparkles, Truck, Volume2, VolumeX, WalletCards } from "lucide-react";
+import { Archive, PackageOpen, RotateCw, ShieldCheck, Sparkles, Truck, Volume2, VolumeX, WalletCards } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { ProductVisual } from "@/components/store/ProductVisual";
-import { formatZar } from "@/lib/products";
+import { formatZar, getProductImage } from "@/lib/products";
 import type { GachaPack, GachaPrize } from "@/lib/gacha";
 
 type VaultGachaExperienceProps = {
@@ -16,7 +16,7 @@ type VaultGachaExperienceProps = {
 type PullState = {
   prize: GachaPrize;
   pack: GachaPack;
-  mode: "revealed" | "redeem" | "sellback";
+  mode: "revealed" | "redeem" | "vault" | "sellback";
 };
 
 const tierColor: Record<GachaPrize["gachaTier"], string> = {
@@ -27,9 +27,11 @@ const tierColor: Record<GachaPrize["gachaTier"], string> = {
   booster: "#39b86a"
 };
 
-const cinematicVideo = "/media/gacha/vault-gacha-cinematic-spin.mp4";
-const cinematicPoster = "/media/gacha/vault-gacha-cinematic-poster.jpg";
-const cinematicFallbackMs = 15100;
+const idleVideo = "/media/gacha/vault-gacha-machine-idle-loop.mp4";
+const idlePoster = "/media/gacha/vault-gacha-machine-idle-poster.jpg";
+const ripVideo = "/media/gacha/vault-gacha-pack-rip-reveal.mp4";
+const ripPoster = "/media/gacha/vault-gacha-pack-rip-poster.jpg";
+const ripFallbackMs = 6800;
 
 function weightedPrize(pack: GachaPack, prizes: GachaPrize[]) {
   const roll = Math.random() * 100;
@@ -45,6 +47,19 @@ function weightedPrize(pack: GachaPack, prizes: GachaPrize[]) {
     : prizes;
   const pool = tierPrizes.length ? tierPrizes : fallback;
   return pool[Math.floor(Math.random() * pool.length)] ?? prizes[0];
+}
+
+function demoPrizeWithMedia(pack: GachaPack, prizes: GachaPrize[]) {
+  const featuredIds = new Set(pack.featuredPrizeIds);
+  const hasDisplayMedia = (prize: GachaPrize) => {
+    const image = getProductImage(prize.id);
+    return Boolean(image?.src) && !image?.src.includes("-fallback");
+  };
+  const isShowcaseHit = (prize: GachaPrize) => (prize.productType === "Graded" || prize.productType === "Sealed") && hasDisplayMedia(prize);
+  const featuredHits = prizes.filter((prize) => featuredIds.has(prize.id) && isShowcaseHit(prize));
+  const allHits = prizes.filter(isShowcaseHit);
+  const pool = featuredHits.length ? featuredHits : allHits;
+  return pool[Math.floor(Math.random() * pool.length)] ?? weightedPrize(pack, prizes);
 }
 
 function expectedPackValue(pack: GachaPack, prizes: GachaPrize[]) {
@@ -63,7 +78,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
   const [isSpinning, setIsSpinning] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [pull, setPull] = useState<PullState | null>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const ripVideoRef = useRef<HTMLVideoElement>(null);
   const fallbackTimerRef = useRef<number | null>(null);
   const pendingPrizeRef = useRef<GachaPrize | null>(null);
 
@@ -85,17 +100,21 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
       window.clearTimeout(fallbackTimerRef.current);
       fallbackTimerRef.current = null;
     }
+    if (ripVideoRef.current) {
+      ripVideoRef.current.pause();
+      ripVideoRef.current.currentTime = 0;
+    }
     setPull({ prize, pack: selectedPack, mode: "revealed" });
     setIsSpinning(false);
   }, [selectedPack]);
 
   function demoRip() {
     if (isSpinning || !selectedPack) return;
-    pendingPrizeRef.current = weightedPrize(selectedPack, prizes);
+    pendingPrizeRef.current = demoPrizeWithMedia(selectedPack, prizes);
     setIsSpinning(true);
     setPull(null);
 
-    const video = videoRef.current;
+    const video = ripVideoRef.current;
     if (video) {
       video.currentTime = 0;
       video.muted = isMuted;
@@ -104,7 +123,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
       });
     }
 
-    fallbackTimerRef.current = window.setTimeout(finishRip, cinematicFallbackMs);
+    fallbackTimerRef.current = window.setTimeout(finishRip, ripFallbackMs);
   }
 
   function updatePack(packId: string) {
@@ -116,8 +135,8 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
   function toggleMute() {
     const next = !isMuted;
     setIsMuted(next);
-    if (videoRef.current) {
-      videoRef.current.muted = next;
+    if (ripVideoRef.current) {
+      ripVideoRef.current.muted = next;
     }
   }
 
@@ -128,13 +147,13 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
           <span>Visual demo · Coming soon</span>
           <h1>Vault Gacha</h1>
           <p>
-            A cinematic pack-rip simulator for future Vault Room drops. Pick a pack, play the vault sequence, reveal a catalogue-backed
-            prize, then preview redeem or 70% FMV auto-sell.
+            A cinematic pack-rip simulator for future Vault Room drops. Pick a pack, watch the vending machine, rip the virtual pack,
+            reveal a catalogue-backed prize, then preview redeem, vault, or 75% FMV buyback.
           </p>
           <div className="gacha-hero__actions">
             <button className="primary-action" onClick={demoRip} type="button">
               <PackageOpen aria-hidden size={17} />
-              Play cinematic demo
+              Rip virtual pack
             </button>
             <Link className="secondary-action" href="/shop">
               View real inventory
@@ -160,29 +179,40 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
           </div>
           <div className={isSpinning ? "gacha-cinematic-wrap is-playing" : "gacha-cinematic-wrap"}>
             <video
-              aria-label="The Vault Room cinematic gacha spin demo"
-              className="gacha-cinematic-video"
+              aria-label="Looping Vault Room gacha vending machine"
+              autoPlay
+              className="gacha-cinematic-video gacha-video-layer gacha-video-layer--idle"
+              loop
+              muted
+              playsInline
+              poster={idlePoster}
+              preload="auto"
+              src={idleVideo}
+            />
+            <video
+              aria-label="The Vault Room virtual pack rip reveal video"
+              className={isSpinning ? "gacha-cinematic-video gacha-video-layer gacha-video-layer--rip is-active" : "gacha-cinematic-video gacha-video-layer gacha-video-layer--rip"}
               muted={isMuted}
               onEnded={finishRip}
               playsInline
-              poster={cinematicPoster}
-              preload="metadata"
-              ref={videoRef}
-              src={cinematicVideo}
+              poster={ripPoster}
+              preload="auto"
+              ref={ripVideoRef}
+              src={ripVideo}
             />
             {!isSpinning && (
               <button className="gacha-video-start" onClick={demoRip} type="button">
                 <Sparkles aria-hidden size={30} />
-                <span>Run the cinematic spin</span>
+                <span>Rip virtual pack</span>
               </button>
             )}
-            <button aria-label={isMuted ? "Turn gacha demo sound on" : "Turn gacha demo sound off"} className="gacha-sound-toggle" onClick={toggleMute} type="button">
+            <button aria-label={isMuted ? "Turn reveal sound on" : "Turn reveal sound off"} className="gacha-sound-toggle" onClick={toggleMute} type="button">
               {isMuted ? <VolumeX aria-hidden size={18} /> : <Volume2 aria-hidden size={18} />}
-              <span>{isMuted ? "Muted" : "Sound"}</span>
+              <span>{isMuted ? "Muted" : "Reveal sound"}</span>
             </button>
           </div>
           <div className="gacha-machine-panel__bottom">
-            <span>{isSpinning ? "Vault sequence playing" : selectedPack.headline}</span>
+            <span>{isSpinning ? "Pack rip video playing" : selectedPack.headline}</span>
             <strong>
               {formatZar(selectedPack.priceZar)} demo price · {formatZar(selectedExpectedValue)} calc EV
             </strong>
@@ -248,7 +278,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
           <h2>{pull ? "You pulled a Vault item" : isSpinning ? "Vault sequence active" : "Ready for the next rip"}</h2>
           <p>
             Live mode will require finalized odds, payment rules, age/compliance checks, refunds, shipping terms and reserve controls. This
-            page currently demonstrates the experience only.
+            page currently demonstrates the full visual flow only.
           </p>
         </div>
         {pull ? (
@@ -262,22 +292,28 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
               <h3>{pull.prize.name}</h3>
               <p>{pull.prize.setName || pull.prize.category}</p>
               <strong>{formatZar(pull.prize.priceZar)} FMV</strong>
-              <em>Auto-sell preview: {formatZar(pull.prize.buybackZar)} at 70% FMV</em>
+              <em>Buyback preview: {formatZar(pull.prize.buybackZar)} at 75% FMV</em>
               <div className="pull-card__actions">
                 <button className={pull.mode === "redeem" ? "primary-action" : "secondary-action"} onClick={() => setPull({ ...pull, mode: "redeem" })} type="button">
                   <Truck aria-hidden size={16} />
-                  Redeem / ship
+                  Redeem
+                </button>
+                <button className={pull.mode === "vault" ? "primary-action" : "secondary-action"} onClick={() => setPull({ ...pull, mode: "vault" })} type="button">
+                  <Archive aria-hidden size={16} />
+                  Vault
                 </button>
                 <button className={pull.mode === "sellback" ? "primary-action" : "secondary-action"} onClick={() => setPull({ ...pull, mode: "sellback" })} type="button">
                   <RotateCw aria-hidden size={16} />
-                  Auto-sell 70%
+                  Accept 75% FMV buyback
                 </button>
               </div>
               {pull.mode !== "revealed" && (
                 <p className="gacha-resolution">
                   {pull.mode === "redeem"
                     ? "Demo status: item reserved for redemption workflow preview. Live redemption will require confirmed stock and shipping terms."
-                    : `Demo status: sell-back credit would show ${formatZar(pull.prize.buybackZar)} before fees, terms and manual approval.`}
+                    : pull.mode === "vault"
+                      ? "Demo status: item stays in your Vault Room digital vault until you redeem, trade, list, or request a buyback."
+                      : `Demo status: buyback credit would show ${formatZar(pull.prize.buybackZar)} before fees, terms and manual approval.`}
                 </p>
               )}
             </div>
@@ -285,7 +321,7 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
         ) : (
           <button className="gacha-empty-reveal" disabled={isSpinning} onClick={demoRip} type="button">
             <Sparkles aria-hidden size={28} />
-            {isSpinning ? "Cinematic vault sequence running..." : "Play the cinematic sequence to reveal a simulated Vault pull."}
+            {isSpinning ? "Pack rip video running..." : "Rip a virtual pack to reveal a simulated Vault pull."}
           </button>
         )}
       </section>
@@ -320,8 +356,8 @@ export function VaultGachaExperience({ packs, prizes }: VaultGachaExperienceProp
         </article>
         <article>
           <Truck aria-hidden size={26} />
-          <strong>Redeem or sell back</strong>
-          <span>Future winners can choose shipping/collection or sell back to Vault Room at 70% of displayed FMV.</span>
+          <strong>Redeem, vault or sell back</strong>
+          <span>Future winners can choose shipping/collection, hold in their Vault, or sell back to Vault Room at 75% of displayed FMV.</span>
         </article>
         <article>
           <WalletCards aria-hidden size={26} />

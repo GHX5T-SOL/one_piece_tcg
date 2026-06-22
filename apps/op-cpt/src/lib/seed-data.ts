@@ -23,7 +23,7 @@ export const profiles: MemberProfile[] = [
   {
     id: "ghost23",
     handle: "Ghost23",
-    crewRole: "Founder / Collector",
+    crewRole: "Collector",
     location: "Cape Town",
     avatarTone: "gold compass",
     collectionValueZar: 28450,
