@@ -311,6 +311,54 @@ main {
   color: #fff7e6;
 }
 
+.invoice-whatsapp-link {
+  align-items: center;
+  background: linear-gradient(180deg, #20b15a, #178a43);
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 0 8px 18px rgba(23, 138, 67, 0.22);
+  color: #fff;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 1000;
+  gap: 7px;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.payment-coming-soon {
+  background: rgba(13, 78, 162, 0.07);
+  border: 1px solid rgba(13, 78, 162, 0.13);
+  border-radius: 7px;
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+}
+
+.payment-coming-soon strong {
+  color: var(--vault-ink);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.payment-coming-soon div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.payment-coming-soon span {
+  background: #fff7e6;
+  border: 1px solid rgba(8, 33, 61, 0.12);
+  border-radius: 999px;
+  color: var(--vault-ink);
+  font-size: 10px;
+  font-weight: 900;
+  padding: 4px 7px;
+}
+
 .secondary-action {
   background: rgba(255, 247, 230, 0.86);
   border: 1px solid rgba(8, 33, 61, 0.28);

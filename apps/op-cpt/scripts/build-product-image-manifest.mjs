@@ -72,6 +72,36 @@ const manualImages = {
   }
 };
 
+const localCardMediaRoot = path.join(appRoot, "..", "..", "media", "cards");
+
+const manualLocalImages = {
+  "TVR-CAT-0005": {
+    path: path.join(localCardMediaRoot, "2024_One_Piece_Japanese_SD_Purple_Monkey_D._Luffy_SR_Zoro-Juurou__ST18-004_CGC_10_PRISTINE.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0012": {
+    path: path.join(localCardMediaRoot, "2022_ONE_PIECE_STARTER_DECK_ST03-THE_SEVEN_WARLORDS_OF_THE_SEA_001_CROCODILE_SUPER_PRE-RELEASE_PSA_9.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0016": {
+    path: path.join(localCardMediaRoot, "2023_One_Piece_Promo_Premium_Collection_Film_Red_Alt_Art_Franky__OP01-021_CGC_10_GEM_MINT.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0025": {
+    path: path.join(localCardMediaRoot, "2023_One_Piece_Promo_Tournament_Pack_Volume_3_Nami__ST01-007_CGC_9_MINT.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0029": {
+    path: path.join(localCardMediaRoot, "2025_One_Piece_Japanese_Promo_3rd_Anniversary_Treasure_SR_Monkey_D._Luffy__ST10-006_CGC_10.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  }
+};
+
 const manualRemoteImages = {
   "TVR-CAT-0003": {
     url: "https://en.onepiece-cardgame.com/images/products/other/cardcollection_bestselection_vol4/mv_01.jpg",
@@ -187,16 +217,21 @@ function candidateUrls(code, product) {
 }
 
 async function fetchImage(url) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 TheVaultRoomCatalogue/1.0"
-    }
-  });
-  if (!response.ok) return null;
-  const contentType = response.headers.get("content-type") || "";
-  if (!contentType.startsWith("image/")) return null;
-  const arrayBuffer = await response.arrayBuffer();
-  return Buffer.from(arrayBuffer);
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 TheVaultRoomCatalogue/1.0"
+      },
+      signal: AbortSignal.timeout(8000)
+    });
+    if (!response.ok) return null;
+    const contentType = response.headers.get("content-type") || "";
+    if (!contentType.startsWith("image/")) return null;
+    const arrayBuffer = await response.arrayBuffer();
+    return Buffer.from(arrayBuffer);
+  } catch {
+    return null;
+  }
 }
 
 async function getDimensions(buffer) {
@@ -256,6 +291,22 @@ async function writeManualRemoteImage(product, manual) {
   };
 }
 
+async function writeManualLocalImage(product, manual) {
+  const buffer = fs.readFileSync(manual.path);
+  const optimized = await optimizeProductImage(buffer);
+  const fileName = `${product.id}-${slugify(product.name)}-owned-slab.webp`;
+  fs.writeFileSync(path.join(imageRoot, fileName), optimized);
+  const dimensions = await getDimensions(optimized);
+  return {
+    src: `/products/catalogue/${fileName}`,
+    ...dimensions,
+    source: manual.source,
+    sourceUrl: null,
+    confidence: manual.confidence,
+    cardCode: extractCode(product)
+  };
+}
+
 function wrapText(value, limit = 24, maxLines = 8) {
   const words = value.replace(/\s+/g, " ").trim().split(" ");
   const lines = [];
@@ -280,10 +331,19 @@ function escapeXml(value) {
 async function writeFallbackImage(product, reason = "no-exact-image-found") {
   const sharp = await import("sharp");
   const titleLines = wrapText(product.name, 24, 7);
-  const subtitle = product.universe === "Services" ? "GRADE LAB" : product.productType.toUpperCase();
-  const motif = /don!!/i.test(product.name) ? "DON!!" : product.universe === "Pokemon" ? "PACK" : product.productType === "Sealed" ? "SEALED" : "CARD";
+  const isGraded = product.productType === "Graded" || product.visualKind === "slab";
+  const subtitle = product.universe === "Services" ? "GRADE LAB" : isGraded ? "GRADED SLAB" : product.productType.toUpperCase();
+  const motif = isGraded
+    ? product.grade || "SLAB"
+    : /don!!/i.test(product.name)
+      ? "DON!!"
+      : product.universe === "Pokemon"
+        ? "PACK"
+        : product.productType === "Sealed"
+          ? "SEALED"
+          : "CARD";
   const titleSvg = titleLines
-    .map((line, index) => `<text x="450" y="${470 + index * 52}" text-anchor="middle" class="title">${escapeXml(line)}</text>`)
+    .map((line, index) => `<text x="450" y="${(isGraded ? 590 : 470) + index * (isGraded ? 44 : 52)}" text-anchor="middle" class="title">${escapeXml(line)}</text>`)
     .join("");
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="900" height="1260" viewBox="0 0 900 1260" xmlns="http://www.w3.org/2000/svg">
@@ -318,7 +378,14 @@ async function writeFallbackImage(product, reason = "no-exact-image-found") {
   </g>
   <text x="450" y="350" text-anchor="middle" class="small">THE VAULT ROOM</text>
   <g filter="url(#shadow)">
-    <rect x="145" y="385" width="610" height="545" rx="38" fill="rgba(255,250,240,0.88)" stroke="#d4af37" stroke-width="7"/>
+    <rect x="145" y="385" width="610" height="545" rx="${isGraded ? 22 : 38}" fill="rgba(255,250,240,0.88)" stroke="#d4af37" stroke-width="7"/>
+    ${
+      isGraded
+        ? `<rect x="190" y="420" width="520" height="104" rx="16" fill="#eef4fb" stroke="#061d38" stroke-opacity="0.28"/>
+    <text x="450" y="485" text-anchor="middle" class="small">SLAB PHOTO PENDING</text>
+    <rect x="244" y="560" width="412" height="320" rx="24" fill="#061d38" opacity="0.08" stroke="#061d38" stroke-opacity="0.24"/>`
+        : ""
+    }
     ${titleSvg}
     <rect x="230" y="790" width="440" height="110" rx="20" fill="url(#navy)"/>
     <text x="450" y="860" text-anchor="middle" class="motif">${escapeXml(motif)}</text>
@@ -360,6 +427,12 @@ for (const product of products) {
     continue;
   }
 
+  if (manualLocalImages[product.id]) {
+    manifest[product.id] = await writeManualLocalImage(product, manualLocalImages[product.id]);
+    stats.manualOwnedSlab += 1;
+    continue;
+  }
+
   if (manualRemoteImages[product.id]) {
     const image = await writeManualRemoteImage(product, manualRemoteImages[product.id]);
     if (image) {
@@ -370,6 +443,12 @@ for (const product of products) {
   }
 
   const code = extractCode(product);
+  if (product.productType === "Graded" || product.visualKind === "slab") {
+    manifest[product.id] = await fallbackFor(product, "graded-slab-photo-needed");
+    stats.fallback += 1;
+    continue;
+  }
+
   if (product.universe === "One Piece" && code && product.productType !== "Sealed") {
     const image = await writeOfficialImage(product, code);
     if (image) {
@@ -385,7 +464,7 @@ for (const product of products) {
 
 const payload = {
   generatedAt: new Date().toISOString(),
-  policy: "Local owned slab photos keep visible certification labels. Official card-list art is used for exact One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
+  policy: "Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
   stats,
   images: manifest
 };

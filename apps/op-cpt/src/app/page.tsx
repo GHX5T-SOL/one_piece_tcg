@@ -12,8 +12,8 @@ export default function HomePage() {
       <section className="trust-row">
         <article>
           <ShieldCheck aria-hidden size={28} />
-          <strong>Secure checkout</strong>
-          <span>Yoco hosted payments and claim mode fallback.</span>
+          <strong>Invoice checkout</strong>
+          <span>Build a cart, send an invoice, then confirm payment manually.</span>
         </article>
         <article>
           <Truck aria-hidden size={28} />

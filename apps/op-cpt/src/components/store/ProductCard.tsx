@@ -39,7 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
       <button className="cart-button" onClick={() => cart.add(product)} disabled={product.stock <= 0}>
         <ShoppingCart aria-hidden size={17} />
-        {product.askOnly ? "Claim" : "Add"}
+        Add
       </button>
     </article>
   );

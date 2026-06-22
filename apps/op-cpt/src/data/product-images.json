@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-20T17:18:55.420Z",
-  "policy": "Local owned slab photos keep visible certification labels. Official card-list art is used for exact One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
+  "generatedAt": "2026-06-22T12:13:45.483Z",
+  "policy": "Local owned slab photos keep visible certification labels. Graded products without exact slab photos use branded slab placeholders rather than raw card art. Official card-list art is used for exact non-graded One Piece card-number matches. Missing exact product photos use branded UI fallbacks until manually sourced.",
   "stats": {
     "total": 325,
-    "manualOwnedSlab": 7,
-    "officialDownloaded": 300,
-    "fallback": 18
+    "manualOwnedSlab": 12,
+    "officialDownloaded": 291,
+    "fallback": 22
   },
   "images": {
     "TVR-CAT-0001": {
@@ -49,14 +49,13 @@
       "variant": "OP01-001_p1"
     },
     "TVR-CAT-0005": {
-      "src": "/products/catalogue/TVR-CAT-0005-st18-004.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/ST18-004.png",
-      "confidence": "official-code-match",
-      "cardCode": "ST18-004",
-      "variant": "ST18-004"
+      "src": "/products/catalogue/TVR-CAT-0005-st18-004-zoro-juurou-st18-004-cgc-10-0-pristine-owned-slab.webp",
+      "width": 718,
+      "height": 1211,
+      "source": "local-owned-slab",
+      "sourceUrl": null,
+      "confidence": "exact-owned-slab",
+      "cardCode": "ST18-004"
     },
     "TVR-CAT-0006": {
       "src": "/products/catalogue/TVR-CAT-0006-st16-004-p1.webp",
@@ -113,14 +112,13 @@
       "confidence": "exact-owned-slab"
     },
     "TVR-CAT-0012": {
-      "src": "/products/catalogue/TVR-CAT-0012-st03-001.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/ST03-001.png",
-      "confidence": "official-code-match",
-      "cardCode": "ST03-001",
-      "variant": "ST03-001"
+      "src": "/products/catalogue/TVR-CAT-0012-st03-001-crocodile-001-owned-slab.webp",
+      "width": 752,
+      "height": 1260,
+      "source": "local-owned-slab",
+      "sourceUrl": null,
+      "confidence": "exact-owned-slab",
+      "cardCode": "ST03-001"
     },
     "TVR-CAT-0013": {
       "src": "/products/catalogue/TVR-CAT-0013-op07-118-p1.webp",
@@ -152,14 +150,13 @@
       "variant": "ST21-014"
     },
     "TVR-CAT-0016": {
-      "src": "/products/catalogue/TVR-CAT-0016-op01-021.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021.png",
-      "confidence": "official-code-match",
-      "cardCode": "OP01-021",
-      "variant": "OP01-021"
+      "src": "/products/catalogue/TVR-CAT-0016-op01-021-franky-pcc-one-piece-film-red-edition-cgc-10-0-pri-owned-slab.webp",
+      "width": 699,
+      "height": 1218,
+      "source": "local-owned-slab",
+      "sourceUrl": null,
+      "confidence": "exact-owned-slab",
+      "cardCode": "OP01-021"
     },
     "TVR-CAT-0017": {
       "src": "/products/featured/doflamingo-prb02-psa10.jpg",
@@ -190,14 +187,13 @@
       "variant": "OP14-041_p1"
     },
     "TVR-CAT-0020": {
-      "src": "/products/catalogue/TVR-CAT-0020-op09-070-p1.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_p1.png",
-      "confidence": "official-code-variant-match",
-      "cardCode": "OP09-070",
-      "variant": "OP09-070_p1"
+      "src": "/products/catalogue/TVR-CAT-0020-op09-070-nami-best-collection-jp-cgc-10-0-gem-mint-fallback.webp",
+      "width": 900,
+      "height": 1260,
+      "source": "vault-room-generated-fallback",
+      "sourceUrl": null,
+      "confidence": "graded-slab-photo-needed",
+      "cardCode": "OP09-070"
     },
     "TVR-CAT-0021": {
       "src": "/products/catalogue/TVR-CAT-0021-op12-061-p1.webp",
@@ -238,14 +234,13 @@
       "variant": "EB03-026_p1"
     },
     "TVR-CAT-0025": {
-      "src": "/products/catalogue/TVR-CAT-0025-st01-007-p1.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/ST01-007_p1.png",
-      "confidence": "official-code-variant-match",
-      "cardCode": "ST01-007",
-      "variant": "ST01-007_p1"
+      "src": "/products/catalogue/TVR-CAT-0025-st01-007-nami-tournament-pack-vol-3-participant-cgc-9-0-mi-owned-slab.webp",
+      "width": 699,
+      "height": 1210,
+      "source": "local-owned-slab",
+      "sourceUrl": null,
+      "confidence": "exact-owned-slab",
+      "cardCode": "ST01-007"
     },
     "TVR-CAT-0026": {
       "src": "/products/featured/i-know-youre-strong-3rd-anniversary-psa10.jpg",
@@ -266,24 +261,22 @@
       "variant": "OP13-003_p1"
     },
     "TVR-CAT-0028": {
-      "src": "/products/catalogue/TVR-CAT-0028-op13-079-p1.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-079_p1.png",
-      "confidence": "official-code-variant-match",
-      "cardCode": "OP13-079",
-      "variant": "OP13-079_p1"
+      "src": "/products/catalogue/TVR-CAT-0028-op13-079-imu-alternate-art-psa-9-0-mint-fallback.webp",
+      "width": 900,
+      "height": 1260,
+      "source": "vault-room-generated-fallback",
+      "sourceUrl": null,
+      "confidence": "graded-slab-photo-needed",
+      "cardCode": "OP13-079"
     },
     "TVR-CAT-0029": {
-      "src": "/products/catalogue/TVR-CAT-0029-st10-006-p1.webp",
-      "width": 600,
-      "height": 837,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/ST10-006_p1.png",
-      "confidence": "official-code-variant-match",
-      "cardCode": "ST10-006",
-      "variant": "ST10-006_p1"
+      "src": "/products/catalogue/TVR-CAT-0029-st10-006-luffy-st10-006-3rd-anniversary-treasure-campaign-pa-owned-slab.webp",
+      "width": 709,
+      "height": 1194,
+      "source": "local-owned-slab",
+      "sourceUrl": null,
+      "confidence": "exact-owned-slab",
+      "cardCode": "ST10-006"
     },
     "TVR-CAT-0030": {
       "src": "/products/featured/koala-op12-psa10.jpg",
@@ -2709,14 +2702,13 @@
       "variant": "ST13-004"
     },
     "TVR-CAT-0274": {
-      "src": "/products/catalogue/TVR-CAT-0274-op01-016-p1.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-016_p1.png",
-      "confidence": "official-code-variant-match",
-      "cardCode": "OP01-016",
-      "variant": "OP01-016_p1"
+      "src": "/products/catalogue/TVR-CAT-0274-op01-016-nami-op01-016-alternate-art-psa-10-gem-mint-fallback.webp",
+      "width": 900,
+      "height": 1260,
+      "source": "vault-room-generated-fallback",
+      "sourceUrl": null,
+      "confidence": "graded-slab-photo-needed",
+      "cardCode": "OP01-016"
     },
     "TVR-CAT-0275": {
       "src": "/products/catalogue/TVR-CAT-0275-me03-pokemon-tcg-mega-evolution-perfect-order-sleeved-pack-s.webp",
@@ -2749,14 +2741,13 @@
       "cardCode": null
     },
     "TVR-CAT-0278": {
-      "src": "/products/catalogue/TVR-CAT-0278-st03-013.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/ST03-013.png",
-      "confidence": "official-code-match",
-      "cardCode": "ST03-013",
-      "variant": "ST03-013"
+      "src": "/products/catalogue/TVR-CAT-0278-st03-013-boa-hancock-st03-013-bgs-10-pristine-fallback.webp",
+      "width": 900,
+      "height": 1260,
+      "source": "vault-room-generated-fallback",
+      "sourceUrl": null,
+      "confidence": "graded-slab-photo-needed",
+      "cardCode": "ST03-013"
     },
     "TVR-CAT-0279": {
       "src": "/products/catalogue/TVR-CAT-0279-op06-119-p1.webp",
