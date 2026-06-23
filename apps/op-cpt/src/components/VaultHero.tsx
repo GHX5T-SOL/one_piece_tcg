@@ -43,23 +43,14 @@ export function VaultHero() {
       </div>
 
       <div className="hero-art-panel">
-        <div className="table-mountain" />
-        <div className="vault-door">
-          <span />
-        </div>
         <Image
           className="crew-hero-art"
-          src="/branding/vault-room-anime-packrip-hero.jpg"
-          alt="Anime collector crew ripping packs and holding graded slabs at the Vault Room harbor"
+          src="/branding/vault-room-crossover-harbor-hero.jpg"
+          alt="Anime trading card fans ripping packs at the Cape Town harbor with Table Mountain and a pirate ship in the background"
           width={1672}
           height={941}
           priority
         />
-        <div className="card-table">
-          {featuredProducts.slice(0, 6).map((product) => (
-            <ProductVisual compact key={product.id} product={product} />
-          ))}
-        </div>
         <div className="hero-value-strip">
           <span>
             <ShieldCheck aria-hidden size={18} /> Trusted community
