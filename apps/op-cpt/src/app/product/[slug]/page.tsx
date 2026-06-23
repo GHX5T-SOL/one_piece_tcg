@@ -29,7 +29,7 @@ export default async function ProductPage({ params }: ProductRouteProps) {
     <VaultRoomShell>
       <section className="product-detail">
         <div className="product-detail__visual">
-          <ProductVisual product={product} />
+          <ProductVisual priority product={product} />
         </div>
         <div className="product-detail__copy">
           <span>{product.universe} · {product.productType}</span>

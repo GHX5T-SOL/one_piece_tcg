@@ -40,13 +40,13 @@
     },
     "TVR-CAT-0004": {
       "src": "/products/catalogue/TVR-CAT-0004-op01-001-p1.webp",
-      "width": 600,
-      "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p1.png",
-      "confidence": "official-code-variant-match",
+      "width": 400,
+      "height": 559,
+      "source": "user-provided-exact-card-image",
+      "sourceUrl": null,
+      "confidence": "exact-user-supplied-card-photo",
       "cardCode": "OP01-001",
-      "variant": "OP01-001_p1"
+      "variant": "OP01-001 alternate art PR"
     },
     "TVR-CAT-0005": {
       "src": "/products/catalogue/TVR-CAT-0005-st18-004-zoro-juurou-st18-004-cgc-10-0-pristine-owned-slab.webp",
@@ -2753,21 +2753,21 @@
       "src": "/products/catalogue/TVR-CAT-0279-op06-119-p1.webp",
       "width": 600,
       "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-119_p1.png",
-      "confidence": "official-code-variant-match",
+      "source": "user-provided-exact-card-image",
+      "sourceUrl": null,
+      "confidence": "exact-user-supplied-card-photo",
       "cardCode": "OP06-119",
-      "variant": "OP06-119_p1"
+      "variant": "OP06-119 Sanji SP"
     },
     "TVR-CAT-0280": {
       "src": "/products/catalogue/TVR-CAT-0280-op07-085-p1.webp",
       "width": 600,
       "height": 838,
-      "source": "official-one-piece-card-list",
-      "sourceUrl": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-085_p1.png",
-      "confidence": "official-code-variant-match",
+      "source": "user-provided-exact-card-image",
+      "sourceUrl": null,
+      "confidence": "exact-user-supplied-card-photo",
       "cardCode": "OP07-085",
-      "variant": "OP07-085_p1"
+      "variant": "OP07-085 Stussy SP"
     },
     "TVR-CAT-0281": {
       "src": "/products/catalogue/TVR-CAT-0281-op13-076-p1.webp",

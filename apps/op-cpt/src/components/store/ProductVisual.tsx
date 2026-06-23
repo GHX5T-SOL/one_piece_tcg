@@ -6,9 +6,10 @@ import type { Product } from "@/lib/products";
 type ProductVisualProps = {
   product: Product;
   compact?: boolean;
+  priority?: boolean;
 };
 
-export function ProductVisual({ product, compact = false }: ProductVisualProps) {
+export function ProductVisual({ product, compact = false, priority = false }: ProductVisualProps) {
   const image = getProductImage(product.id);
   const Icon =
     product.visualKind === "slab"
@@ -28,6 +29,7 @@ export function ProductVisual({ product, compact = false }: ProductVisualProps) 
           alt={`${product.name} slab`}
           className="product-visual__photo"
           height={image.height}
+          priority={priority}
           sizes={compact ? "70px" : "140px"}
           src={image.src}
           width={image.width}
