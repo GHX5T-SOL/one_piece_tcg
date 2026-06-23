@@ -15,7 +15,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const cart = useCart();
 
   return (
-    <article className="product-card">
+    <article className="product-card" data-kind={product.visualKind} data-universe={product.universe}>
       <div className="product-card__media">
         {product.featured && <span className="product-card__flag">Hot</span>}
         <button className="icon-button" aria-label={`Save ${product.name}`}>

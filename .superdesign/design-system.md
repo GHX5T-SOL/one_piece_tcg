@@ -159,3 +159,11 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
   - `/group-buys`: admin-moderated interest board only; no deposit collection until terms are approved.
   - `/profile`: member sign-in readiness, portfolio privacy, marketplace/comment/DM roadmap.
 - Public copy must position The Vault Room as a trusted Cape Town collector operating desk: browse, enquire, confirm, pay/collect through approved human workflow until checkout, moderation, and legal terms are production-ready.
+
+## Vault Room Anime Terminal Polish
+
+- Global visual energy may use parchment maps, ocean-glow overlays, card-shine motion, devil-fruit rings, gold aura, blue lightning, and duel-card motifs, but text must stay practical and readable.
+- `/market` should feel like a TCG trading terminal: index cards, sparklines, confidence meters, gainers/pullbacks, source ledger, and beta/manual-review warnings.
+- Current `/market` hero background asset: `apps/op-cpt/public/branding/vault-room-market-terminal-bg.png`.
+- Do not claim live pricing if the data is seeded/manual. Use wording like `manual review`, `scenario signal`, `source-backed`, and `beta`.
+- Preserve the approved homepage hero and one-row featured-products layout unless the user explicitly asks for a homepage redesign.
