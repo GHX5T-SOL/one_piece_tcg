@@ -14,13 +14,20 @@ const nav = [
   { href: "/community", label: "Community", icon: UsersRound }
 ];
 
+const whatsappCommunityUrl = "https://chat.whatsapp.com/LgAy8Q0NgVp9NcU7oJXBDy";
+
 export function VaultRoomShell({ children, showCart = true }: { children: React.ReactNode; showCart?: boolean }) {
   return (
     <div className="vault-app">
-      <div className="top-ribbon">Cape Town Collector Community</div>
+      <div className="top-ribbon">
+        <span>Beta site under construction: prices, photos and features may change.</span>
+        <Link href={whatsappCommunityUrl} target="_blank" rel="noreferrer">
+          WhatsApp us to confirm details
+        </Link>
+      </div>
       <header className="site-header">
         <Link className="vault-brand" href="/">
-          <Image src="/branding/vault-room-crest.png" alt="" width={74} height={74} priority />
+          <Image src="/branding/vault-room-crest.png" alt="" width={96} height={101} priority />
           <span>
             <strong>The Vault Room</strong>
             <em>Cards. Collectibles. Grails.</em>
@@ -42,7 +49,7 @@ export function VaultRoomShell({ children, showCart = true }: { children: React.
             <Search aria-hidden size={20} />
           </Link>
           <Link href="/profile" aria-label="Profile">
-            <Image src="/branding/vault-room-crest.png" alt="" width={38} height={38} />
+            <Image src="/branding/vault-room-crest.png" alt="" width={38} height={40} />
             <span>Captain</span>
           </Link>
         </div>

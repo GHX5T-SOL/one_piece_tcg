@@ -65,6 +65,7 @@ select {
 }
 
 img {
+  height: auto;
   max-width: 100%;
 }
 
@@ -80,11 +81,15 @@ img {
   background: #07182c;
   color: var(--vault-gold);
   display: flex;
+  flex-wrap: wrap;
   font-size: 12px;
   font-weight: 900;
+  gap: 6px 10px;
   justify-content: center;
   letter-spacing: 0.18em;
   min-height: 28px;
+  padding: 5px 16px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -93,6 +98,16 @@ img {
   color: var(--vault-gold);
   content: "✦";
   margin: 0 12px;
+}
+
+.top-ribbon a {
+  border-bottom: 1px solid rgba(255, 247, 230, 0.55);
+  color: var(--vault-cream);
+  white-space: nowrap;
+}
+
+.top-ribbon a:hover {
+  color: var(--vault-sky);
 }
 
 .site-header {
@@ -119,7 +134,8 @@ img {
 
 .vault-brand img {
   height: 58px;
-  width: 58px;
+  flex: 0 0 auto;
+  width: auto;
 }
 
 .vault-brand span {
@@ -189,6 +205,11 @@ img {
   border: 1px solid rgba(8, 33, 61, 0.12);
   box-shadow: 0 8px 24px rgba(8, 33, 61, 0.08);
   padding-right: 12px;
+}
+
+.header-tools img {
+  height: 40px;
+  width: auto;
 }
 
 main {
@@ -3252,7 +3273,15 @@ main {
 @media (max-width: 720px) {
   .top-ribbon {
     font-size: 10px;
-    min-height: 24px;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    min-height: 34px;
+    padding: 6px 12px;
+  }
+
+  .top-ribbon::before,
+  .top-ribbon::after {
+    display: none;
   }
 
   .site-header {
@@ -3267,7 +3296,7 @@ main {
 
   .vault-brand img {
     height: 46px;
-    width: 46px;
+    width: auto;
   }
 
   .vault-brand strong {
