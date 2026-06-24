@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-22T16:10:29.525Z",
-  "source": "sales/loyverse/2026-06-19/the-vault-room-loyverse-import-2026-06-19.csv",
-  "sourceRows": 324,
-  "publicProducts": 325,
+  "generatedAt": "2026-06-24T15:55:27.776Z",
+  "source": "show_pricing/2026-06-24-stock-for-show/data/stock_for_show_pricing_master.csv",
+  "sourceRows": 317,
+  "publicProducts": 318,
   "serviceProductsAdded": 1,
   "categoryCounts": {
-    "One Piece": 321,
+    "One Piece": 314,
     "Yu-Gi-Oh": 1,
     "Pokemon": 2,
     "Services": 1
   },
-  "publicSafetyPolicy": "Customer-facing product data is sanitized for public display."
+  "publicSafetyPolicy": "Customer-facing product data is generated from the latest public list prices only. Private pricing fields and research notes are not exported."
 }

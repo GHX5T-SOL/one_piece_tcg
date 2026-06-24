@@ -14,23 +14,7 @@ fs.rmSync(imageRoot, { recursive: true, force: true });
 fs.mkdirSync(imageRoot, { recursive: true });
 
 const manualImages = {
-  "TVR-CAT-0010": {
-    src: "/products/featured/roronoa-zoro-25th-cgc10.jpg",
-    width: 952,
-    height: 1620,
-    source: "local-owned-slab",
-    sourceUrl: "/products/featured/roronoa-zoro-25th-cgc10.jpg",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0011": {
-    src: "/products/featured/koby-prb02-cgc10.jpg",
-    width: 1000,
-    height: 1717,
-    source: "local-owned-slab",
-    sourceUrl: "/products/featured/koby-prb02-cgc10.jpg",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0007": {
+  "TVR-CAT-0012": {
     src: "/products/featured/borsalino-op06-psa10.jpg",
     width: 1000,
     height: 1664,
@@ -39,14 +23,14 @@ const manualImages = {
     confidence: "exact-owned-slab"
   },
   "TVR-CAT-0017": {
-    src: "/products/featured/doflamingo-prb02-psa10.jpg",
-    width: 1000,
-    height: 1677,
+    src: "/products/featured/roronoa-zoro-25th-cgc10.jpg",
+    width: 952,
+    height: 1620,
     source: "local-owned-slab",
-    sourceUrl: "/products/featured/doflamingo-prb02-psa10.jpg",
+    sourceUrl: "/products/featured/roronoa-zoro-25th-cgc10.jpg",
     confidence: "exact-owned-slab"
   },
-  "TVR-CAT-0022": {
+  "TVR-CAT-0018": {
     src: "/products/featured/cavendish-op10-psa10.jpg",
     width: 1000,
     height: 1667,
@@ -54,7 +38,15 @@ const manualImages = {
     sourceUrl: "/products/featured/cavendish-op10-psa10.jpg",
     confidence: "exact-owned-slab"
   },
-  "TVR-CAT-0026": {
+  "TVR-CAT-0019": {
+    src: "/products/featured/koby-prb02-cgc10.jpg",
+    width: 1000,
+    height: 1717,
+    source: "local-owned-slab",
+    sourceUrl: "/products/featured/koby-prb02-cgc10.jpg",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0024": {
     src: "/products/featured/i-know-youre-strong-3rd-anniversary-psa10.jpg",
     width: 1000,
     height: 1676,
@@ -63,6 +55,14 @@ const manualImages = {
     confidence: "exact-owned-slab"
   },
   "TVR-CAT-0030": {
+    src: "/products/featured/doflamingo-prb02-psa10.jpg",
+    width: 1000,
+    height: 1677,
+    source: "local-owned-slab",
+    sourceUrl: "/products/featured/doflamingo-prb02-psa10.jpg",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0050": {
     src: "/products/featured/koala-op12-psa10.jpg",
     width: 1000,
     height: 1672,
@@ -81,50 +81,58 @@ const manualLocalImages = {
     confidence: "exact-user-supplied-card-photo",
     suffix: "transparent-card-photo"
   },
-  "TVR-CAT-0005": {
-    path: path.join(localCardMediaRoot, "2024_One_Piece_Japanese_SD_Purple_Monkey_D._Luffy_SR_Zoro-Juurou__ST18-004_CGC_10_PRISTINE.jpg"),
-    source: "local-owned-slab",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0012": {
-    path: path.join(localCardMediaRoot, "2022_ONE_PIECE_STARTER_DECK_ST03-THE_SEVEN_WARLORDS_OF_THE_SEA_001_CROCODILE_SUPER_PRE-RELEASE_PSA_9.jpg"),
-    source: "local-owned-slab",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0016": {
-    path: path.join(localCardMediaRoot, "2023_One_Piece_Promo_Premium_Collection_Film_Red_Alt_Art_Franky__OP01-021_CGC_10_GEM_MINT.jpg"),
-    source: "local-owned-slab",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0025": {
-    path: path.join(localCardMediaRoot, "2023_One_Piece_Promo_Tournament_Pack_Volume_3_Nami__ST01-007_CGC_9_MINT.jpg"),
-    source: "local-owned-slab",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0029": {
-    path: path.join(localCardMediaRoot, "2025_One_Piece_Japanese_Promo_3rd_Anniversary_Treasure_SR_Monkey_D._Luffy__ST10-006_CGC_10.jpg"),
-    source: "local-owned-slab",
-    confidence: "exact-owned-slab"
-  },
-  "TVR-CAT-0020": {
-    path: path.join(appRoot, "assets/product-sources/op09-070-nami-best-collection-jp-cgc10-gem-mint.jpeg"),
-    source: "local-user-supplied-slab-photo",
-    confidence: "exact-user-supplied-slab-photo",
-    suffix: "user-slab"
-  },
-  "TVR-CAT-0028": {
-    path: path.join(appRoot, "assets/product-sources/op13-079-imu-alternate-art-psa9-mint.png"),
-    source: "local-user-supplied-slab-photo",
-    confidence: "exact-user-supplied-slab-photo",
-    suffix: "user-slab"
-  },
-  "TVR-CAT-0274": {
+  "TVR-CAT-0002": {
     path: path.join(appRoot, "assets/product-sources/op01-016-nami-alternate-art-psa10-gem-mint.jpeg"),
     source: "local-user-supplied-slab-photo",
     confidence: "exact-user-supplied-slab-photo",
     suffix: "user-slab"
   },
-  "TVR-CAT-0278": {
+  "TVR-CAT-0005": {
+    path: path.join(appRoot, "assets/product-sources/op06-119-sanji-sp-user.webp"),
+    source: "local-user-supplied-card-photo",
+    confidence: "exact-user-supplied-card-photo",
+    suffix: "user-card"
+  },
+  "TVR-CAT-0009": {
+    path: path.join(appRoot, "assets/product-sources/op01-001-zoro-alternate-art-user.webp"),
+    source: "local-user-supplied-card-photo",
+    confidence: "exact-user-supplied-card-photo",
+    suffix: "user-card"
+  },
+  "TVR-CAT-0010": {
+    path: path.join(localCardMediaRoot, "2024_One_Piece_Japanese_SD_Purple_Monkey_D._Luffy_SR_Zoro-Juurou__ST18-004_CGC_10_PRISTINE.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0011": {
+    path: path.join(appRoot, "assets/product-sources/op07-085-stussy-sp-user.webp"),
+    source: "local-user-supplied-card-photo",
+    confidence: "exact-user-supplied-card-photo",
+    suffix: "user-card"
+  },
+  "TVR-CAT-0020": {
+    path: path.join(localCardMediaRoot, "2025_One_Piece_Japanese_Promo_3rd_Anniversary_Treasure_SR_Monkey_D._Luffy__ST10-006_CGC_10.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0032": {
+    path: path.join(localCardMediaRoot, "2023_One_Piece_Promo_Premium_Collection_Film_Red_Alt_Art_Franky__OP01-021_CGC_10_GEM_MINT.jpg"),
+    source: "local-owned-slab",
+    confidence: "exact-owned-slab"
+  },
+  "TVR-CAT-0035": {
+    path: path.join(appRoot, "assets/product-sources/op09-070-nami-best-collection-jp-cgc10-gem-mint.jpeg"),
+    source: "local-user-supplied-slab-photo",
+    confidence: "exact-user-supplied-slab-photo",
+    suffix: "user-slab"
+  },
+  "TVR-CAT-0045": {
+    path: path.join(appRoot, "assets/product-sources/op13-079-imu-alternate-art-psa9-mint.png"),
+    source: "local-user-supplied-slab-photo",
+    confidence: "exact-user-supplied-slab-photo",
+    suffix: "user-slab"
+  },
+  "TVR-CAT-0129": {
     path: path.join(appRoot, "assets/product-sources/st03-013-boa-hancock-bgs10-pristine.jpg"),
     source: "local-user-supplied-slab-photo",
     confidence: "exact-user-supplied-slab-photo",
@@ -133,83 +141,59 @@ const manualLocalImages = {
 };
 
 const manualRemoteImages = {
-  "TVR-CAT-0003": {
+  "TVR-CAT-0004": {
+    url: "https://en.onepiece-cardgame.com/images/products/boosters/op12/mv_01.jpg?v2",
+    sourcePage: "https://en.onepiece-cardgame.com/products/boosters/op12.php",
+    source: "official-one-piece-product-page",
+    confidence: "official-sealed-product-match"
+  },
+  "TVR-CAT-0006": {
     url: "https://en.onepiece-cardgame.com/images/products/other/cardcollection_bestselection_vol4/mv_01.jpg",
     sourcePage: "https://en.onepiece-cardgame.com/products/other/cardcollection_bestselection_vol4.php",
     source: "official-one-piece-product-page",
     confidence: "official-sealed-product-match"
   },
-  "TVR-CAT-0008": {
+  "TVR-CAT-0014": {
     url: "https://en.onepiece-cardgame.com/images/products/other/cardcollection_liveaction/mv_01.jpg",
     sourcePage: "https://en.onepiece-cardgame.com/products/other/cardcollection_liveaction.php",
     source: "official-one-piece-product-page",
     confidence: "official-sealed-product-match"
   },
-  "TVR-CAT-0009": {
+  "TVR-CAT-0016": {
     url: "https://en.onepiece-cardgame.com/images/products/other/cardcollection_bcgfest23-24/mv_01.jpg",
     sourcePage: "https://en.onepiece-cardgame.com/products/other/cardcollection_bcgfest23-24.php",
     source: "official-one-piece-product-page",
     confidence: "official-sealed-product-match"
   },
-  "TVR-CAT-0018": {
+  "TVR-CAT-0028": {
     url: "https://en.onepiece-cardgame.com/images/products/boosters/op12/mv_01.jpg?v2",
     sourcePage: "https://en.onepiece-cardgame.com/products/boosters/op12.php",
     source: "official-one-piece-product-page",
     confidence: "official-sealed-product-match"
   },
-  "TVR-CAT-0023": {
+  "TVR-CAT-0039": {
     url: "https://en.onepiece-cardgame.com/images/products/decks/ld01/mv_01.jpg",
     sourcePage: "https://en.onepiece-cardgame.com/products/decks/ld01.php",
     source: "official-one-piece-product-page",
     confidence: "official-sealed-product-match"
   },
-  "TVR-CAT-0275": {
-    url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/42647c19-8b65-49d3-a64b-3e07f36336ca.png%3BmaxHeight%3D422%3BmaxWidth%3D264?format=webp",
-    sourcePage: "https://www.bestbuy.com/product/pokemon-trading-card-game-mega-evolution-perfect-order-sleeved-booster-1-sleeved-booster-per-order-styles-may-vary/JJG2TLXKC4",
-    source: "retailer-product-page",
-    confidence: "retailer-sealed-product-match"
-  },
-  "TVR-CAT-0276": {
-    url: "https://en.onepiece-cardgame.com/images/products/other/dp08/mv_01.jpg?1",
-    sourcePage: "https://en.onepiece-cardgame.com/products/other/dp08.php",
-    source: "official-one-piece-product-page",
-    confidence: "official-sealed-product-match"
-  },
-  "TVR-CAT-0277": {
-    url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a551f306-30fd-4435-9cb7-1f18dba165c2.png%3BmaxHeight%3D422%3BmaxWidth%3D264?format=webp",
-    sourcePage: "https://www.bestbuy.com/product/pokemon-trading-card-game-mega-evolution-chaos-rising-sleeved-booster-one-per-order-styles-may-vary/JJG2TLXVHV",
-    source: "retailer-product-page",
-    confidence: "retailer-sealed-product-match"
-  },
-  "TVR-CAT-0286": {
-    url: "https://en.onepiece-cardgame.com/images/products/decks/st10/mv_01.jpg?3",
-    sourcePage: "https://en.onepiece-cardgame.com/products/decks/st10.php",
-    source: "official-one-piece-product-page",
-    confidence: "official-sealed-product-match"
-  },
-  "TVR-CAT-0293": {
+  "TVR-CAT-0040": {
     url: "https://en.onepiece-cardgame.com/images/products/decks/st01-04/mv_01.jpg?v3",
     sourcePage: "https://en.onepiece-cardgame.com/products/decks/st01-04.php",
     source: "official-one-piece-product-page",
     confidence: "official-starter-deck-group-match"
   },
-  "TVR-CAT-0322": {
-    url: "https://asia-en.onepiece-cardgame.com/renewal/images/products/boosters/eb04/img_item01.webp",
-    sourcePage: "https://asia-en.onepiece-cardgame.com/products/boosters/eb04.php",
-    source: "official-one-piece-product-page",
-    confidence: "official-sealed-product-match"
+  "TVR-CAT-0068": {
+    url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a551f306-30fd-4435-9cb7-1f18dba165c2.png%3BmaxHeight%3D422%3BmaxWidth%3D264?format=webp",
+    sourcePage: "https://www.bestbuy.com/product/pokemon-trading-card-game-mega-evolution-chaos-rising-sleeved-booster-one-per-order-styles-may-vary/JJG2TLXVHV",
+    source: "retailer-product-page",
+    confidence: "retailer-sealed-product-match"
   },
-  "TVR-CAT-0323": {
-    url: "https://asia-en.onepiece-cardgame.com/onepiececg/bccard/jp/products/2026/03/19/QRbilYFyY46pR9VQ/img_item01.webp",
-    sourcePage: "https://asia-en.onepiece-cardgame.com/products/op16.html",
-    source: "official-one-piece-product-page",
-    confidence: "official-sealed-product-match"
-  },
-  "TVR-CAT-0324": {
-    url: "https://en.onepiece-cardgame.com/images/products/boosters/op12/mv_01.jpg?v2",
-    sourcePage: "https://en.onepiece-cardgame.com/products/boosters/op12.php",
-    source: "official-one-piece-product-page",
-    confidence: "official-sealed-product-match"
+  "TVR-CAT-0085": {
+    url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/42647c19-8b65-49d3-a64b-3e07f36336ca.png%3BmaxHeight%3D422%3BmaxWidth%3D264?format=webp",
+    sourcePage: "https://www.bestbuy.com/product/pokemon-trading-card-game-mega-evolution-perfect-order-sleeved-booster-1-sleeved-booster-per-order-styles-may-vary/JJG2TLXKC4",
+    source: "retailer-product-page",
+    confidence: "retailer-sealed-product-match"
   }
 };
 

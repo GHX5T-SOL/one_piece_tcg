@@ -1,10 +1,11 @@
-import csv from "node:fs";
+import fsSync from "node:fs";
 import fs from "node:fs/promises";
 import path from "node:path";
 
 const root = path.resolve(process.cwd(), "../..");
 const appRoot = process.cwd();
-const loyversePath = path.join(root, "sales/loyverse/2026-06-19/the-vault-room-loyverse-import-2026-06-19.csv");
+const sourceRelativePath = "show_pricing/2026-06-24-stock-for-show/data/stock_for_show_pricing_master.csv";
+const sourcePath = path.join(root, sourceRelativePath);
 const outPath = path.join(appRoot, "src/data/products.json");
 const manifestPath = path.join(appRoot, "src/data/catalogue-manifest.json");
 
@@ -52,7 +53,12 @@ function slugify(value) {
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "")
-    .slice(0, 88);
+    .slice(0, 100);
+}
+
+function asInt(value, fallback = 0) {
+  const parsed = Number.parseInt(String(value || "").replace(/[^0-9-]/g, ""), 10);
+  return Number.isFinite(parsed) ? parsed : fallback;
 }
 
 function money(value) {
@@ -60,144 +66,132 @@ function money(value) {
   return Number.isFinite(parsed) ? Math.round(parsed) : 0;
 }
 
-function extract(description, label) {
-  const match = description.match(new RegExp(`${label}:\\s*([^|]+)`, "i"));
-  return match ? match[1].trim() : "";
+function clean(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
 }
 
-function classify(category, name) {
-  const lower = `${category} ${name}`.toLowerCase();
-  if (lower.includes("pre-grade") || lower.includes("authentication report") || lower.includes("grade lab service")) {
-    return "Services";
-  }
-  if (lower.includes("pokemon")) return "Pokemon";
-  if (lower.includes("yu-gi-oh")) return "Yu-Gi-Oh";
+function normalizeUniverse(category) {
+  if (/yu.?gi.?oh/i.test(category)) return "Yu-Gi-Oh";
+  if (/pokemon/i.test(category)) return "Pokemon";
   return "One Piece";
 }
 
-function productType(category, name) {
-  const lower = `${category} ${name}`.toLowerCase();
-  if (lower.includes("graded") || lower.includes("psa") || lower.includes("cgc") || lower.includes("bgs")) return "Graded";
-  if (lower.includes("sealed") || lower.includes("booster") || lower.includes("starter deck") || lower.includes("ultra deck") || lower.includes("double pack")) return "Sealed";
-  if (lower.includes("service") || lower.includes("pre-grade")) return "Service";
-  if (lower.includes("premium")) return "Premium Single";
+function normalizeLanguage(language) {
+  const value = clean(language);
+  if (/japanese/i.test(value)) return "Japanese";
+  if (/english/i.test(value)) return "English";
+  if (/mixed/i.test(value)) return "Mixed";
+  return value || "Unknown";
+}
+
+function productType(row) {
+  const type = clean(row.product_type);
+  const nameSet = `${row.product_name} ${row.set_name} ${row.rarity} ${row.flags}`.toLowerCase();
+  if (/graded/i.test(type) || /\b(psa|cgc|bgs)\b/i.test(row.grade)) return "Graded";
+  if (/sealed|product/i.test(type) || /booster box|booster pack|starter deck|ultra deck|deck set|card collection|double pack/i.test(nameSet)) {
+    return "Sealed";
+  }
+  if (/sp|alternate|alt art|parallel|manga|promo|event|anniversary|starlight|leader/i.test(nameSet)) return "Premium Single";
   return "Single";
 }
 
-function visualKind(type, category) {
+function visualKind(type, universe) {
   if (type === "Graded") return "slab";
-  if (type === "Sealed" && category === "Pokemon") return "pokemon-pack";
+  if (type === "Sealed" && universe === "Pokemon") return "pokemon-pack";
   if (type === "Sealed") return "sealed";
   if (type === "Service") return "service";
   return "card";
 }
 
-function cleanName(name) {
-  return name
-    .replace(/\s*-\s*Japanese\b/gi, " JP")
-    .replace(/\s+/g, " ")
-    .trim();
+function displayCategory(row, type) {
+  if (type === "Graded") return "Graded Slabs";
+  if (type === "Sealed") return "Sealed Products";
+  if (type === "Premium Single") return "Premium Singles";
+  return clean(row.category) === "Pokemon" ? "Pokemon Singles" : clean(row.category) === "YuGiOh" ? "Yu-Gi-Oh Singles" : "Binder Singles";
 }
 
-function publicCategory(category, universe) {
-  const cleaned = category
-    .replace(/^One Piece\s+/i, "")
-    .replace(/\bConsignment\b/gi, "Premium")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  if (!cleaned) return universe === "Pokemon" ? "Sealed Products" : "Premium Singles";
-  return cleaned;
-}
-
-function publicDescription(row, type, universe) {
-  const description = row.Description || "";
-  const set = extract(description, "Set");
-  const rarity = extract(description, "Rarity");
-  const variant = extract(description, "Variant");
-  const condition = extract(description, "Condition") || "Near Mint";
+function publicDescription(row, type, universe, language) {
   const parts = [];
+  const setName = clean(row.set_name);
+  const cardNumber = clean(row.card_number);
+  const rarity = clean(row.rarity);
+  const variant = clean(row.variance);
+  const grade = clean(row.grade);
+  const condition = clean(row.condition) || (type === "Sealed" ? "Sealed" : "Near Mint");
 
-  if (set) parts.push(set);
+  if (setName) parts.push(setName);
+  if (cardNumber) parts.push(cardNumber);
   if (rarity) parts.push(`${rarity} rarity`);
-  if (variant && variant !== "Normal") parts.push(variant);
-  if (type !== "Sealed" && type !== "Service") parts.push(condition);
-  if (type === "Graded") parts.push("graded display piece");
-  if (type === "Sealed") parts.push("factory sealed product");
-  if (universe === "Pokemon") parts.push("Pokemon sealed stock");
-
-  return parts.length
-    ? parts.join(" • ")
-    : "The Vault Room catalogue item. Availability and final condition confirmed before handover.";
+  if (variant && !/^normal$/i.test(variant)) parts.push(variant);
+  if (language && language !== "Unknown") parts.push(language);
+  if (type === "Graded" && grade) parts.push(grade);
+  if (type === "Sealed") parts.push("sealed product");
+  if (type !== "Sealed") parts.push(condition);
+  if (universe === "Pokemon") parts.push("Pokemon stock");
+  return `${parts.join(" • ")}. Availability and final condition are confirmed before invoice or handover.`;
 }
 
-const publicRecordOverrides = {
-  "TVR-CAT-0020": {
-    publicDescription:
-      "Premium Card Collection: Best Selection Vol.4 • OP09-070 • CGC GEM MINT 10 • cert 6124522036 • graded display piece",
-    searchTextExtra: "6124522036 cgc cert"
-  },
-  "TVR-CAT-0028": {
-    publicDescription:
-      "Carrying On His Will • OP13-079 Imu Alternate Art • PSA MINT 9 • cert 153963574 • graded display piece",
-    searchTextExtra: "153963574 psa cert"
-  },
-  "TVR-CAT-0274": {
-    publicDescription:
-      "Japanese Romance Dawn / OP-01 • OP01-016 Nami Alternate Art • PSA GEM MINT 10 • cert 96095956 • graded display piece",
-    searchTextExtra: "96095956 psa cert"
-  },
-  "TVR-CAT-0278": {
-    publicDescription:
-      "Starter Deck 3 / Best Selection Vol.2 • ST03-013 Boa Hancock • BGS PRISTINE 10 • cert 0017679037 • subgrades: centering 9.5, corners 10, edges 10, surface 10",
-    searchTextExtra: "0017679037 bgs cert beckett pristine subgrades"
-  }
-};
+function makeProduct(row) {
+  const rank = asInt(row.rank, 0);
+  const sku = `TVR-CAT-${String(rank || asInt(row.row_id, 0)).padStart(4, "0")}`;
+  const name = clean(row.product_name) || sku;
+  const universe = normalizeUniverse(row.category);
+  const type = productType(row);
+  const category = displayCategory(row, type);
+  const setName = clean(row.set_name);
+  const cardNumber = clean(row.card_number);
+  const rarity = clean(row.rarity);
+  const variant = clean(row.variance);
+  const language = normalizeLanguage(row.language);
+  const condition = clean(row.condition) || (type === "Sealed" ? "Sealed" : "Near Mint");
+  const grade = clean(row.grade).replace(/^Ungraded$/i, "");
+  const priceZar = money(row.list_price_zar);
+  const stock = Math.max(0, asInt(row.quantity, 0));
+  const confidence = clean(row.confidence);
+  const researchStatus = clean(row.research_status);
+  const baseSlug = slugify(`${sku}-${cardNumber}-${name}-${grade || condition}`);
+  const searchFields = [
+    sku,
+    name,
+    universe,
+    category,
+    type,
+    setName,
+    cardNumber,
+    rarity,
+    variant,
+    language,
+    condition,
+    grade
+  ];
 
-function makeProduct(row, index) {
-  const sku = `TVR-CAT-${String(index + 1).padStart(4, "0")}`;
-  const name = cleanName(row.Name || sku);
-  const category = row.Category || "Trading Cards";
-  const universe = classify(category, name);
-  const type = productType(category, name);
-  const displayCategory = publicCategory(category, universe);
-  const priceZar = money(row["Price [the vault room ]"]);
-  const stock = Math.max(0, Number.parseInt(row["In stock [the vault room ]"] || "0", 10) || 0);
-  const description = row.Description || "";
-  const setName = extract(description, "Set") || "";
-  const rarity = extract(description, "Rarity") || "";
-  const condition = extract(description, "Condition") || (type === "Sealed" ? "Sealed" : "Near Mint");
-  const gradeMatch = name.match(/\b(PSA|CGC|BGS)\s+([0-9.]+|10\.0)?\s*([A-Z][A-Z\s-]+)?/i);
-  const grade = gradeMatch ? gradeMatch[0].replace(/\s+/g, " ").trim() : "";
-  const baseSlug = slugify(`${sku}-${name}`);
-
-  const override = publicRecordOverrides[sku] || {};
-  const searchFields = [name, sku, displayCategory, setName, rarity, condition, grade];
-  if (override.searchTextExtra) searchFields.push(override.searchTextExtra);
   return {
     id: sku,
     sku,
-    slug: baseSlug || `product-${index + 1}`,
+    slug: baseSlug || `product-${rank}`,
     name,
     universe,
-    category: displayCategory,
+    category,
     productType: type,
     setName,
+    cardNumber,
     rarity,
+    variant,
+    language,
     condition,
     grade,
     priceZar,
     stock,
     status: stock > 0 ? "In stock" : "Ask availability",
-    featured: index < 18 || priceZar >= 2500,
-    askOnly: /ASK ONLY|live-check|Verify/i.test(description),
+    featured: rank <= 24 || priceZar >= 2500,
+    askOnly: priceZar <= 0 || /needs_owner_confirmation|needs_research/i.test(`${confidence} ${researchStatus}`),
     visualKind: visualKind(type, universe),
-    publicDescription: override.publicDescription || publicDescription(row, type, universe),
+    publicDescription: publicDescription(row, type, universe, language),
     searchText: searchFields.join(" ").toLowerCase()
   };
 }
 
-const source = csv.readFileSync(loyversePath, "utf8");
+const source = fsSync.readFileSync(sourcePath, "utf8");
 const sourceRows = parseCsv(source);
 const products = sourceRows.map(makeProduct);
 
@@ -210,7 +204,10 @@ products.push({
   category: "Grade Lab",
   productType: "Service",
   setName: "The Vault Room Grade Lab",
+  cardNumber: "",
   rarity: "Service",
+  variant: "Inspection",
+  language: "Mixed",
   condition: "Per card",
   grade: "",
   priceZar: 150,
@@ -236,16 +233,17 @@ await fs.writeFile(
   `${JSON.stringify(
     {
       generatedAt: new Date().toISOString(),
-      source: "sales/loyverse/2026-06-19/the-vault-room-loyverse-import-2026-06-19.csv",
+      source: sourceRelativePath,
       sourceRows: sourceRows.length,
       publicProducts: products.length,
       serviceProductsAdded: 1,
       categoryCounts,
-      publicSafetyPolicy: "Customer-facing product data is sanitized for public display."
+      publicSafetyPolicy:
+        "Customer-facing product data is generated from the latest public list prices only. Private pricing fields and research notes are not exported."
     },
     null,
     2
   )}\n`
 );
 
-console.log(`Generated ${products.length} public products from ${sourceRows.length} catalogue records.`);
+console.log(`Generated ${products.length} public products from ${sourceRows.length} show-pricing records.`);

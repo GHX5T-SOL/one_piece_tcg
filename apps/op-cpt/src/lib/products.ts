@@ -11,7 +11,10 @@ export type Product = {
   category: string;
   productType: "Graded" | "Sealed" | "Service" | "Premium Single" | "Single";
   setName: string;
+  cardNumber: string;
   rarity: string;
+  variant: string;
+  language: "English" | "Japanese" | "Mixed" | "Unknown" | string;
   condition: string;
   grade: string;
   priceZar: number;
@@ -38,13 +41,13 @@ export const allProducts = products as Product[];
 export const saleProducts = allProducts.filter((product) => product.productType !== "Service");
 
 export const featuredProductIds = [
-  "TVR-CAT-0010",
-  "TVR-CAT-0011",
-  "TVR-CAT-0007",
+  "TVR-CAT-0002",
   "TVR-CAT-0017",
-  "TVR-CAT-0022",
-  "TVR-CAT-0026",
-  "TVR-CAT-0030"
+  "TVR-CAT-0012",
+  "TVR-CAT-0019",
+  "TVR-CAT-0018",
+  "TVR-CAT-0024",
+  "TVR-CAT-0050"
 ] as const;
 
 const featuredProductIdSet = new Set<string>(featuredProductIds);
@@ -77,7 +80,7 @@ export function getProductImage(productId: string) {
 }
 
 export const grailProducts = allProducts
-  .filter((product) => product.priceZar >= 2500 && product.stock > 0)
+  .filter((product) => product.productType !== "Service" && product.priceZar >= 2500 && product.stock > 0)
   .slice(0, 12);
 
 export const serviceProducts = allProducts.filter((product) => product.productType === "Service");
@@ -95,12 +98,12 @@ export function findProductBySlug(slug: string) {
 }
 
 export function productStats() {
-  const totalValue = allProducts.reduce((sum, product) => sum + product.priceZar * Math.max(product.stock, 0), 0);
-  const inStock = allProducts.filter((product) => product.stock > 0).length;
-  const categories = new Set(allProducts.map((product) => product.category)).size;
+  const totalValue = saleProducts.reduce((sum, product) => sum + product.priceZar * Math.max(product.stock, 0), 0);
+  const inStock = saleProducts.filter((product) => product.stock > 0).length;
+  const categories = new Set(saleProducts.map((product) => product.category)).size;
 
   return {
-    products: allProducts.length,
+    products: saleProducts.length,
     sourceRows: catalogueManifest.sourceRows,
     inStock,
     categories,

@@ -45,6 +45,18 @@ export default async function ProductPage({ params }: ProductRouteProps) {
               <dt>Set / product</dt>
               <dd>{product.setName || product.category}</dd>
             </div>
+            {product.cardNumber ? (
+              <div>
+                <dt>Card number</dt>
+                <dd>{product.cardNumber}</dd>
+              </div>
+            ) : null}
+            {product.language ? (
+              <div>
+                <dt>Language</dt>
+                <dd>{product.language}</dd>
+              </div>
+            ) : null}
             <div>
               <dt>Condition</dt>
               <dd>{product.condition}</dd>
