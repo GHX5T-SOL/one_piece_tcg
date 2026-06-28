@@ -370,6 +370,14 @@ main {
 
 .hero-actions {
   flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.hero-actions .primary-action,
+.hero-actions .secondary-action {
+  font-size: 12px;
+  padding-inline: 12px;
+  white-space: nowrap;
 }
 
 .primary-action,
