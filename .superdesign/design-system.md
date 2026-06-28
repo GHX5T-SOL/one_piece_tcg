@@ -160,6 +160,16 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
   - `/profile`: member sign-in readiness, portfolio privacy, marketplace/comment/DM roadmap.
 - Public copy must position The Vault Room as a trusted Cape Town collector operating desk: browse, enquire, confirm, pay/collect through approved human workflow until checkout, moderation, and legal terms are production-ready.
 
+## Vault Room Social + Vault Credit Upgrade
+
+- Next public event reference: `Cape Town Collect-a-Con`, Saturday `4 July 2026`, `Protea Fire & Ice! Cape Town`, `10:00 AM`, free entrance from the public poster.
+- Header account CTA should read `My Profile`, not `Captain`.
+- `/profile` should feel like a collector social command center: profile status, collection value, points, feed, private messages, add-card workflow, list-for-sale workflow, leaderboard, privacy controls, and beta account status.
+- `/auth/sign-in` should make account creation easy to understand even before live OAuth is configured: provider buttons, email magic-link field, WhatsApp fallback, and a clear `member beta` state.
+- New service page: `Vault Credit` or similar. It explains a future card-backed funding service using graded slabs/high-end raw grails as collateral, valuation review, secure custody, offer terms, repayment/release, and human review. It must say `Coming soon` and avoid promising active lending, approval, legal terms, or guaranteed offers.
+- Platform expansion visuals should add anime TCG energy without hurting readability: devil-fruit rings, gold aura, electric blue strokes, duel-board card panels, starburst motion, parchment maps, harbor/wave silhouettes, and high-quality collector UI chrome.
+- Use real backend groundwork where useful, but when Supabase/Yoco/OAuth keys are missing, the public UI must remain a working beta/demo that routes to WhatsApp/manual confirmation.
+
 ## Vault Room Anime Terminal Polish
 
 - Global visual energy may use parchment maps, ocean-glow overlays, card-shine motion, devil-fruit rings, gold aura, blue lightning, and duel-card motifs, but text must stay practical and readable.

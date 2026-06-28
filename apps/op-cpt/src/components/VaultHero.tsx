@@ -32,11 +32,11 @@ export function VaultHero() {
         </div>
         <article className="event-card">
           <span>Upcoming show</span>
-          <strong>Lagoon Beach Hotel</strong>
-          <em>27 June 2026</em>
+          <strong>Cape Town Collect-a-Con</strong>
+          <em>4 July 2026</em>
           <p>
             <CalendarDays aria-hidden size={15} />
-            10AM - 5PM
+            Protea Fire & Ice! Cape Town · 10AM
           </p>
           <Link href="/events">RSVP now</Link>
         </article>
@@ -79,8 +79,8 @@ export function VaultHero() {
           <Image className="phone-hero" src="/branding/vault-room-poster.jpg" alt="Vault Room mobile hero" width={230} height={300} />
           <article>
             <span>Upcoming show</span>
-            <b>Lagoon Beach Hotel</b>
-            <em>27 June 2026</em>
+            <b>Collect-a-Con</b>
+            <em>4 July 2026</em>
           </article>
           {featuredProducts[0] && (
             <div className="phone-product">

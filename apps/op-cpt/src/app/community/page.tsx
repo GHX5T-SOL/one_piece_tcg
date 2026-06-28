@@ -6,7 +6,7 @@ export default function CommunityPage() {
   return (
     <VaultRoomShell>
       <section className="page-hero">
-        <span>Cape Town Collector Community</span>
+        <span>The Vault Room crew</span>
         <h1>More than cards</h1>
         <p>Join the rooms for trades, price checks, game nights, auctions, preorders and show-day announcements.</p>
       </section>

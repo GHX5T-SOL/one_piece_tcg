@@ -4,11 +4,18 @@ import { VaultRoomShell } from "@/components/VaultRoomShell";
 
 const events = [
   {
-    title: "Reload Trade & Play",
+    title: "Cape Town Collect-a-Con",
+    venue: "Protea Fire & Ice! Cape Town",
+    date: "Saturday, 4 July 2026",
+    time: "10:00 AM",
+    detail: "Free entrance show with The Vault Room table, pack rips, trades, slabs, sealed stock, buy-ins, community prizes and signups."
+  },
+  {
+    title: "Reload Trade & Play recap",
     venue: "Lagoon Beach Hotel",
     date: "27 June 2026",
-    time: "10AM - 5PM",
-    detail: "TCG show table, live catalogue, trades, grail hunting, pack talk and community signups."
+    time: "Completed",
+    detail: "Our first smaller show table was a successful community introduction and a useful dry run for bigger events."
   },
   {
     title: "Vault Room Trade Night",

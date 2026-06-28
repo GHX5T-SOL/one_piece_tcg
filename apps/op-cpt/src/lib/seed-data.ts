@@ -335,26 +335,26 @@ export const landmarks: Landmark[] = [
 
 export const events: EventRecord[] = [
   {
-    id: "game-night-june-6",
-    title: "The Vault Room Game Night",
-    date: "2026-06-06",
-    venue: "Fanaticus Clubhouse, Cape Town",
-    format: "Casual battles, teaching table, trade window, pack-rip corner",
-    capacity: 32,
-    attending: 24,
+    id: "collect-a-con-2026-07-04",
+    title: "Cape Town Collect-a-Con",
+    date: "2026-07-04",
+    venue: "Protea Fire & Ice! Cape Town",
+    format: "Show table, buy/sell/trade, pack rips, community challenges and Vault Room signups",
+    capacity: 80,
+    attending: 42,
     status: "open",
-    notes: "Member-beta dry run. Bring trade binders, deck boxes, and verified want lists."
+    notes: "Free entrance show. Bring binders, slabs, sealed stock, wishlists and clean sleeves."
   },
   {
-    id: "op16-release-watch",
-    title: "OP-16 Release Watch",
-    date: "2026-06-05",
-    venue: "Online + local store calls",
-    format: "Allocation tracking and group-buy interest",
+    id: "vault-room-trade-night-july",
+    title: "Vault Room Trade Night",
+    date: "2026-07-11",
+    venue: "Cape Town venue TBC",
+    format: "Casual battles, grading intake, binder checks and safe-trade meetups",
     capacity: 40,
     attending: 18,
     status: "open",
-    notes: "Official events page lists OP-16 Release Event for June 5-11, 2026."
+    notes: "Community meetup date and venue will be confirmed through WhatsApp."
   }
 ];
 
