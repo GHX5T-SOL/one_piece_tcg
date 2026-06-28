@@ -5150,3 +5150,783 @@ main {
     transition-duration: 1ms !important;
   }
 }
+
+/* Reference fidelity rebuild: premium anime collector chrome layered over the working app. */
+.vault-app {
+  background:
+    radial-gradient(circle at 9% 20%, rgba(255, 107, 91, 0.14), transparent 19rem),
+    radial-gradient(circle at 84% 18%, rgba(126, 198, 240, 0.2), transparent 26rem),
+    radial-gradient(circle at 52% 96%, rgba(13, 78, 162, 0.2), transparent 30rem),
+    linear-gradient(135deg, rgba(255, 247, 230, 0.96), rgba(244, 229, 194, 0.92));
+  isolation: isolate;
+}
+
+.vault-app::before {
+  background:
+    linear-gradient(90deg, rgba(8, 33, 61, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(8, 33, 61, 0.028) 1px, transparent 1px),
+    radial-gradient(circle at 18% 72%, transparent 0 7rem, rgba(8, 33, 61, 0.05) 7.08rem 7.16rem, transparent 7.25rem),
+    radial-gradient(circle at 84% 30%, transparent 0 5.7rem, rgba(212, 175, 55, 0.12) 5.78rem 5.86rem, transparent 5.95rem),
+    linear-gradient(130deg, transparent 0 42%, rgba(212, 175, 55, 0.08) 42.2% 42.5%, transparent 42.8% 100%);
+  background-size: 82px 82px, 82px 82px, auto, auto, auto;
+  opacity: 0.82;
+}
+
+.vault-app::after {
+  background:
+    radial-gradient(ellipse at 50% 105%, rgba(13, 78, 162, 0.26), transparent 44%),
+    linear-gradient(180deg, transparent 0 68%, rgba(7, 24, 44, 0.06) 100%);
+  opacity: 1;
+}
+
+.vault-atmosphere {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.top-ribbon,
+.site-header,
+main,
+.mobile-bottom-nav {
+  z-index: 3;
+}
+
+.site-header {
+  background:
+    radial-gradient(circle at 4% 0%, rgba(212, 175, 55, 0.22), transparent 18rem),
+    linear-gradient(180deg, rgba(8, 33, 61, 0.98), rgba(5, 19, 35, 0.98));
+  border-bottom: 1px solid rgba(212, 175, 55, 0.78);
+  box-shadow:
+    0 18px 42px rgba(5, 19, 35, 0.22),
+    inset 0 -1px 0 rgba(255, 247, 230, 0.12);
+}
+
+.site-header::before {
+  background:
+    linear-gradient(90deg, rgba(212, 175, 55, 0.22), transparent 20%, transparent 80%, rgba(126, 198, 240, 0.14)),
+    radial-gradient(circle at 14% 50%, transparent 0 2.4rem, rgba(212, 175, 55, 0.22) 2.46rem 2.52rem, transparent 2.6rem),
+    radial-gradient(circle at 86% 48%, transparent 0 2.1rem, rgba(126, 198, 240, 0.17) 2.16rem 2.22rem, transparent 2.3rem);
+  content: "";
+  inset: 0;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+}
+
+.vault-brand,
+.desktop-nav,
+.header-tools {
+  position: relative;
+  z-index: 1;
+}
+
+.vault-brand strong {
+  color: #fff7e6;
+  text-shadow: 0 2px 0 rgba(5, 19, 35, 0.7), 0 0 24px rgba(212, 175, 55, 0.18);
+}
+
+.vault-brand em {
+  color: var(--vault-gold);
+}
+
+.desktop-nav a,
+.header-tools button,
+.header-tools a {
+  color: #fff7e6;
+}
+
+.desktop-nav a {
+  border: 1px solid transparent;
+}
+
+.desktop-nav a:hover,
+.header-tools button:hover,
+.header-tools a:hover {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.42);
+  color: #fff7e6;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12), inset 0 0 0 1px rgba(255, 247, 230, 0.08);
+}
+
+.desktop-nav a svg,
+.header-tools a svg {
+  color: var(--vault-gold);
+  filter: drop-shadow(0 0 9px rgba(212, 175, 55, 0.18));
+}
+
+.header-tools a {
+  background: rgba(255, 247, 230, 0.08);
+  border-color: rgba(212, 175, 55, 0.36);
+  box-shadow: inset 0 0 0 1px rgba(255, 247, 230, 0.08);
+}
+
+.header-tools a:last-child {
+  background:
+    linear-gradient(135deg, rgba(255, 247, 230, 0.16), transparent 44%),
+    rgba(255, 247, 230, 0.09);
+}
+
+.atmo-orb,
+.atmo-ring,
+.atmo-card,
+.atmo-bolt {
+  position: absolute;
+}
+
+.atmo-orb {
+  border-radius: 999px;
+  filter: blur(0.2px);
+  opacity: 0.55;
+}
+
+.atmo-orb::before,
+.atmo-ring::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.atmo-orb--fruit {
+  animation: vaultFloat 10s ease-in-out infinite alternate;
+  background:
+    radial-gradient(circle at 33% 26%, rgba(255, 247, 230, 0.72), transparent 8%),
+    repeating-conic-gradient(from 18deg, rgba(134, 85, 177, 0.9) 0 10deg, rgba(83, 38, 116, 0.9) 10deg 20deg);
+  box-shadow: 0 0 34px rgba(134, 85, 177, 0.36);
+  height: 82px;
+  left: 2vw;
+  top: 34vh;
+  width: 82px;
+}
+
+.atmo-orb--ki {
+  animation: vaultPulse 2.7s ease-in-out infinite alternate;
+  background:
+    radial-gradient(circle, rgba(255, 247, 230, 0.8), transparent 28%),
+    radial-gradient(circle, rgba(255, 207, 47, 0.88), rgba(255, 107, 91, 0.28) 62%, transparent 72%);
+  height: 148px;
+  right: -54px;
+  top: 28vh;
+  width: 148px;
+}
+
+.atmo-orb--duel {
+  animation: vaultFloat 13s ease-in-out infinite alternate-reverse;
+  background:
+    linear-gradient(135deg, rgba(42, 18, 61, 0.92), rgba(13, 78, 162, 0.7)),
+    radial-gradient(circle at center, rgba(212, 175, 55, 0.55), transparent 46%);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 10px;
+  box-shadow: 0 0 28px rgba(42, 18, 61, 0.28);
+  height: 104px;
+  left: -36px;
+  top: 72vh;
+  transform: rotate(-14deg);
+  width: 72px;
+}
+
+.atmo-card {
+  align-items: center;
+  animation: cardDrift 12s ease-in-out infinite alternate;
+  background:
+    linear-gradient(150deg, rgba(255, 247, 230, 0.62), transparent 42%),
+    linear-gradient(180deg, rgba(7, 24, 44, 0.92), rgba(13, 78, 162, 0.76));
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 7px;
+  box-shadow: 0 15px 38px rgba(8, 33, 61, 0.14), 0 0 22px rgba(126, 198, 240, 0.12);
+  color: var(--vault-gold);
+  display: flex;
+  font-size: 16px;
+  font-weight: 1000;
+  height: 88px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  opacity: 0.35;
+  width: 62px;
+}
+
+.atmo-card::before {
+  content: attr(data-label);
+}
+
+.atmo-card--one {
+  right: 3vw;
+  top: 14vh;
+  transform: rotate(12deg);
+}
+
+.atmo-card--two {
+  animation-delay: -4s;
+  left: 9vw;
+  top: 87vh;
+  transform: rotate(-9deg);
+}
+
+.atmo-card--three {
+  animation-delay: -7s;
+  right: 17vw;
+  top: 86vh;
+  transform: rotate(7deg);
+}
+
+.atmo-bolt {
+  animation: lightningFlicker 3.4s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(126, 198, 240, 0.72), rgba(212, 175, 55, 0.42), transparent);
+  height: 2px;
+  opacity: 0.42;
+  transform: rotate(-23deg);
+  width: 280px;
+}
+
+.atmo-bolt--one {
+  left: -40px;
+  top: 27vh;
+}
+
+.atmo-bolt--two {
+  animation-delay: -1.7s;
+  right: -60px;
+  top: 72vh;
+  transform: rotate(17deg);
+}
+
+.atmo-ring {
+  animation: ringRotate 28s linear infinite;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 999px;
+  opacity: 0.36;
+}
+
+.atmo-ring::before {
+  border: 1px dashed rgba(8, 33, 61, 0.18);
+  border-radius: inherit;
+  transform: scale(0.72);
+}
+
+.atmo-ring--one {
+  height: 220px;
+  left: 19vw;
+  top: 8vh;
+  width: 220px;
+}
+
+.atmo-ring--two {
+  animation-direction: reverse;
+  bottom: 8vh;
+  height: 280px;
+  right: 6vw;
+  width: 280px;
+}
+
+.hero-copy-panel h1,
+.section-title-row h2,
+.vault-quest-map h2,
+.page-hero h1,
+.service-hero h1,
+.profile-id-card h1,
+.vault-credit-hero h1 {
+  text-shadow: 0 2px 0 rgba(255, 247, 230, 0.5), 0 18px 38px rgba(8, 33, 61, 0.12);
+}
+
+.hero-copy-panel {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(126, 198, 240, 0.17), transparent 34%),
+    linear-gradient(160deg, rgba(255, 247, 230, 0.68), rgba(255, 247, 230, 0.12));
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px rgba(255, 247, 230, 0.28);
+  padding: 18px;
+}
+
+.hero-art-panel {
+  border-color: rgba(212, 175, 55, 0.68);
+  box-shadow:
+    0 30px 82px rgba(8, 33, 61, 0.3),
+    0 0 0 1px rgba(255, 247, 230, 0.3) inset,
+    0 0 44px rgba(212, 175, 55, 0.18);
+}
+
+.hero-art-panel::before {
+  animation: heroGleam 6.8s ease-in-out infinite;
+  background:
+    linear-gradient(104deg, transparent 12%, rgba(255, 247, 230, 0.22) 38%, transparent 48%),
+    radial-gradient(circle at 13% 9%, rgba(255, 247, 230, 0.34), transparent 22%),
+    linear-gradient(180deg, rgba(255, 247, 230, 0.06), transparent 18%, transparent 72%, rgba(7, 24, 44, 0.2));
+}
+
+.hero-value-strip {
+  box-shadow: 0 -16px 34px rgba(7, 24, 44, 0.22);
+}
+
+.vault-quest-map {
+  background:
+    radial-gradient(circle at 16% 16%, rgba(126, 198, 240, 0.16), transparent 36%),
+    radial-gradient(circle at 86% 26%, rgba(255, 107, 91, 0.1), transparent 36%),
+    linear-gradient(135deg, rgba(7, 24, 44, 0.96), rgba(8, 33, 61, 0.92));
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 22px 58px rgba(8, 33, 61, 0.22);
+  color: #fff7e6;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.4fr) minmax(210px, 0.5fr);
+  margin: 18px 0;
+  overflow: hidden;
+  padding: 18px;
+  position: relative;
+}
+
+.vault-quest-map::before {
+  background:
+    linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.58), transparent),
+    radial-gradient(circle at 92% 78%, rgba(212, 175, 55, 0.24), transparent 22%);
+  content: "";
+  inset: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  position: absolute;
+}
+
+.vault-quest-map > * {
+  position: relative;
+}
+
+.vault-quest-map__intro {
+  align-content: center;
+  display: grid;
+  gap: 8px;
+}
+
+.vault-quest-map__intro span,
+.quest-boss-card span:first-child {
+  color: var(--vault-gold);
+  font-size: 11px;
+  font-weight: 1000;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.vault-quest-map h2 {
+  color: #fff7e6;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 27px;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.vault-quest-map p,
+.quest-boss-card span {
+  color: rgba(255, 247, 230, 0.76);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.quest-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quest-card {
+  background:
+    linear-gradient(150deg, rgba(255, 247, 230, 0.12), rgba(255, 247, 230, 0.03)),
+    rgba(255, 247, 230, 0.05);
+  border: 1px solid rgba(255, 247, 230, 0.14);
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  min-height: 116px;
+  padding: 12px;
+  position: relative;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.quest-card::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 247, 230, 0.32), transparent);
+  content: "";
+  height: 1px;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.quest-card span {
+  align-items: center;
+  background: rgba(212, 175, 55, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 7px;
+  color: var(--vault-gold);
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.quest-card strong {
+  color: #fff7e6;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.quest-card em {
+  color: rgba(255, 247, 230, 0.7);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.3;
+}
+
+.quest-card:hover {
+  background: rgba(255, 247, 230, 0.1);
+  border-color: rgba(212, 175, 55, 0.48);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18), 0 0 22px rgba(212, 175, 55, 0.12);
+  transform: translateY(-3px);
+}
+
+.quest-card[data-tone="sky"] span {
+  background: rgba(126, 198, 240, 0.18);
+  border-color: rgba(126, 198, 240, 0.38);
+  color: var(--vault-sky);
+}
+
+.quest-card[data-tone="coral"] span {
+  background: rgba(255, 107, 91, 0.16);
+  border-color: rgba(255, 107, 91, 0.34);
+  color: #ffb2a8;
+}
+
+.quest-card[data-tone="navy"] span {
+  background: rgba(255, 247, 230, 0.12);
+  color: #fff7e6;
+}
+
+.quest-boss-card {
+  align-content: center;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.24), transparent 36%),
+    rgba(255, 247, 230, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.quest-boss-card svg {
+  color: var(--vault-gold);
+}
+
+.quest-boss-card strong {
+  color: #fff7e6;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.product-card {
+  background:
+    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--card-accent, var(--vault-gold)) 18%, transparent), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(255, 247, 230, 0.84) 48%, rgba(246, 231, 201, 0.92));
+  border-color: rgba(212, 175, 55, 0.32);
+  box-shadow:
+    0 14px 34px rgba(8, 33, 61, 0.12),
+    0 0 0 1px rgba(255, 247, 230, 0.42) inset;
+}
+
+.product-card h3 {
+  font-weight: 1000;
+}
+
+.product-card__media {
+  background:
+    radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--card-accent, var(--vault-gold)) 13%, transparent), transparent 38%),
+    linear-gradient(180deg, rgba(7, 24, 44, 0.04), transparent);
+}
+
+.product-card__media::after {
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 247, 230, 0.7), transparent),
+    radial-gradient(circle, color-mix(in srgb, var(--card-accent, var(--vault-gold)) 50%, transparent), transparent 64%);
+  bottom: 8px;
+  content: "";
+  height: 1px;
+  left: 18%;
+  opacity: 0.7;
+  position: absolute;
+  right: 18%;
+}
+
+.product-card__flag {
+  background:
+    linear-gradient(135deg, #ff6b5b, #d4af37);
+  box-shadow: 0 7px 16px rgba(255, 107, 91, 0.18);
+}
+
+.icon-button {
+  backdrop-filter: blur(10px);
+}
+
+.cart-button {
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--card-accent, var(--vault-gold)) 26%, transparent), transparent 45%),
+    linear-gradient(180deg, #0b2949, #061427);
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.product-visual:has(.product-visual__photo) {
+  filter: drop-shadow(0 16px 18px rgba(8, 33, 61, 0.18));
+}
+
+.page-hero,
+.service-hero,
+.profile-command-hero,
+.vault-credit-hero,
+.tool-panel,
+.auth-panel,
+.event-list-card,
+.auction-card,
+.public-note-panel,
+.product-detail,
+.trust-row article,
+.community-grid article,
+.credit-eligibility,
+.credit-process,
+.sell-to-us-band,
+.community-band {
+  border-color: rgba(212, 175, 55, 0.32);
+  box-shadow:
+    0 16px 44px rgba(8, 33, 61, 0.13),
+    inset 0 0 0 1px rgba(255, 247, 230, 0.34);
+}
+
+.page-hero,
+.service-hero,
+.profile-command-hero,
+.vault-credit-hero {
+  background:
+    linear-gradient(140deg, rgba(7, 24, 44, 0.92), rgba(13, 78, 162, 0.72)),
+    radial-gradient(circle at 82% 24%, rgba(212, 175, 55, 0.24), transparent 32%);
+  color: #fff7e6;
+}
+
+.page-hero h1,
+.service-hero h1,
+.profile-id-card h1,
+.vault-credit-hero h1 {
+  color: #fff7e6;
+}
+
+.page-hero p,
+.service-hero p,
+.profile-id-card p,
+.vault-credit-hero p {
+  color: rgba(255, 247, 230, 0.78);
+}
+
+.tool-panel__head {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  margin: -2px -2px 12px;
+  padding: 2px 2px 12px;
+}
+
+.tool-panel__head span {
+  color: var(--vault-ink);
+  font-weight: 1000;
+}
+
+.tool-panel__head svg {
+  color: var(--vault-gold);
+}
+
+.profile-avatar {
+  background:
+    radial-gradient(circle at 40% 30%, rgba(255, 247, 230, 0.72), transparent 28%),
+    linear-gradient(135deg, var(--vault-gold), var(--vault-coral));
+  color: #07182c;
+  box-shadow: 0 0 0 4px rgba(255, 247, 230, 0.12), 0 18px 32px rgba(8, 33, 61, 0.2);
+}
+
+.listing-flow div,
+.social-feed-list div,
+.quest-list div,
+.profile-card-list div,
+.account-preview-grid article,
+.profile-platform-roadmap article,
+.credit-signal-grid article {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 247, 230, 0.72)),
+    radial-gradient(circle at 86% 10%, rgba(212, 175, 55, 0.12), transparent 30%);
+  border-color: rgba(212, 175, 55, 0.24);
+}
+
+.gacha-machine-panel,
+.gacha-console,
+.gacha-prize-board,
+.gacha-rules article,
+.gacha-chamber__shell {
+  border-color: rgba(212, 175, 55, 0.48);
+  box-shadow:
+    0 22px 58px rgba(8, 33, 61, 0.18),
+    0 0 42px rgba(126, 198, 240, 0.12);
+}
+
+.gacha-cinematic-wrap::after,
+.gacha-chamber__stage::after {
+  animation: gachaScanline 3.4s linear infinite;
+  background:
+    linear-gradient(180deg, transparent, rgba(126, 198, 240, 0.18), transparent),
+    linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.28), transparent);
+  content: "";
+  height: 24%;
+  left: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: -24%;
+  z-index: 4;
+}
+
+.gacha-cinematic-wrap,
+.gacha-chamber__stage {
+  border-color: rgba(126, 198, 240, 0.42);
+}
+
+.market-index-card,
+.terminal-chart-panel,
+.terminal-feed-panel {
+  box-shadow:
+    0 18px 52px rgba(8, 33, 61, 0.18),
+    0 0 34px rgba(212, 175, 55, 0.08);
+}
+
+.trust-row article:hover,
+.community-grid article:hover,
+.account-preview-grid article:hover,
+.profile-platform-roadmap article:hover {
+  border-color: rgba(212, 175, 55, 0.48);
+  transform: translateY(-3px);
+}
+
+@keyframes vaultFloat {
+  from {
+    transform: translate3d(0, 0, 0) rotate(-6deg);
+  }
+  to {
+    transform: translate3d(14px, -24px, 0) rotate(9deg);
+  }
+}
+
+@keyframes vaultPulse {
+  from {
+    opacity: 0.26;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 0.62;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cardDrift {
+  from {
+    opacity: 0.18;
+    transform: translateY(0) rotate(-10deg);
+  }
+  to {
+    opacity: 0.42;
+    transform: translateY(-22px) rotate(8deg);
+  }
+}
+
+@keyframes lightningFlicker {
+  0%,
+  78%,
+  100% {
+    opacity: 0.12;
+  }
+  80%,
+  86% {
+    opacity: 0.58;
+  }
+}
+
+@keyframes ringRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroGleam {
+  0%,
+  58%,
+  100% {
+    opacity: 0.7;
+    transform: translateX(-8%);
+  }
+  72% {
+    opacity: 1;
+    transform: translateX(9%);
+  }
+}
+
+@keyframes gachaScanline {
+  to {
+    top: 100%;
+  }
+}
+
+@media (max-width: 1320px) {
+  .vault-quest-map {
+    grid-template-columns: 1fr;
+  }
+
+  .quest-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    background: linear-gradient(180deg, rgba(8, 33, 61, 0.98), rgba(5, 19, 35, 0.98));
+  }
+
+  .vault-brand strong {
+    font-size: 22px;
+  }
+
+  .vault-atmosphere {
+    opacity: 0.52;
+  }
+
+  .quest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-copy-panel {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .vault-atmosphere {
+    opacity: 0.28;
+  }
+
+  .quest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vault-quest-map {
+    padding: 14px;
+  }
+
+  .quest-card {
+    min-height: 96px;
+  }
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Award, HandCoins, PackageCheck, ShieldCheck, Truck } from "lucide-react";
 import { ShopGrid } from "@/components/store/ShopGrid";
 import { VaultHero } from "@/components/VaultHero";
+import { VaultQuestMap } from "@/components/VaultQuestMap";
 import { VaultRoomShell } from "@/components/VaultRoomShell";
 
 export default function HomePage() {
@@ -9,6 +10,7 @@ export default function HomePage() {
     <VaultRoomShell>
       <VaultHero />
       <ShopGrid limit={7} />
+      <VaultQuestMap />
       <section className="trust-row">
         <article>
           <ShieldCheck aria-hidden size={28} />

@@ -177,3 +177,16 @@ New community/business layer: `The Vault Room`, formerly tracked internally as O
 - Current `/market` hero background asset: `apps/op-cpt/public/branding/vault-room-market-terminal-bg.png`.
 - Do not claim live pricing if the data is seeded/manual. Use wording like `manual review`, `scenario signal`, `source-backed`, and `beta`.
 - Preserve the approved homepage hero and one-row featured-products layout unless the user explicitly asks for a homepage redesign.
+
+## Vault Room Reference Fidelity Rebuild
+
+- North star: the live app should look like a polished anime collector dashboard, not a plain ecommerce template. Use the approved generated references for proportion, density, motion and panel treatment.
+- Keep the selected crossover harbor hero image. Raise the surrounding system with layered code-driven assets instead of flattening the site into one image.
+- Header: dark navy command bar, gold linework, compact icon navigation, crest/wordmark lockup, and `My Profile` as the account CTA.
+- Canvas: parchment sea-map base with ocean glow, compass rings, subtle grid, torn-map corners, and bottom wave accents.
+- Atmosphere: floating card ghosts, devil-fruit-style orbs, electric blue/gold strokes, slab glints, and rare-card shimmer. These must be decorative and non-blocking.
+- Homepage: add a `Vault quest map` linking the major platform experiences and showing the company vision: shop, gacha, collection, market, credit, events, grade lab, community and consignment.
+- Cards and panels: use dark title rails, gold-corner chrome, universe accents, stronger shadow hierarchy, hover lifts, CTA shine and rarity badges.
+- Profile/social layer: should feel like a collector command center with stats, collection adding, listings, community feed, DMs, quests and platform roadmap.
+- Motion: cinematic but restrained; respect `prefers-reduced-motion`.
+- Safety: no public page may claim official affiliation, automated payments, active lending, guaranteed grading, or live pricing unless actually wired.

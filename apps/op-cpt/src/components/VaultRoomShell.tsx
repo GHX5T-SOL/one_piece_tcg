@@ -34,6 +34,7 @@ const whatsappCommunityUrl = "https://chat.whatsapp.com/LgAy8Q0NgVp9NcU7oJXBDy";
 export function VaultRoomShell({ children, showCart = true }: { children: React.ReactNode; showCart?: boolean }) {
   return (
     <div className="vault-app">
+      <VaultAtmosphere />
       <div className="top-ribbon">
         <span>Member beta: stock, pricing, photos and features are being verified daily.</span>
         <Link href={whatsappCommunityUrl} target="_blank" rel="noreferrer">
@@ -86,6 +87,23 @@ export function VaultRoomShell({ children, showCart = true }: { children: React.
           );
         })}
       </nav>
+    </div>
+  );
+}
+
+function VaultAtmosphere() {
+  return (
+    <div className="vault-atmosphere" aria-hidden="true">
+      <span className="atmo-orb atmo-orb--fruit" />
+      <span className="atmo-orb atmo-orb--ki" />
+      <span className="atmo-orb atmo-orb--duel" />
+      <span className="atmo-card atmo-card--one" data-label="PR" />
+      <span className="atmo-card atmo-card--two" data-label="AA" />
+      <span className="atmo-card atmo-card--three" data-label="10" />
+      <span className="atmo-bolt atmo-bolt--one" />
+      <span className="atmo-bolt atmo-bolt--two" />
+      <span className="atmo-ring atmo-ring--one" />
+      <span className="atmo-ring atmo-ring--two" />
     </div>
   );
 }
